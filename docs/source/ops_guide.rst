@@ -9,6 +9,7 @@ Operations Guides
    config_update
    msp
    configtx
+   capability_requirements
    endorsement-policies
    pluggable_endorsement_and_validation
    access_control.md
@@ -20,4 +21,5 @@ Operations Guides
    logging-control
    enable_tls
    raft_configuration.md
+   kafka_raft_migration.md
    kafka

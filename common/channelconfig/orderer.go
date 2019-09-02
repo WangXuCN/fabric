@@ -87,7 +87,7 @@ func NewOrdererOrgConfig(orgName string, orgGroup *cb.ConfigGroup, mspConfigHand
 
 	if !channelCapabilities.OrgSpecificOrdererEndpoints() {
 		if _, ok := orgGroup.Values[EndpointsKey]; ok {
-			return nil, errors.Errorf("Orderer Org %s cannot contain endpoints value until V2_0+ capabilities have been enabled", orgName)
+			return nil, errors.Errorf("Orderer Org %s cannot contain endpoints value until V1_4_2+ capabilities have been enabled", orgName)
 		}
 	}
 
@@ -153,14 +153,9 @@ func (oc *OrdererConfig) ConsensusMetadata() []byte {
 	return oc.protos.ConsensusType.Metadata
 }
 
-// ConsensusMigrationState return the consensus type migration state.
-func (oc *OrdererConfig) ConsensusMigrationState() ab.ConsensusType_MigrationState {
-	return oc.protos.ConsensusType.MigrationState
-}
-
-// ConsensusMigrationContext return the consensus type migration context.
-func (oc *OrdererConfig) ConsensusMigrationContext() uint64 {
-	return oc.protos.ConsensusType.MigrationContext
+// ConsensusState return the consensus type state.
+func (oc *OrdererConfig) ConsensusState() ab.ConsensusType_State {
+	return oc.protos.ConsensusType.State
 }
 
 // BatchSize returns the maximum number of messages to include in a block.

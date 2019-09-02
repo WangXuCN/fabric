@@ -131,7 +131,7 @@ func UpdateOrdererConfig(n *Network, orderer *Orderer, channel string, current, 
 	updateFile := filepath.Join(tempDir, "update.pb")
 	defer os.RemoveAll(tempDir)
 
-	computeUpdateOrdererConfig(updateFile, n, channel, current, updated, submitter, additionalSigners...)
+	ComputeUpdateOrdererConfig(updateFile, n, channel, current, updated, submitter, additionalSigners...)
 
 	currentBlockNumber := CurrentConfigBlockNumber(n, submitter, orderer, channel)
 
@@ -161,7 +161,8 @@ func UpdateOrdererConfig(n *Network, orderer *Orderer, channel string, current, 
 
 // CurrentConfigBlockNumber retrieves the block number from the header of the
 // current config block. This can be used to detect when configuration change
-// has completed.
+// has completed. If an orderer is not provided, the current config block will
+// be fetched from the peer.
 func CurrentConfigBlockNumber(n *Network, peer *Peer, orderer *Orderer, channel string) uint64 {
 	tempDir, err := ioutil.TempDir("", "currentConfigBlock")
 	Expect(err).NotTo(HaveOccurred())
@@ -169,10 +170,32 @@ func CurrentConfigBlockNumber(n *Network, peer *Peer, orderer *Orderer, channel 
 
 	// fetch the config block
 	output := filepath.Join(tempDir, "config_block.pb")
+	if orderer == nil {
+		return CurrentConfigBlockNumberFromPeer(n, peer, channel, output)
+	}
+
 	FetchConfigBlock(n, peer, orderer, channel, output)
 
 	// unmarshal the config block bytes
 	configBlock := UnmarshalBlockFromFile(output)
+
+	return configBlock.Header.Number
+}
+
+// CurrentConfigBlockNumberFromPeer retrieves the block number from the header
+// of the peer's current config block.
+func CurrentConfigBlockNumberFromPeer(n *Network, peer *Peer, channel, output string) uint64 {
+	sess, err := n.PeerAdminSession(peer, commands.ChannelFetch{
+		ChannelID:  channel,
+		Block:      "config",
+		OutputFile: output,
+	})
+	Expect(err).NotTo(HaveOccurred())
+	Eventually(sess, n.EventuallyTimeout).Should(gexec.Exit(0))
+	Expect(sess.Err).To(gbytes.Say("Received block: "))
+
+	configBlock := UnmarshalBlockFromFile(output)
+
 	return configBlock.Header.Number
 }
 
@@ -203,7 +226,7 @@ func UpdateOrdererConfigFail(n *Network, orderer *Orderer, channel string, curre
 	updateFile := filepath.Join(tempDir, "update.pb")
 	defer os.RemoveAll(tempDir)
 
-	computeUpdateOrdererConfig(updateFile, n, channel, current, updated, submitter, additionalSigners...)
+	ComputeUpdateOrdererConfig(updateFile, n, channel, current, updated, submitter, additionalSigners...)
 
 	//session should not return with a zero exit code nor with a success response
 	sess, err := n.OrdererAdminSession(orderer, submitter, commands.ChannelUpdate{
@@ -216,7 +239,7 @@ func UpdateOrdererConfigFail(n *Network, orderer *Orderer, channel string, curre
 	Expect(sess.Err).NotTo(gbytes.Say("Successfully submitted channel update"))
 }
 
-func computeUpdateOrdererConfig(updateFile string, n *Network, channel string, current, updated *common.Config, submitter *Peer, additionalSigners ...*Orderer) {
+func ComputeUpdateOrdererConfig(updateFile string, n *Network, channel string, current, updated *common.Config, submitter *Peer, additionalSigners ...*Orderer) {
 	// compute update
 	configUpdate, err := update.Compute(current, updated)
 	Expect(err).NotTo(HaveOccurred())
