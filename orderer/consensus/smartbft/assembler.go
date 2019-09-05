@@ -31,6 +31,7 @@ type Ledger interface {
 type Assembler struct {
 	Ledger Ledger
 	Logger *flogging.FabricLogger
+	GetLastCommittedHash func() []byte
 }
 
 func (a *Assembler) AssembleProposal(metadata []byte, requests [][]byte) (nextProp types.Proposal, remainder [][]byte) {
@@ -42,7 +43,7 @@ func (a *Assembler) AssembleProposal(metadata []byte, requests [][]byte) (nextPr
 	lastConfigBlock := lastConfigBlockFromLedgerOrPanic(a.Ledger, a.Logger)
 	lastBlock := lastBlockFromLedgerOrPanic(a.Ledger, a.Logger)
 
-	block := protoutil.NewBlock(lastBlock.Header.Number+1, protoutil.BlockHeaderHash(lastBlock.Header))
+	block := common.NewBlock(lastBlock.Header.Number+1, a.GetLastCommittedHash())
 	block.Data = &common.BlockData{Data: batchedRequests}
 	block.Header.DataHash = protoutil.BlockDataHash(block.Data)
 	block.Metadata.Metadata[common.BlockMetadataIndex_LAST_CONFIG] = protoutil.MarshalOrPanic(&common.Metadata{

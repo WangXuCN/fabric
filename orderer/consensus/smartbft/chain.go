@@ -181,6 +181,11 @@ func bftSmartConsensusBuild(
 		Assembler: &Assembler{
 			Logger: flogging.MustGetLogger("orderer.consensus.smartbft.assembler").With(channelDecorator),
 			Ledger: c.support,
+			GetLastCommittedHash: func() []byte {
+				lastHash := c.verifier.lastCommittedHash()
+				h, _ := hex.DecodeString(lastHash)
+				return h
+			},
 		},
 		RequestInspector: requestInspector,
 		Synchronizer:     sync,
