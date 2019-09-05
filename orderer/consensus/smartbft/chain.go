@@ -160,6 +160,8 @@ func bftSmartConsensusBuild(
 	logger := flogging.MustGetLogger("orderer.consensus.smartbft.consensus").With(channelDecorator)
 
 	config := smartbft.DefaultConfig
+	config.RequestTimeout = time.Hour
+	config.RequestBatchMaxInterval = time.Second
 	config.LeaderHeartbeatTimeout = time.Second * 10
 	config.SelfID = c.SelfID
 

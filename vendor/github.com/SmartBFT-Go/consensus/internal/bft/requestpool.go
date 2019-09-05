@@ -211,7 +211,7 @@ func (rp *Pool) RemoveRequest(requestInfo types.RequestInfo) error {
 	element, exist := rp.existMap[requestInfo]
 	if !exist {
 		errStr := fmt.Sprintf("request %s is not in the pool at remove time", requestInfo)
-		rp.logger.Warnf(errStr)
+		rp.logger.Debugf(errStr)
 		return fmt.Errorf(errStr)
 	}
 
@@ -224,7 +224,7 @@ func (rp *Pool) deleteRequest(element *list.Element, requestInfo types.RequestIn
 
 	rp.fifo.Remove(element)
 	delete(rp.existMap, requestInfo)
-	rp.logger.Infof("Removed request %s from request pool", requestInfo)
+	rp.logger.Debugf("Removed request %s from request pool", requestInfo)
 	rp.semaphore.Release(1)
 
 	if len(rp.existMap) != rp.fifo.Len() {
@@ -359,7 +359,7 @@ func (rp *Pool) onLeaderFwdRequestTO(request []byte, reqInfo types.RequestInfo) 
 func (rp *Pool) onAutoRemoveTO(reqInfo types.RequestInfo) {
 	rp.logger.Debugf("Request %s auto-remove timeout expired, going to remove from pool", reqInfo)
 	if err := rp.RemoveRequest(reqInfo); err != nil {
-		rp.logger.Errorf("Removal of request %s failed; error: %s", reqInfo, err)
+		rp.logger.Debugf("Removal of request %s failed; error: %s", reqInfo, err)
 		return
 	}
 	rp.timeoutHandler.OnAutoRemoveTimeout(reqInfo)

@@ -1,0 +1,254 @@
+diff --git a/integration/raft/client.go b/integration/raft/client.go
+index 71629cff0..8bdc624ae 100644
+--- a/integration/raft/client.go
++++ b/integration/raft/client.go
+@@ -20,6 +20,7 @@ import (
+ 	"github.com/hyperledger/fabric/protoutil"
+ 	. "github.com/onsi/gomega"
+ 	"github.com/pkg/errors"
++	"fmt"
+ )
+ 
+ // Broadcast sends given env to Broadcast API of specified orderer.
+@@ -55,40 +56,48 @@ func Broadcast(n *nwo.Network, o *nwo.Orderer, env *common.Envelope) (*orderer.B
+ }
+ 
+ // Deliver sends given env to Deliver API of specified orderer.
+-func Deliver(n *nwo.Network, o *nwo.Orderer, env *common.Envelope) (*common.Block, error) {
++func Deliver(n *nwo.Network, o *nwo.Orderer, env *common.Envelope, targetBlock uint64) error {
+ 	gRPCclient, err := CreateGRPCClient(n, o)
+ 	if err != nil {
+-		return nil, err
++		return err
+ 	}
+ 
+ 	addr := n.OrdererAddress(o, nwo.ListenPort)
+ 	conn, err := gRPCclient.NewConnection(addr, "")
+ 	if err != nil {
+-		return nil, err
++		return err
+ 	}
+ 	defer conn.Close()
+ 
+ 	deliverer, err := orderer.NewAtomicBroadcastClient(conn).Deliver(context.Background())
+ 	if err != nil {
+-		return nil, err
++		return err
+ 	}
+ 
+ 	err = deliverer.Send(env)
+ 	if err != nil {
+-		return nil, err
++		return err
+ 	}
+ 
+-	resp, err := deliverer.Recv()
+-	if err != nil {
+-		return nil, err
+-	}
++	t1 := time.Now()
+ 
+-	blk := resp.GetBlock()
+-	if blk == nil {
+-		return nil, errors.Errorf("block not found")
+-	}
++	for {
++		resp, err := deliverer.Recv()
++		if err != nil {
++			return err
++		}
+ 
+-	return blk, nil
++		blk := resp.GetBlock()
++		if blk == nil {
++			return errors.Errorf("block not found")
++		}
++
++		fmt.Println(time.Since(t1), ">>>> GOT BLOCK", blk.Header.Number, "of", len(blk.Data.Data), "transactions")
++
++		if blk.Header.Number == targetBlock {
++			return nil
++		}
++	}
+ }
+ 
+ func FetchBlock(n *nwo.Network, o *nwo.Orderer, seq uint64, channel string) *common.Block {
+@@ -98,7 +107,7 @@ func FetchBlock(n *nwo.Network, o *nwo.Orderer, seq uint64, channel string) *com
+ 	var blk *common.Block
+ 	var err error
+ 	Eventually(func() error {
+-		blk, err = Deliver(n, o, denv)
++		err = Deliver(n, o, denv, seq)
+ 		return err
+ 	}, n.EventuallyTimeout).ShouldNot(HaveOccurred())
+ 
+@@ -156,7 +165,11 @@ func CreateDeliverEnvelope(n *nwo.Network, entity interface{}, blkNum uint64, ch
+ 		channel,
+ 		nil,
+ 		&orderer.SeekInfo{
+-			Start:    specified,
++			Start:  &orderer.SeekPosition{
++				Type: &orderer.SeekPosition_Specified{
++					Specified: &orderer.SeekSpecified{Number: 1},
++				},
++			}  ,
+ 			Stop:     specified,
+ 			Behavior: orderer.SeekInfo_BLOCK_UNTIL_READY,
+ 		},
+diff --git a/integration/smartbft/smartbft_test.go b/integration/smartbft/smartbft_test.go
+index 3e4592133..da1061338 100644
+--- a/integration/smartbft/smartbft_test.go
++++ b/integration/smartbft/smartbft_test.go
+@@ -32,6 +32,10 @@ import (
+ 	"github.com/onsi/gomega/gexec"
+ 	"github.com/tedsuo/ifrit"
+ 	"github.com/tedsuo/ifrit/ginkgomon"
++	"github.com/hyperledger/fabric/integration/raft"
++	"github.com/hyperledger/fabric/protos/orderer"
++	"context"
++	"github.com/hyperledger/fabric/protos/common"
+ )
+ 
+ func init() {
+@@ -580,6 +584,38 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
+ 			By("Submitting transaction to the new leader")
+ 			invokeQuery(network, peer, network.Orderers[1], channel, 80)
+ 		})
++
++		It("smartbft performance", func() {
++			network = nwo.New(nwo.MultiNodeSmartBFT(), testDir, client, StartPort(), components)
++			network.GenerateConfigTree()
++			network.Bootstrap()
++
++			var ordererRunners []*ginkgomon.Runner
++			for _, orderer := range network.Orderers {
++				runner := network.OrdererRunner(orderer)
++				runner.Command.Env = append(runner.Command.Env, "FABRIC_LOGGING_SPEC=orderer.consensus.smartbft=debug:grpc=debug")
++				ordererRunners = append(ordererRunners, runner)
++				proc := ifrit.Invoke(runner)
++				ordererProcesses = append(ordererProcesses, proc)
++				Eventually(proc.Ready(), network.EventuallyTimeout).Should(BeClosed())
++			}
++
++			peer := network.Peer("Org1", "peer0")
++
++			assertBlockReception(map[string]int{"systemchannel": 0}, network.Orderers, peer, network)
++
++			By("Waiting for followers to see the leader")
++			Eventually(ordererRunners[1].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 0"))
++			Eventually(ordererRunners[2].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 0"))
++			Eventually(ordererRunners[3].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 0"))
++
++			By("Sleeping 10 seconds just in case")
++			time.Sleep(time.Second * 10)
++
++			benchmark(network, network.Orderers[0])
++
++			Fail("bla")
++		})
+ 	})
+ })
+ 
+@@ -659,3 +695,54 @@ func waitForBlockReception(o *nwo.Orderer, submitter *nwo.Peer, network *nwo.Net
+ 		return sessErr
+ 	}, network.EventuallyTimeout, time.Second).Should(BeEmpty())
+ }
++
++func benchmark(n *nwo.Network, o *nwo.Orderer) {
++	var transactions []*common.Envelope
++	m := 101 * 100 // 101 batch size * 100 blocks
++
++	deliverEnvelope := raft.CreateDeliverEnvelope(n, o, 200, "systemchannel")
++
++	for i := 0; i < m; i++ {
++		txn := raft.CreateBroadcastEnvelope(n, o, n.SystemChannel.Name, make([]byte, 1024 * 3))
++		transactions = append(transactions, txn)
++	}
++
++	gRPCclient, err := raft.CreateGRPCClient(n, o)
++	if err != nil {
++		panic(err)
++	}
++
++	addr := n.OrdererAddress(o, nwo.ListenPort)
++	conn, err := gRPCclient.NewConnection(addr, "")
++	if err != nil {
++		panic(err)
++	}
++
++	broadcaster, err := orderer.NewAtomicBroadcastClient(conn).Broadcast(context.Background())
++	if err != nil {
++		panic(err)
++	}
++
++	time.Sleep(time.Second * 5)
++
++	go func() {
++		defer GinkgoRecover()
++		for _, txn := range transactions{
++			time.Sleep(time.Millisecond)
++			err = broadcaster.Send(txn)
++			if err != nil {
++				panic(err)
++			}
++
++			_, err := broadcaster.Recv()
++			if err != nil {
++				panic(err)
++			}
++		}
++	}()
++
++	err = raft.Deliver(n, o, deliverEnvelope, uint64(m))
++	if err != nil {
++		panic(err)
++	}
++}
+\ No newline at end of file
+diff --git a/orderer/consensus/smartbft/chain.go b/orderer/consensus/smartbft/chain.go
+index 6355933e2..259663689 100644
+--- a/orderer/consensus/smartbft/chain.go
++++ b/orderer/consensus/smartbft/chain.go
+@@ -160,6 +160,7 @@ func bftSmartConsensusBuild(
+ 	logger := flogging.MustGetLogger("orderer.consensus.smartbft.consensus").With(channelDecorator)
+ 
+ 	config := smartbft.DefaultConfig
++	config.RequestBatchMaxInterval = time.Second
+ 	config.LeaderHeartbeatTimeout = time.Second * 10
+ 	config.SelfID = c.SelfID
+ 
+diff --git a/orderer/consensus/smartbft/util.go b/orderer/consensus/smartbft/util.go
+index b1b7c1575..947b5806d 100644
+--- a/orderer/consensus/smartbft/util.go
++++ b/orderer/consensus/smartbft/util.go
+@@ -34,6 +34,7 @@ import (
+ 	"github.com/hyperledger/fabric/protos/orderer/smartbft"
+ 	"github.com/hyperledger/fabric/protoutil"
+ 	"github.com/pkg/errors"
++	"fmt"
+ )
+ 
+ //go:generate counterfeiter -o mocks/mock_blockpuller.go . BlockPuller
+@@ -112,6 +113,9 @@ func (ri *RequestInspector) RequestID(rawReq []byte) types.RequestInfo {
+ 	if err != nil {
+ 		return types.RequestInfo{}
+ 	}
++
++	fmt.Println(">>>>>>>> NONCE:", hex.EncodeToString(req.sigHdr.Nonce))
++
+ 	reqInfo, err := ri.requestIDFromSigHeader(req.sigHdr)
+ 	if err != nil {
+ 		return types.RequestInfo{}
+diff --git a/vendor/github.com/SmartBFT-Go/consensus/internal/bft/controller.go b/vendor/github.com/SmartBFT-Go/consensus/internal/bft/controller.go
+index 0111017b3..dfcb2c429 100644
+--- a/vendor/github.com/SmartBFT-Go/consensus/internal/bft/controller.go
++++ b/vendor/github.com/SmartBFT-Go/consensus/internal/bft/controller.go
+@@ -356,7 +356,7 @@ func (c *Controller) propose() {
+ 	if len(remainder) != 0 {
+ 		c.Batcher.BatchRemainder(remainder)
+ 	}
+-	c.Logger.Debugf("Leader proposing proposal: %v", proposal)
++	c.Logger.Debugf("Leader proposing proposal of %d bytes: %v", len(proposal.Payload))
+ 	c.currView.Propose(proposal)
+ }
+ 

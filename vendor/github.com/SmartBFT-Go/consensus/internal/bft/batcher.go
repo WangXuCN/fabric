@@ -48,7 +48,7 @@ func (b *BatchBuilder) NextBatch() [][]byte {
 			if b.pool.Size() >= b.batchSize-remainderOccupied {
 				return b.buildBatch(remainderOccupied, currBatch)
 			}
-			time.Sleep(b.batchTimeout / 100)
+			time.Sleep(time.Millisecond)
 		}
 	}
 }

@@ -12,6 +12,8 @@ import (
 	"path"
 	"time"
 
+	"fmt"
+
 	"github.com/hyperledger/fabric/cmd/common/signer"
 	"github.com/hyperledger/fabric/core/comm"
 	"github.com/hyperledger/fabric/integration/nwo"
@@ -55,40 +57,48 @@ func Broadcast(n *nwo.Network, o *nwo.Orderer, env *common.Envelope) (*orderer.B
 }
 
 // Deliver sends given env to Deliver API of specified orderer.
-func Deliver(n *nwo.Network, o *nwo.Orderer, env *common.Envelope) (*common.Block, error) {
+func Deliver(n *nwo.Network, o *nwo.Orderer, env *common.Envelope, targetBlock uint64) error {
 	gRPCclient, err := CreateGRPCClient(n, o)
 	if err != nil {
-		return nil, err
+		return err
 	}
 
 	addr := n.OrdererAddress(o, nwo.ListenPort)
 	conn, err := gRPCclient.NewConnection(addr, "")
 	if err != nil {
-		return nil, err
+		return err
 	}
 	defer conn.Close()
 
 	deliverer, err := orderer.NewAtomicBroadcastClient(conn).Deliver(context.Background())
 	if err != nil {
-		return nil, err
+		return err
 	}
 
 	err = deliverer.Send(env)
 	if err != nil {
-		return nil, err
+		return err
 	}
 
-	resp, err := deliverer.Recv()
-	if err != nil {
-		return nil, err
-	}
+	t1 := time.Now()
 
-	blk := resp.GetBlock()
-	if blk == nil {
-		return nil, errors.Errorf("block not found")
-	}
+	for {
+		resp, err := deliverer.Recv()
+		if err != nil {
+			return err
+		}
 
-	return blk, nil
+		blk := resp.GetBlock()
+		if blk == nil {
+			return errors.Errorf("block not found")
+		}
+
+		fmt.Println(time.Since(t1), ">>>> GOT BLOCK", blk.Header.Number, "of", len(blk.Data.Data), "transactions")
+
+		if blk.Header.Number == targetBlock {
+			return nil
+		}
+	}
 }
 
 func FetchBlock(n *nwo.Network, o *nwo.Orderer, seq uint64, channel string) *common.Block {
@@ -98,7 +108,7 @@ func FetchBlock(n *nwo.Network, o *nwo.Orderer, seq uint64, channel string) *com
 	var blk *common.Block
 	var err error
 	Eventually(func() error {
-		blk, err = Deliver(n, o, denv)
+		err = Deliver(n, o, denv, seq)
 		return err
 	}, n.EventuallyTimeout).ShouldNot(HaveOccurred())
 
@@ -156,7 +166,11 @@ func CreateDeliverEnvelope(n *nwo.Network, entity interface{}, blkNum uint64, ch
 		channel,
 		nil,
 		&orderer.SeekInfo{
-			Start:    specified,
+			Start: &orderer.SeekPosition{
+				Type: &orderer.SeekPosition_Specified{
+					Specified: &orderer.SeekSpecified{Number: 1},
+				},
+			},
 			Stop:     specified,
 			Behavior: orderer.SeekInfo_BLOCK_UNTIL_READY,
 		},

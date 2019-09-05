@@ -20,10 +20,15 @@ import (
 	"syscall"
 	"time"
 
+	"context"
+
 	docker "github.com/fsouza/go-dockerclient"
 	"github.com/hyperledger/fabric/integration/nwo"
 	"github.com/hyperledger/fabric/integration/nwo/commands"
+	"github.com/hyperledger/fabric/integration/raft"
+	"github.com/hyperledger/fabric/protos/common"
 	"github.com/hyperledger/fabric/protos/msp"
+	"github.com/hyperledger/fabric/protos/orderer"
 	"github.com/hyperledger/fabric/protos/orderer/smartbft"
 	"github.com/hyperledger/fabric/protoutil"
 	. "github.com/onsi/ginkgo"
@@ -580,6 +585,33 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			By("Submitting transaction to the new leader")
 			invokeQuery(network, peer, network.Orderers[1], channel, 80)
 		})
+
+		It("smartbft performance", func() {
+			network = nwo.New(nwo.MultiNodeSmartBFT(), testDir, client, StartPort(), components)
+			network.GenerateConfigTree()
+			network.Bootstrap()
+
+			var ordererRunners []*ginkgomon.Runner
+			for _, orderer := range network.Orderers {
+				runner := network.OrdererRunner(orderer)
+				runner.Command.Env = append(runner.Command.Env, "FABRIC_LOGGING_SPEC=INFO")
+				ordererRunners = append(ordererRunners, runner)
+				proc := ifrit.Invoke(runner)
+				ordererProcesses = append(ordererProcesses, proc)
+				Eventually(proc.Ready(), network.EventuallyTimeout).Should(BeClosed())
+			}
+
+			peer := network.Peer("Org1", "peer0")
+
+			assertBlockReception(map[string]int{"systemchannel": 0}, network.Orderers, peer, network)
+
+			By("Sleeping 15 seconds just in case")
+			time.Sleep(time.Second * 15)
+
+			benchmark(network, network.Orderers[0])
+
+			Fail("bla")
+		})
 	})
 })
 
@@ -658,4 +690,67 @@ func waitForBlockReception(o *nwo.Orderer, submitter *nwo.Peer, network *nwo.Net
 		}
 		return sessErr
 	}, network.EventuallyTimeout, time.Second).Should(BeEmpty())
+}
+
+func benchmark(n *nwo.Network, o *nwo.Orderer) {
+	m := 101 * 100 // 101 batch size * 100 blocks
+	var batches [][]*common.Envelope
+	batchCount := 4
+
+	fmt.Println("Creating batches....")
+	for batchNumber := 0; batchNumber < batchCount; batchNumber++ {
+		fmt.Println("Batch", batchNumber)
+		var transactions []*common.Envelope
+		for i := 0; i < m; i++ {
+			txn := raft.CreateBroadcastEnvelope(n, o, n.SystemChannel.Name, make([]byte, 1024*3))
+			transactions = append(transactions, txn)
+		}
+		batches = append(batches, transactions)
+	}
+
+	//deliverEnvelope := raft.CreateDeliverEnvelope(n, o, 200, "systemchannel")
+
+	fmt.Println("Starting send")
+	time.Sleep(time.Second * 5)
+
+	var wg sync.WaitGroup
+	wg.Add(len(batches))
+	for _, batch := range batches {
+		go func(transactions []*common.Envelope) {
+			defer wg.Done()
+			defer GinkgoRecover()
+
+			gRPCclient, err := raft.CreateGRPCClient(n, o)
+			if err != nil {
+				panic(err)
+			}
+
+			addr := n.OrdererAddress(o, nwo.ListenPort)
+			conn, err := gRPCclient.NewConnection(addr, "")
+			if err != nil {
+				panic(err)
+			}
+
+			broadcaster, err := orderer.NewAtomicBroadcastClient(conn).Broadcast(context.Background())
+			if err != nil {
+				panic(err)
+			}
+
+			for _, txn := range transactions {
+				time.Sleep(time.Millisecond)
+				err = broadcaster.Send(txn)
+				if err != nil {
+					panic(err)
+				}
+
+				_, err := broadcaster.Recv()
+				if err != nil {
+					panic(err)
+				}
+			}
+		}(batch)
+	}
+
+	wg.Wait()
+	time.Sleep(time.Second * 5)
 }

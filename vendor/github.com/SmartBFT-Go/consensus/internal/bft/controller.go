@@ -8,6 +8,7 @@ package bft
 import (
 	"sync"
 	"sync/atomic"
+	"time"
 
 	"github.com/SmartBFT-Go/consensus/pkg/api"
 	"github.com/SmartBFT-Go/consensus/pkg/types"
@@ -344,7 +345,9 @@ func (c *Controller) getNextBatch() [][]byte {
 }
 
 func (c *Controller) propose() {
+	t1 := time.Now()
 	nextBatch := c.getNextBatch()
+	c.Logger.Infof("getNextBatch took %v", time.Since(t1))
 	if len(nextBatch) == 0 {
 		// If our next batch is empty,
 		// it can only be because
@@ -356,7 +359,7 @@ func (c *Controller) propose() {
 	if len(remainder) != 0 {
 		c.Batcher.BatchRemainder(remainder)
 	}
-	c.Logger.Debugf("Leader proposing proposal: %v", proposal)
+	c.Logger.Debugf("Leader proposing proposal of %d bytes", len(proposal.Payload))
 	c.currView.Propose(proposal)
 }
 
@@ -562,7 +565,7 @@ func (c *Controller) Decide(proposal types.Proposal, signatures []types.Signatur
 func (c *Controller) removeDeliveredFromPool(d decision) {
 	for _, reqInfo := range d.requests {
 		if err := c.RequestPool.RemoveRequest(reqInfo); err != nil {
-			c.Logger.Warnf("Error during remove of request %s from the pool : %s", reqInfo, err)
+			c.Logger.Debugf("Error during remove of request %s from the pool : %s", reqInfo, err)
 		}
 	}
 }
