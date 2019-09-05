@@ -183,6 +183,9 @@ func bftSmartConsensusBuild(
 			Ledger: c.support,
 			GetLastCommittedHash: func() []byte {
 				lastHash := c.verifier.lastCommittedHash()
+				if len(lastHash) == 0 {
+					return nil
+				}
 				h, _ := hex.DecodeString(lastHash)
 				return h
 			},

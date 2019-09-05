@@ -695,7 +695,7 @@ func waitForBlockReception(o *nwo.Orderer, submitter *nwo.Peer, network *nwo.Net
 func benchmark(n *nwo.Network, o *nwo.Orderer) {
 	m := 101 * 100 // 101 batch size * 100 blocks
 	var batches [][]*common.Envelope
-	batchCount := 4
+	batchCount := 16
 
 	fmt.Println("Creating batches....")
 	for batchNumber := 0; batchNumber < batchCount; batchNumber++ {

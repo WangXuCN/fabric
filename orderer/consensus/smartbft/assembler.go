@@ -15,6 +15,8 @@ import (
 	"github.com/hyperledger/fabric/protos/common"
 	"github.com/hyperledger/fabric/protoutil"
 	"github.com/pkg/errors"
+	"github.com/SmartBFT-Go/consensus/smartbftprotos"
+	"github.com/golang/protobuf/proto"
 )
 
 //go:generate mockery -dir . -name Ledger -case underscore -output mocks
@@ -41,9 +43,17 @@ func (a *Assembler) AssembleProposal(metadata []byte, requests [][]byte) (nextPr
 	batchedRequests := singleConfigTxOrSeveralNonConfigTx(requests, a.Logger)
 
 	lastConfigBlock := lastConfigBlockFromLedgerOrPanic(a.Ledger, a.Logger)
-	lastBlock := lastBlockFromLedgerOrPanic(a.Ledger, a.Logger)
 
-	block := common.NewBlock(lastBlock.Header.Number+1, a.GetLastCommittedHash())
+	lastHash := a.GetLastCommittedHash()
+	if len(lastHash) == 0 {
+		lastBlock := lastBlockFromLedgerOrPanic(a.Ledger, a.Logger)
+		lastHash = protoutil.BlockHeaderHash(lastBlock.Header)
+	}
+
+	viewMetadata := &smartbftprotos.ViewMetadata{}
+	proto.Unmarshal(metadata, viewMetadata)
+
+	block := protoutil.NewBlock(viewMetadata.LatestSequence, lastHash)
 	block.Data = &common.BlockData{Data: batchedRequests}
 	block.Header.DataHash = protoutil.BlockDataHash(block.Data)
 	block.Metadata.Metadata[common.BlockMetadataIndex_LAST_CONFIG] = protoutil.MarshalOrPanic(&common.Metadata{
