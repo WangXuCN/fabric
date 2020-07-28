@@ -240,7 +240,7 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			proc := ifrit.Invoke(runner)
 			ordererProcesses[3] = proc
 			Eventually(proc.Ready(), network.EventuallyTimeout).Should(BeClosed())
-			Eventually(runner.Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Starting view with number 0 and sequence 2"))
+			Eventually(runner.Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Starting view with number 0, sequence 2"))
 
 			By("Waiting communication to be established from the leader")
 			Eventually(runner.Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 1"))
@@ -334,7 +334,7 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			proc := ifrit.Invoke(runner)
 			ordererProcesses[3] = proc
 			Eventually(proc.Ready(), network.EventuallyTimeout).Should(BeClosed())
-			Eventually(runner.Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Starting view with number 0 and sequence 2"))
+			Eventually(runner.Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Starting view with number 0, sequence 2"))
 
 			By("Waiting communication to be established from the leader")
 			Eventually(runner.Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 1 channel=testchannel1"))

@@ -75,8 +75,8 @@
   version = "v1.20.1"
 
 [[projects]]
-  branch = "dynamic_config"
-  digest = "1:fffb73954452ab3c165b62ee7e7b80b8b174a7e73ea10acb5c0a1dc09a99bf4b"
+  branch = "leader_rotation"
+  digest = "1:c51b99e1879ab6ec0f7689172d25c1ffa192168d5ecd93a815146ec5d2556856"
   name = "github.com/SmartBFT-Go/consensus"
   packages = [
     "internal/bft",
@@ -87,7 +87,7 @@
     "smartbftprotos",
   ]
   pruneopts = "NUT"
-  revision = "5623f7133ae2c9a2d6806378a3c6c6aa4f74b91f"
+  revision = "af20c247eb2e0cfb3a7da2708c9707cc0572c149"
 
 [[projects]]
   branch = "master"
