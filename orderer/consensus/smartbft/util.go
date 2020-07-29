@@ -106,8 +106,8 @@ func configFromMetadataOptions(selfID uint64, options *smartbft.Options) (types.
 
 	config := types.DefaultConfig
 	config.SelfID = selfID
-	config.DecisionsPerLeader = 100
-	config.LeaderRotation = false
+	config.DecisionsPerLeader = 1
+	config.LeaderRotation = true
 
 	if options == nil {
 		return config, errors.New("config metadata options field is nil")
