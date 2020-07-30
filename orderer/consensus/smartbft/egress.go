@@ -23,14 +23,15 @@ type RPC interface {
 	SendSubmit(dest uint64, request *orderer.SubmitRequest) error
 }
 
-type PanicLogger interface {
+type Logger interface {
+	Warnf(template string, args ...interface{})
 	Panicf(template string, args ...interface{})
 }
 
 type Egress struct {
 	Channel       string
 	RPC           RPC
-	Logger        PanicLogger
+	Logger        Logger
 	RuntimeConfig *atomic.Value
 }
 
@@ -44,7 +45,10 @@ func (e *Egress) Nodes() []uint64 {
 }
 
 func (e *Egress) SendConsensus(targetID uint64, m *protos.Message) {
-	e.RPC.SendConsensus(targetID, bftMsgToClusterMsg(m, e.Channel))
+	err := e.RPC.SendConsensus(targetID, bftMsgToClusterMsg(m, e.Channel))
+	if err != nil {
+		e.Logger.Warnf("Failed sending to %d: %v", targetID, err)
+	}
 }
 
 func (e *Egress) SendTransaction(targetID uint64, request []byte) {

@@ -82,7 +82,7 @@ func (a *Assembler) AssembleProposal(metadata []byte, requests [][]byte) (nextPr
 	return prop
 }
 
-func singleConfigTxOrSeveralNonConfigTx(requests [][]byte, logger PanicLogger) [][]byte {
+func singleConfigTxOrSeveralNonConfigTx(requests [][]byte, logger Logger) [][]byte {
 	// Scan until a config transaction is found
 	var batchedRequests [][]byte
 	var i int
@@ -114,7 +114,7 @@ func singleConfigTxOrSeveralNonConfigTx(requests [][]byte, logger PanicLogger) [
 	return batchedRequests
 }
 
-func LastConfigBlockFromLedgerOrPanic(ledger Ledger, logger PanicLogger) *common.Block {
+func LastConfigBlockFromLedgerOrPanic(ledger Ledger, logger Logger) *common.Block {
 	block, err := lastConfigBlockFromLedger(ledger)
 	if err != nil {
 		logger.Panicf("Failed retrieving last config block: %v", err)
@@ -135,7 +135,7 @@ func lastConfigBlockFromLedger(ledger Ledger) (*common.Block, error) {
 	return lastConfigBlock, nil
 }
 
-func PreviousConfigBlockFromLedgerOrPanic(ledger Ledger, logger PanicLogger) *common.Block {
+func PreviousConfigBlockFromLedgerOrPanic(ledger Ledger, logger Logger) *common.Block {
 	block, err := previousConfigBlockFromLedger(ledger)
 	if err != nil {
 		logger.Panicf("Failed retrieving previous config block: %v", err)
@@ -159,7 +159,7 @@ func previousConfigBlockFromLedger(ledger Ledger) (*common.Block, error) {
 	return previousConfigBlock, nil
 }
 
-func LastBlockFromLedgerOrPanic(ledger Ledger, logger PanicLogger) *common.Block {
+func LastBlockFromLedgerOrPanic(ledger Ledger, logger Logger) *common.Block {
 	lastBlockSeq := ledger.Height() - 1
 	lastBlock := ledger.Block(lastBlockSeq)
 	if lastBlock == nil {
