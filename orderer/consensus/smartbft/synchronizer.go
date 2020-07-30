@@ -102,6 +102,8 @@ func (s *Synchronizer) synchronize() (*types.Decision, error) {
 	targetSeq := targetHeight - 1
 	seq := startHeight
 
+	var blocksFetched int
+
 	s.Logger.Debugf("Will fetch sequences [%d-%d]", seq, targetSeq)
 
 	var lastPulledBlock *common.Block
@@ -123,6 +125,7 @@ func (s *Synchronizer) synchronize() (*types.Decision, error) {
 		s.lastReconfig = s.OnCommit(lastPulledBlock)
 		s.lastReconfig.InLatestDecision = s.lastReconfig.InLatestDecision || prevInLatestDecision
 		seq++
+		blocksFetched++
 	}
 
 	if lastPulledBlock == nil {
@@ -131,7 +134,7 @@ func (s *Synchronizer) synchronize() (*types.Decision, error) {
 
 	startSeq := startHeight
 	s.Logger.Infof("Finished synchronizing with cluster, fetched %d blocks, starting from block [%d], up until and including block [%d]",
-		seq-startSeq+1, startSeq, lastPulledBlock.Header.Number)
+		blocksFetched, startSeq, lastPulledBlock.Header.Number)
 
 	viewMetadata, lastConfigSqn := s.getViewMetadataLastConfigSqnFromBlock(lastPulledBlock)
 

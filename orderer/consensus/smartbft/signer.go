@@ -23,7 +23,7 @@ type SignerSerializer interface {
 type Signer struct {
 	ID                 uint64
 	SignerSerializer   SignerSerializer
-	Logger             PanicLogger
+	Logger             Logger
 	LastConfigBlockNum func(*common.Block) uint64
 }
 

@@ -350,7 +350,6 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			invokeQuery(network, peer, orderer, channel, 90)
 			By("Invoking twice")
 			invokeQuery(network, peer, orderer, channel, 80)
-			time.Sleep(time.Second * 30)
 			By("Waiting for a view change to occur")
 			Eventually(ordererRunners[1].Err(), network.EventuallyTimeout*2, time.Second).Should(gbytes.Say("Changing to leader role, current view: 1, current leader: 2 channel=testchannel1"))
 			Eventually(ordererRunners[2].Err(), network.EventuallyTimeout*2, time.Second).Should(gbytes.Say("Changing to follower role, current view: 1, current leader: 2 channel=testchannel1"))
@@ -383,15 +382,17 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			assertBlockReception(map[string]int{"testchannel1": 7}, network.Orderers, peer, network)
 		})
 
-		PIt("smartbft node addition and removal", func() {
+		It("smartbft node addition and removal", func() {
 			network = nwo.New(nwo.MultiNodeSmartBFT(), testDir, client, StartPort(), components)
 			network.GenerateConfigTree()
 			network.Bootstrap()
 
+			network.EventuallyTimeout *= 2
+
 			var ordererRunners []*ginkgomon.Runner
 			for _, orderer := range network.Orderers {
 				runner := network.OrdererRunner(orderer)
-				runner.Command.Env = append(runner.Command.Env, "FABRIC_LOGGING_SPEC=orderer.consensus.smartbft=debug:policies.ImplicitOrderer=debug")
+				runner.Command.Env = append(runner.Command.Env, "FABRIC_LOGGING_SPEC=orderer.common.cluster=debug:orderer.consensus.smartbft=debug:policies.ImplicitOrderer=debug")
 				ordererRunners = append(ordererRunners, runner)
 				proc := ifrit.Invoke(runner)
 				ordererProcesses = append(ordererProcesses, proc)
@@ -500,7 +501,7 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 
 				By(fmt.Sprintf("Launching %s", orderer.Name))
 				runner := network.OrdererRunner(orderer)
-				runner.Command.Env = append(runner.Command.Env, "FABRIC_LOGGING_SPEC=orderer.consensus.smartbft=debug:policies.ImplicitOrderer=debug")
+				runner.Command.Env = append(runner.Command.Env, "FABRIC_LOGGING_SPEC=grpc=debug:orderer.consensus.smartbft=debug:policies.ImplicitOrderer=debug")
 				ordererRunners[i] = runner
 				proc := ifrit.Invoke(runner)
 				ordererProcesses[i] = proc
@@ -518,15 +519,15 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			Expect(err).NotTo(HaveOccurred())
 
 			By("Launching the added orderer")
-			runner := network.OrdererRunner(orderer5)
-			runner.Command.Env = append(runner.Command.Env, "FABRIC_LOGGING_SPEC=orderer.consensus.smartbft=debug:policies.ImplicitOrderer=debug")
-			ordererRunners = append(ordererRunners, runner)
-			proc := ifrit.Invoke(runner)
+			orderer5Runner := network.OrdererRunner(orderer5)
+			orderer5Runner.Command.Env = append(orderer5Runner.Command.Env, "FABRIC_LOGGING_SPEC=grpc=debug:orderer.consensus.smartbft=debug:policies.ImplicitOrderer=debug")
+			ordererRunners = append(ordererRunners, orderer5Runner)
+			proc := ifrit.Invoke(orderer5Runner)
 			ordererProcesses = append(ordererProcesses, proc)
 			Eventually(proc.Ready(), network.EventuallyTimeout).Should(BeClosed())
 
 			By("Waiting for the added orderer to see the leader")
-			Eventually(runner.Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 3 channel=systemchannel"))
+			Eventually(orderer5Runner.Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 3 channel=systemchannel"))
 
 			By("Ensure all nodes are in sync")
 			assertBlockReception(map[string]int{
@@ -548,17 +549,17 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			Eventually(ordererRunners[4].Err(), network.EventuallyTimeout*2, time.Second).Should(gbytes.Say("Changing to follower role, current view: 1, current leader: 2 channel=systemchannel"))
 
 			By("Bringing the previous leader back up")
-			runner = network.OrdererRunner(network.Orderers[2])
+			runner := network.OrdererRunner(network.Orderers[2])
 			ordererRunners[2] = runner
 			proc = ifrit.Invoke(runner)
 			ordererProcesses[2] = proc
 			Eventually(proc.Ready(), network.EventuallyTimeout).Should(BeClosed())
 
 			By("Making sure previous leader abdicates")
-			Eventually(runner.Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Changing to follower role, current view: 1, current leader: 2 channel=systemchannel"))
+			Eventually(ordererRunners[2].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Changing to follower role, current view: 1, current leader: 2 channel=systemchannel"))
 
 			By("Making sure previous leader sees the new leader")
-			Eventually(runner.Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 2 channel=systemchannel"))
+			Eventually(ordererRunners[2].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 2 channel=systemchannel"))
 
 			By("Ensure all nodes are in sync")
 			assertBlockReception(map[string]int{
@@ -566,29 +567,37 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 				"testchannel1":  4,
 			}, network.Orderers, peer, network)
 
-			orderer = network.Orderers[1]
-
-			By("Transacting on testchannel1, again")
-			invokeQuery(network, peer, orderer, channel, 70)
-			invokeQuery(network, peer, orderer, channel, 60)
-			invokeQuery(network, peer, orderer, channel, 50)
-
-			By("Ensuring added node participates in consensus")
-			Eventually(runner.Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Deciding on seq 7"))
-
-			By("Ensure all nodes are in sync, again")
+			By("Transacting on testchannel1 a few times")
+			invokeQuery(network, peer, network.Orderers[4], channel, 70)
+			invokeQuery(network, peer, network.Orderers[4], channel, 60)
+			By("Making sure the previous leader synchronizes")
+			Eventually(ordererRunners[2].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Synchronized to view 0 and sequence 6 with verification sequence 2 channel=testchannel1"))
+			Eventually(ordererRunners[2].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Starting view with number 0, sequence 7, and decisions 6 channel=testchannel1"))
+			By("Invoking again")
+			invokeQuery(network, peer, network.Orderers[4], channel, 50)
+			By("Ensure all nodes are in sync")
 			assertBlockReception(map[string]int{"testchannel1": 7}, network.Orderers, peer, network)
 
+			time.Sleep(time.Second * 5)
+			invokeQuery(network, peer, network.Orderers[4], channel, 40)
+
+			By("Ensuring added node participates in consensus")
+			Eventually(ordererRunners[2].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Deciding on seq 8"))
+
+			By("Ensure all nodes are in sync, again")
+			assertBlockReception(map[string]int{"testchannel1": 8}, network.Orderers, peer, network)
+
 			By("Removing the added node from the channels")
-			for _, channel := range []string{"systemchannel", "testchannel1"} {
-				nwo.UpdateSmartBFTMetadata(network, peer, orderer, channel, func(md *smartbft.ConfigMetadata) {
-					md.Consenters = md.Consenters[:4]
-				})
-			}
+			nwo.UpdateSmartBFTMetadata(network, peer, network.Orderers[2], "testchannel1", func(md *smartbft.ConfigMetadata) {
+				md.Consenters = md.Consenters[:4]
+			})
+			nwo.UpdateSmartBFTMetadata(network, peer, network.Orderers[1], "systemchannel", func(md *smartbft.ConfigMetadata) {
+				md.Consenters = md.Consenters[:4]
+			})
 
 			assertBlockReception(map[string]int{
 				"systemchannel": 3,
-				"testchannel1":  8,
+				"testchannel1":  9,
 			}, network.Orderers, peer, network)
 
 			By("Restarting the removed node")
@@ -602,24 +611,23 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			Eventually(ordererRunners[1].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 3 channel=systemchannel"))
 			Eventually(ordererRunners[3].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 3 channel=systemchannel"))
 
-			By("Ensuring the leader talks to existing followers")
-			Eventually(ordererRunners[0].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 3 channel=systemchannel"))
-			Eventually(ordererRunners[1].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 3 channel=systemchannel"))
-			Eventually(ordererRunners[3].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 3 channel=systemchannel"))
-
 			By("Make sure the peers get the config blocks, again")
-			waitForBlockReceptionByPeer(peer, network, "testchannel1", 8)
+			waitForBlockReceptionByPeer(peer, network, "testchannel1", 9)
 
 			By("Transact again")
-			invokeQuery(network, peer, orderer, channel, 40)
+			invokeQuery(network, peer, network.Orderers[2], channel, 30)
 
 			By("Ensuring the existing nodes got the block")
 			assertBlockReception(map[string]int{
-				"testchannel1": 9,
+				"testchannel1": 10,
 			}, network.Orderers[:4], peer, network)
 
+			// Drain the buffer
+			n := len(orderer5Runner.Err().Contents())
+			orderer5Runner.Err().Read(make([]byte, n))
+
 			By("Adding back the node to the application channel")
-			nwo.UpdateSmartBFTMetadata(network, peer, orderer, channel, func(md *smartbft.ConfigMetadata) {
+			nwo.UpdateSmartBFTMetadata(network, peer, network.Orderers[2], channel, func(md *smartbft.ConfigMetadata) {
 				md.Consenters = append(md.Consenters, &smartbft.Consenter{
 					MspId:       "OrdererMSP",
 					ConsenterId: 5,
@@ -636,14 +644,25 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 
 			By("Ensuring all nodes got the block that adds the consenter to the application channel")
 			assertBlockReception(map[string]int{
-				"testchannel1": 10,
+				"testchannel1": 11,
 			}, network.Orderers, peer, network)
 
 			By("Transact again")
-			invokeQuery(network, peer, orderer, channel, 30)
+			invokeQuery(network, peer, network.Orderers[2], channel, 20)
+
+			assertBlockReception(map[string]int{
+				"testchannel1": 12,
+			}, network.Orderers, peer, network)
+
+			By("Transact last time")
+			invokeQuery(network, peer, network.Orderers[2], channel, 10)
+
+			assertBlockReception(map[string]int{
+				"testchannel1": 13,
+			}, network.Orderers, peer, network)
 
 			By("Ensuring re-added node participates in consensus")
-			Eventually(runner.Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Deciding on seq 11"))
+			Eventually(ordererRunners[4].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Deciding on seq 13 channel=testchannel1"))
 		})
 
 		It("smartbft iterated addition and iterated removal", func() {
