@@ -174,7 +174,7 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			invokeQuery(network, peer, orderer, channel, 80)
 		})
 
-		PIt("smartbft assisted synchronization", func() {
+		It("smartbft assisted synchronization no rotation", func() {
 			network = nwo.New(nwo.MultiNodeSmartBFT(), testDir, client, StartPort(), components)
 			network.GenerateConfigTree()
 			network.Bootstrap()
@@ -212,6 +212,29 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 
 			assertBlockReception(map[string]int{"systemchannel": 1}, network.Orderers, peer, network)
 
+			// Disable leader rotation in application channel
+			nwo.UpdateSmartBFTMetadata(network, peer, orderer, channel, func(md *smartbft.ConfigMetadata) {
+				md.Options.LeaderRotation = smartbft.Options_OFF
+			})
+
+			assertBlockReception(map[string]int{"testchannel1": 1}, network.Orderers, peer, network)
+
+			By("Restarting all nodes")
+			for i := 0; i < 4; i++ {
+				orderer := network.Orderers[i]
+				By(fmt.Sprintf("Killing %s", orderer.Name))
+				ordererProcesses[i].Signal(syscall.SIGTERM)
+				Eventually(ordererProcesses[i].Wait(), network.EventuallyTimeout).Should(Receive())
+
+				By(fmt.Sprintf("Launching %s", orderer.Name))
+				runner := network.OrdererRunner(orderer)
+				runner.Command.Env = append(runner.Command.Env, "FABRIC_LOGGING_SPEC=orderer.consensus.smartbft=debug:policies.ImplicitOrderer=debug")
+				ordererRunners[i] = runner
+				proc := ifrit.Invoke(runner)
+				ordererProcesses[i] = proc
+				Eventually(proc.Ready(), network.EventuallyTimeout).Should(BeClosed())
+			}
+
 			nwo.DeployChaincode(network, channel, network.Orderers[0], nwo.Chaincode{
 				Name:    "mycc",
 				Version: "0.0",
@@ -220,7 +243,7 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 				Policy:  `AND ('Org1MSP.member','Org2MSP.member')`,
 			})
 
-			assertBlockReception(map[string]int{"testchannel1": 1}, network.Orderers, peer, network)
+			assertBlockReception(map[string]int{"testchannel1": 2}, network.Orderers, peer, network)
 
 			By("check block validation policy on app channel")
 			assertBlockValidationPolicy(network, peer, network.Orderers[0], channel, common.Policy_IMPLICIT_ORDERER)
@@ -256,16 +279,16 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			invokeQuery(network, peer, orderer, channel, 20)
 			time.Sleep(time.Second * 2)
 
-			assertBlockReception(map[string]int{"testchannel1": 9}, network.Orderers, peer, network)
-
-			invokeQuery(network, peer, orderer, channel, 10)
 			assertBlockReception(map[string]int{"testchannel1": 10}, network.Orderers, peer, network)
 
-			invokeQuery(network, peer, orderer, channel, 0)
+			invokeQuery(network, peer, orderer, channel, 10)
 			assertBlockReception(map[string]int{"testchannel1": 11}, network.Orderers, peer, network)
 
+			invokeQuery(network, peer, orderer, channel, 0)
+			assertBlockReception(map[string]int{"testchannel1": 12}, network.Orderers, peer, network)
+
 			By("Ensuring follower participates in consensus")
-			Eventually(runner.Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Deciding on seq 11"))
+			Eventually(runner.Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Deciding on seq 12"))
 		})
 
 		It("smartbft autonomous synchronization", func() {
