@@ -83,7 +83,7 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 	})
 
 	Describe("smartbft network", func() {
-		PIt("smartbft multiple nodes stop start all nodes", func() {
+		It("smartbft multiple nodes stop start all nodes", func() {
 			network = nwo.New(nwo.MultiNodeSmartBFT(), testDir, client, StartPort(), components)
 			network.GenerateConfigTree()
 			network.Bootstrap()
@@ -114,11 +114,10 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 
 			channel := "testchannel1"
 			By("Creating and joining  testchannel1")
-			orderer := network.Orderers[0]
-			network.CreateAndJoinChannel(orderer, channel)
+			network.CreateAndJoinChannel(network.Orderers[0], channel)
 
 			By("Deploying chaincode")
-			nwo.DeployChaincode(network, channel, orderer, nwo.Chaincode{
+			nwo.DeployChaincode(network, channel, network.Orderers[0], nwo.Chaincode{
 				Name:    "mycc",
 				Version: "0.0",
 				Path:    "github.com/hyperledger/fabric/integration/chaincode/simple/cmd",
@@ -145,7 +144,7 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			Expect(sess).To(gbytes.Say("100"))
 
 			By("invoking the chaincode")
-			invokeQuery(network, peer, orderer, channel, 90)
+			invokeQuery(network, peer, network.Orderers[1], channel, 90)
 
 			By("Taking down all the orderers")
 			for _, proc := range ordererProcesses {
@@ -166,12 +165,12 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			}
 
 			By("Waiting for followers to see the leader, again")
-			Eventually(ordererRunners[1].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 1"))
-			Eventually(ordererRunners[2].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 1"))
-			Eventually(ordererRunners[3].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 1"))
+			Eventually(ordererRunners[0].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 3 channel=testchannel1"))
+			Eventually(ordererRunners[1].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 3 channel=testchannel1"))
+			Eventually(ordererRunners[3].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("Message from 3 channel=testchannel1"))
 
 			By("invoking the chaincode, again")
-			invokeQuery(network, peer, orderer, channel, 80)
+			invokeQuery(network, peer, network.Orderers[2], channel, 80)
 		})
 
 		It("smartbft assisted synchronization no rotation", func() {
