@@ -824,7 +824,7 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			}
 		})
 
-		PIt("smartbft multiple nodes view change", func() {
+		It("smartbft multiple nodes view change", func() {
 			network = nwo.New(nwo.MultiNodeSmartBFT(), testDir, client, StartPort(), components)
 			network.GenerateConfigTree()
 			network.Bootstrap()
@@ -851,12 +851,11 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 
 			channel := "testchannel1"
 
-			orderer := network.Orderers[0]
-			network.CreateAndJoinChannel(orderer, channel)
+			network.CreateAndJoinChannel(network.Orderers[0], channel)
 
 			assertBlockReception(map[string]int{"systemchannel": 1}, network.Orderers, peer, network)
 
-			nwo.DeployChaincode(network, channel, orderer, nwo.Chaincode{
+			nwo.DeployChaincode(network, channel, network.Orderers[0], nwo.Chaincode{
 				Name:    "mycc",
 				Version: "0.0",
 				Path:    "github.com/hyperledger/fabric/integration/chaincode/simple/cmd",
@@ -872,34 +871,38 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			assertBlockValidationPolicy(network, peer, network.Orderers[0], channel, common.Policy_IMPLICIT_ORDERER)
 
 			By("Taking down the leader node")
-			ordererProcesses[0].Signal(syscall.SIGTERM)
-			Eventually(ordererProcesses[0].Wait(), network.EventuallyTimeout).Should(Receive())
+			ordererProcesses[1].Signal(syscall.SIGTERM)
+			Eventually(ordererProcesses[1].Wait(), network.EventuallyTimeout).Should(Receive())
 
-			By("Submitting a request all followers to force a view change")
-			for i, orderer := range []*nwo.Orderer{network.Orderers[1], network.Orderers[2], network.Orderers[3]} {
-				invokeStr := fmt.Sprintf(`{"Args":["issue","x%d","100"]}`, i)
-				sess, err := network.PeerUserSession(peer, "User1", commands.ChaincodeInvoke{
-					ChannelID: channel,
-					Orderer:   network.OrdererAddress(orderer, nwo.ListenPort),
-					Name:      "mycc",
-					Ctor:      invokeStr,
-					PeerAddresses: []string{
-						network.PeerAddress(network.Peer("Org1", "peer0"), nwo.ListenPort),
-						network.PeerAddress(network.Peer("Org2", "peer1"), nwo.ListenPort),
-					},
-					WaitForEvent: false,
-				})
-				Expect(err).NotTo(HaveOccurred())
-				Eventually(sess, network.EventuallyTimeout).Should(gexec.Exit(0))
-			}
+			By("Submitting a request to all followers to force a view change")
 
-			By("Waiting for circulating transactions to be re-proposed")
-			for i := 0; i < 3; i++ {
-				queryExpect(network, peer, channel, fmt.Sprintf("x%d", i), 100)
-			}
+			endpoints := fmt.Sprintf("%s,%s,%s",
+				network.OrdererAddress(network.Orderers[0], nwo.ListenPort),
+				network.OrdererAddress(network.Orderers[2], nwo.ListenPort),
+				network.OrdererAddress(network.Orderers[3], nwo.ListenPort))
 
-			By("Submitting transaction to the new leader")
-			invokeQuery(network, peer, network.Orderers[1], channel, 90)
+			sess, err := network.PeerUserSession(peer, "User1", commands.ChaincodeInvoke{
+				ChannelID: channel,
+				Orderer:   endpoints,
+				Name:      "mycc",
+				Ctor:      `{"Args":["issue","x1","100"]}`,
+				PeerAddresses: []string{
+					network.PeerAddress(network.Peer("Org1", "peer0"), nwo.ListenPort),
+					network.PeerAddress(network.Peer("Org2", "peer1"), nwo.ListenPort),
+				},
+				WaitForEvent: false,
+			})
+			Expect(err).NotTo(HaveOccurred())
+			Eventually(sess, network.EventuallyTimeout).Should(gexec.Exit(0))
+
+			By("Waiting for view change to occur")
+			Eventually(ordererRunners[0].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("ViewChanged, the new view is 2"))
+			Eventually(ordererRunners[2].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("ViewChanged, the new view is 2"))
+			Eventually(ordererRunners[3].Err(), network.EventuallyTimeout, time.Second).Should(gbytes.Say("ViewChanged, the new view is 2"))
+
+			By("Waiting for circulating transaction to be re-proposed")
+			queryExpect(network, peer, channel, "x1", 100)
+
 		})
 	})
 })
