@@ -18,7 +18,6 @@ package common
 
 import (
 	cb "github.com/hyperledger/fabric/protos/common"
-	ab "github.com/hyperledger/fabric/protos/orderer"
 	"github.com/pkg/errors"
 )
 
@@ -29,7 +28,7 @@ type BroadcastClient interface {
 }
 
 type broadcastClient struct {
-	client ab.AtomicBroadcast_BroadcastClient
+	client BroadcastOrdererClient
 }
 
 // GetBroadcastClient creates a simple instance of the BroadcastClient interface
