@@ -85,7 +85,7 @@ serial_test_packages() {
 # "go test" the provided packages. Packages that are not present in the serial package list
 # will be tested in parallel
 run_tests() {
-    local flags=""
+    local flags="-gcflags=all=-d=checkptr=0"
     if [ -n "${VERBOSE}" ]; then
         flags="${flags} -v"
     fi

@@ -1,5 +1,8 @@
 #!/usr/bin/env bash -e
 
+echo "go version:"
+go version
+
 echo "Building docker images..."
 git checkout origin/release-1.4-BFT-2
 

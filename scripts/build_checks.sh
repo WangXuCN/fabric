@@ -32,8 +32,9 @@ if [[ $? -ne 0 ]];then
     exit 1
 fi
 
+make docker
+
 echo "Pulling hyperledger/fabric-ccenv:latest"
-docker pull hyperledger/fabric-ccenv:latest
 docker tag hyperledger/fabric-ccenv hyperledger/fabric-ccenv:amd64-latest
 
 echo "Pulling hyperledger/fabric-couchdb"

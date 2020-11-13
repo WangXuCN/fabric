@@ -1,4 +1,3 @@
-// +build go1.9,linux,cgo go1.10,darwin,cgo
 // +build !ppc64le
 
 /*
@@ -38,7 +37,7 @@ var raceEnabled bool
 func buildPlugin(t *testing.T, dest, pkg string) {
 	cmd := exec.Command("go", "build", "-o", dest, "-buildmode=plugin")
 	if raceEnabled {
-		cmd.Args = append(cmd.Args, "-race")
+		cmd.Args = append(cmd.Args, "-race", "-gcflags=all=-d=checkptr=0")
 	}
 	cmd.Args = append(cmd.Args, pkg)
 	output, err := cmd.CombinedOutput()
