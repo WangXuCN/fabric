@@ -27,7 +27,7 @@ func buildPlugin(lib string, t *testing.T) {
 		// build the example plugin
 		cmd := exec.Command("go", "build", "-buildmode=plugin")
 		if raceEnabled {
-			cmd.Args = append(cmd.Args, "-race")
+			cmd.Args = append(cmd.Args, "-race", "-gcflags=all=-d=checkptr=0")
 		}
 		cmd.Args = append(cmd.Args, "github.com/hyperledger/fabric/examples/plugins/bccsp")
 		err := cmd.Run()

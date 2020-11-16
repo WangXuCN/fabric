@@ -66,7 +66,7 @@ var raceEnabled bool
 func buildExamplePlugin(t *testing.T, path, pluginPackage string) {
 	cmd := exec.Command("go", "build", "-o", path, "-buildmode=plugin")
 	if raceEnabled {
-		cmd.Args = append(cmd.Args, "-race")
+		cmd.Args = append(cmd.Args, "-race", "-gcflags=all=-d=checkptr=0")
 	}
 	cmd.Args = append(cmd.Args, pluginPackage)
 	output, err := cmd.CombinedOutput()
