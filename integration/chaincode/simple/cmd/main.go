@@ -13,7 +13,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/hyperledger/fabric-chaincode-go/shim"
+	"github.com/SmartBFT-Go/fabric-chaincode-go/shim"
 	"github.com/hyperledger/fabric/integration/chaincode/simple"
 )
 

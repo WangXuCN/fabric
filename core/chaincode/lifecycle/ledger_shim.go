@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 package lifecycle
 
 import (
-	"github.com/hyperledger/fabric-chaincode-go/shim"
+	"github.com/SmartBFT-Go/fabric-chaincode-go/shim"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/queryresult"
 	commonledger "github.com/hyperledger/fabric/common/ledger"
 	validatorstate "github.com/hyperledger/fabric/core/handlers/validation/api/state"

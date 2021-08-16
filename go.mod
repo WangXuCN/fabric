@@ -18,6 +18,8 @@ require (
 	github.com/Shopify/sarama v1.20.1
 	github.com/Shopify/toxiproxy v2.1.4+incompatible // indirect
 	github.com/SmartBFT-Go/consensus v0.0.0-20200624082633-5623f7133ae2
+	github.com/SmartBFT-Go/fabric-chaincode-go v0.1.1
+	github.com/SmartBFT-Go/fabric-config v0.2.2
 	github.com/SmartBFT-Go/fabric-protos-go/v2 v2.3.0
 	github.com/VictoriaMetrics/fastcache v1.5.7
 	github.com/VividCortex/gohistogram v1.0.0 // indirect
@@ -42,8 +44,6 @@ require (
 	github.com/hashicorp/go-version v1.2.0
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/hyperledger/fabric-amcl v0.0.0-20200128223036-d1aa2665426a
-	github.com/hyperledger/fabric-chaincode-go v0.0.0-20200128192331-2d899240a7ed
-	github.com/hyperledger/fabric-config v0.0.7
 	github.com/hyperledger/fabric-lib-go v1.0.0
 	github.com/konsorten/go-windows-terminal-sequences v1.0.2 // indirect
 	github.com/kr/pretty v0.2.0

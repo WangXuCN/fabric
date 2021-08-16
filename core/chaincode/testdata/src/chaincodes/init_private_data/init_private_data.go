@@ -9,7 +9,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/hyperledger/fabric-chaincode-go/shim"
+	"github.com/SmartBFT-Go/fabric-chaincode-go/shim"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 )
 

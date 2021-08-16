@@ -11,10 +11,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-config/protolator"
+	"github.com/SmartBFT-Go/fabric-config/protolator"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/bccsp"
 	"github.com/hyperledger/fabric/common/channelconfig"
 	"github.com/hyperledger/fabric/common/flogging"

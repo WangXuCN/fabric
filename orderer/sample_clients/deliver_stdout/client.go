@@ -10,7 +10,7 @@ import (
 	"math"
 	"os"
 
-	"github.com/hyperledger/fabric-config/protolator"
+	"github.com/SmartBFT-Go/fabric-config/protolator"
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
 	"github.com/hyperledger/fabric/bccsp/factory"

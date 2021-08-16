@@ -13,11 +13,11 @@ import (
 
 	"github.com/hyperledger/fabric/core/ledger"
 
-	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-chaincode-go/shim"
+	"github.com/SmartBFT-Go/fabric-chaincode-go/shim"
 	mspprotos "github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 	lb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer/lifecycle"
+	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/common/chaincode"
 	"github.com/hyperledger/fabric/common/channelconfig"
 	"github.com/hyperledger/fabric/common/policydsl"

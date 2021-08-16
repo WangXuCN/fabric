@@ -15,10 +15,10 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/SmartBFT-Go/fabric-config/configtx"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	docker "github.com/fsouza/go-dockerclient"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-config/configtx"
-	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/hyperledger/fabric/integration/nwo"
 	"github.com/hyperledger/fabric/integration/nwo/commands"
 	"github.com/hyperledger/fabric/integration/ordererclient"

@@ -14,14 +14,14 @@ import (
 	"os"
 	"reflect"
 
-	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-config/protolator"
+	"github.com/SmartBFT-Go/fabric-config/protolator"
 	_ "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common" // Import these to register the proto types
 	_ "github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
 	_ "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
 	_ "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/etcdraft"
 	_ "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
+	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/common/flogging"
 	"github.com/hyperledger/fabric/internal/configtxlator/metadata"
 	"github.com/hyperledger/fabric/internal/configtxlator/rest"

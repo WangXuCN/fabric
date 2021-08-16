@@ -217,7 +217,7 @@ Specifically, access to the private data will be restricted as follows:
 All of the data that is created by the asset transfer private data sample smart
 contract is stored in private data. The smart contract uses the Fabric chaincode API
 to read and write private data to private data collections using the ``GetPrivateData()``
-and ``PutPrivateData()`` functions. You can find more information about those functions `here <https://godoc.org/github.com/hyperledger/fabric-chaincode-go/shim#ChaincodeStub>`_.
+and ``PutPrivateData()`` functions. You can find more information about those functions `here <https://godoc.org/github.com/SmartBFT-Go/fabric-chaincode-go/shim#ChaincodeStub>`_.
 
 The following diagram illustrates the private data model used by the private data
 sample. Note that Org3 is only shown in the diagram to illustrate that if

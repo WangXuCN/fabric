@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/hyperledger/fabric-chaincode-go/shim"
+	"github.com/SmartBFT-Go/fabric-chaincode-go/shim"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	mspprotos "github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
