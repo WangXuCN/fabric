@@ -22,14 +22,14 @@ github.com/Shopify/sarama
 github.com/Shopify/sarama/mocks
 # github.com/Shopify/toxiproxy v2.1.4+incompatible
 ## explicit
-# github.com/SmartBFT-Go/consensus v0.0.0-20200624082633-5623f7133ae2 => gitlab.n-t.io/ntbc/consensus v0.0.0-20210215144729-4e12a0376705
+# github.com/SmartBFT-Go/consensus/v2 v2.3.0
 ## explicit
-github.com/SmartBFT-Go/consensus/internal/bft
-github.com/SmartBFT-Go/consensus/pkg/api
-github.com/SmartBFT-Go/consensus/pkg/consensus
-github.com/SmartBFT-Go/consensus/pkg/types
-github.com/SmartBFT-Go/consensus/pkg/wal
-github.com/SmartBFT-Go/consensus/smartbftprotos
+github.com/SmartBFT-Go/consensus/v2/internal/bft
+github.com/SmartBFT-Go/consensus/v2/pkg/api
+github.com/SmartBFT-Go/consensus/v2/pkg/consensus
+github.com/SmartBFT-Go/consensus/v2/pkg/types
+github.com/SmartBFT-Go/consensus/v2/pkg/wal
+github.com/SmartBFT-Go/consensus/v2/smartbftprotos
 # github.com/SmartBFT-Go/fabric-chaincode-go v0.1.1
 ## explicit
 github.com/SmartBFT-Go/fabric-chaincode-go/pkg/statebased
@@ -156,7 +156,7 @@ github.com/go-logfmt/logfmt
 github.com/gogo/protobuf/gogoproto
 github.com/gogo/protobuf/proto
 github.com/gogo/protobuf/protoc-gen-gogo/descriptor
-# github.com/golang/protobuf v1.3.5
+# github.com/golang/protobuf v1.5.0
 ## explicit
 github.com/golang/protobuf/jsonpb
 github.com/golang/protobuf/proto
@@ -164,7 +164,6 @@ github.com/golang/protobuf/ptypes
 github.com/golang/protobuf/ptypes/any
 github.com/golang/protobuf/ptypes/duration
 github.com/golang/protobuf/ptypes/empty
-github.com/golang/protobuf/ptypes/struct
 github.com/golang/protobuf/ptypes/timestamp
 # github.com/golang/snappy v0.0.2
 ## explicit
@@ -203,8 +202,6 @@ github.com/hpcloud/tail/winfile
 ## explicit
 github.com/hyperledger/fabric-amcl/amcl
 github.com/hyperledger/fabric-amcl/amcl/FP256BN
-# github.com/hyperledger/fabric-config v0.1.0
-## explicit
 # github.com/hyperledger/fabric-lib-go v1.0.0
 ## explicit
 github.com/hyperledger/fabric-lib-go/healthz
@@ -335,7 +332,7 @@ github.com/spf13/pflag
 github.com/spf13/viper
 # github.com/stretchr/objx v0.1.1
 github.com/stretchr/objx
-# github.com/stretchr/testify v1.6.1
+# github.com/stretchr/testify v1.7.0
 ## explicit
 github.com/stretchr/testify/assert
 github.com/stretchr/testify/mock
@@ -365,8 +362,6 @@ github.com/tedsuo/ifrit/grouper
 # github.com/willf/bitset v1.1.10
 ## explicit
 github.com/willf/bitset
-# gitlab.n-t.io/ntbc/consensus v0.0.0-20200305092142-48c132f58ce8
-## explicit
 # go.etcd.io/etcd v0.5.0-alpha.5.0.20181228115726-23731bf9ba55
 ## explicit
 go.etcd.io/etcd/etcdserver/api/snap
@@ -498,6 +493,40 @@ google.golang.org/grpc/serviceconfig
 google.golang.org/grpc/stats
 google.golang.org/grpc/status
 google.golang.org/grpc/tap
+# google.golang.org/protobuf v1.27.1
+google.golang.org/protobuf/encoding/protojson
+google.golang.org/protobuf/encoding/prototext
+google.golang.org/protobuf/encoding/protowire
+google.golang.org/protobuf/internal/descfmt
+google.golang.org/protobuf/internal/descopts
+google.golang.org/protobuf/internal/detrand
+google.golang.org/protobuf/internal/encoding/defval
+google.golang.org/protobuf/internal/encoding/json
+google.golang.org/protobuf/internal/encoding/messageset
+google.golang.org/protobuf/internal/encoding/tag
+google.golang.org/protobuf/internal/encoding/text
+google.golang.org/protobuf/internal/errors
+google.golang.org/protobuf/internal/filedesc
+google.golang.org/protobuf/internal/filetype
+google.golang.org/protobuf/internal/flags
+google.golang.org/protobuf/internal/genid
+google.golang.org/protobuf/internal/impl
+google.golang.org/protobuf/internal/order
+google.golang.org/protobuf/internal/pragma
+google.golang.org/protobuf/internal/set
+google.golang.org/protobuf/internal/strs
+google.golang.org/protobuf/internal/version
+google.golang.org/protobuf/proto
+google.golang.org/protobuf/reflect/protodesc
+google.golang.org/protobuf/reflect/protoreflect
+google.golang.org/protobuf/reflect/protoregistry
+google.golang.org/protobuf/runtime/protoiface
+google.golang.org/protobuf/runtime/protoimpl
+google.golang.org/protobuf/types/descriptorpb
+google.golang.org/protobuf/types/known/anypb
+google.golang.org/protobuf/types/known/durationpb
+google.golang.org/protobuf/types/known/emptypb
+google.golang.org/protobuf/types/known/timestamppb
 # gopkg.in/alecthomas/kingpin.v2 v2.2.6
 ## explicit
 gopkg.in/alecthomas/kingpin.v2
@@ -514,5 +543,4 @@ gopkg.in/yaml.v2
 # gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
 gopkg.in/yaml.v3
 # github.com/hyperledger/fabric => ./
-# github.com/SmartBFT-Go/consensus => gitlab.n-t.io/ntbc/consensus v0.0.0-20210215144729-4e12a0376705
 # golang.org/x/sys => golang.org/x/sys v0.0.0-20190920190810-ef0ce1748380

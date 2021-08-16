@@ -9,10 +9,10 @@ package smartbft
 import (
 	"sync/atomic"
 
-	protos "github.com/SmartBFT-Go/consensus/smartbftprotos"
-	"github.com/golang/protobuf/proto"
+	protos "github.com/SmartBFT-Go/consensus/v2/smartbftprotos"
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
+	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/protoutil"
 )
 

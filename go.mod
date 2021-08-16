@@ -5,8 +5,6 @@ go 1.14
 // develop
 replace github.com/hyperledger/fabric => ./
 
-replace github.com/SmartBFT-Go/consensus => gitlab.n-t.io/ntbc/consensus v0.0.0-20210215144729-4e12a0376705
-
 // https://github.com/golang/go/issues/34610
 replace golang.org/x/sys => golang.org/x/sys v0.0.0-20190920190810-ef0ce1748380
 
@@ -17,7 +15,7 @@ require (
 	github.com/Microsoft/hcsshim v0.8.6 // indirect
 	github.com/Shopify/sarama v1.20.1
 	github.com/Shopify/toxiproxy v2.1.4+incompatible // indirect
-	github.com/SmartBFT-Go/consensus v0.0.0-20200624082633-5623f7133ae2
+	github.com/SmartBFT-Go/consensus/v2 v2.3.0
 	github.com/SmartBFT-Go/fabric-chaincode-go v0.1.1
 	github.com/SmartBFT-Go/fabric-config v0.2.2
 	github.com/SmartBFT-Go/fabric-protos-go/v2 v2.3.0
@@ -36,7 +34,7 @@ require (
 	github.com/frankban/quicktest v1.9.0 // indirect
 	github.com/fsouza/go-dockerclient v1.4.1
 	github.com/go-kit/kit v0.8.0
-	github.com/golang/protobuf v1.3.5
+	github.com/golang/protobuf v1.5.0
 	github.com/golang/snappy v0.0.2 // indirect
 	github.com/gorilla/handlers v1.4.0
 	github.com/gorilla/mux v1.7.2
@@ -65,12 +63,11 @@ require (
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.1.1
-	github.com/stretchr/testify v1.6.1
+	github.com/stretchr/testify v1.7.0
 	github.com/sykesm/zap-logfmt v0.0.2
 	github.com/syndtr/goleveldb v1.0.1-0.20190625010220-02440ea7a285
 	github.com/tedsuo/ifrit v0.0.0-20180802180643-bea94bb476cc
 	github.com/willf/bitset v1.1.10
-	gitlab.n-t.io/ntbc/consensus v0.0.0-20200305092142-48c132f58ce8 // indirect
 	go.etcd.io/etcd v0.5.0-alpha.5.0.20181228115726-23731bf9ba55
 	go.uber.org/zap v1.16.0
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9

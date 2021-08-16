@@ -10,9 +10,9 @@ import (
 	"encoding/asn1"
 	"math/big"
 
-	"github.com/SmartBFT-Go/consensus/pkg/types"
-	"github.com/golang/protobuf/proto"
+	"github.com/SmartBFT-Go/consensus/v2/pkg/types"
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/common/util"
 	"github.com/pkg/errors"
 )
