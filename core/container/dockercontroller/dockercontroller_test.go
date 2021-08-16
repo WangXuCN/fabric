@@ -20,7 +20,7 @@ import (
 	"time"
 
 	docker "github.com/fsouza/go-dockerclient"
-	pb "github.com/hyperledger/fabric-protos-go/peer"
+	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 	"github.com/hyperledger/fabric/common/flogging/floggingtest"
 	"github.com/hyperledger/fabric/common/metrics/disabled"
 	"github.com/hyperledger/fabric/common/metrics/metricsfakes"

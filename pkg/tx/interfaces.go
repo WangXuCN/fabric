@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/hyperledger/fabric-protos-go/common"
-	"github.com/hyperledger/fabric-protos-go/peer"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 	"github.com/hyperledger/fabric/pkg/statedata"
 )
 

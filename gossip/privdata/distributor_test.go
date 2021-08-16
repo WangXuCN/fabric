@@ -11,9 +11,9 @@ import (
 	"fmt"
 	"testing"
 
-	proto "github.com/hyperledger/fabric-protos-go/gossip"
-	"github.com/hyperledger/fabric-protos-go/peer"
-	"github.com/hyperledger/fabric-protos-go/transientstore"
+	proto "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/transientstore"
 	"github.com/hyperledger/fabric/core/common/privdata"
 	"github.com/hyperledger/fabric/gossip/api"
 	gcommon "github.com/hyperledger/fabric/gossip/common"

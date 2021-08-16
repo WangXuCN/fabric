@@ -15,9 +15,9 @@ import (
 	"github.com/hyperledger/fabric/protoutil"
 
 	"github.com/golang/protobuf/proto"
-	cb "github.com/hyperledger/fabric-protos-go/common"
-	protosmsp "github.com/hyperledger/fabric-protos-go/msp"
-	"github.com/hyperledger/fabric-protos-go/orderer/smartbft"
+	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	protosmsp "github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/smartbft"
 	"github.com/hyperledger/fabric/common/policies/orderer/mocks"
 	"github.com/hyperledger/fabric/msp"
 	"github.com/stretchr/testify/assert"

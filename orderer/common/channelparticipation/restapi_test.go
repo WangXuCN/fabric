@@ -17,7 +17,7 @@ import (
 	"path"
 	"testing"
 
-	"github.com/hyperledger/fabric-protos-go/common"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/hyperledger/fabric/orderer/common/channelparticipation"
 	"github.com/hyperledger/fabric/orderer/common/channelparticipation/mocks"
 	"github.com/hyperledger/fabric/orderer/common/localconfig"

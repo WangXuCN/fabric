@@ -7,10 +7,10 @@ SPDX-License-Identifier: Apache-2.0
 package lifecycle_test
 
 import (
-	"github.com/hyperledger/fabric-protos-go/common"
-	"github.com/hyperledger/fabric-protos-go/msp"
-	pb "github.com/hyperledger/fabric-protos-go/peer"
-	lb "github.com/hyperledger/fabric-protos-go/peer/lifecycle"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
+	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
+	lb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer/lifecycle"
 	"github.com/hyperledger/fabric/common/chaincode"
 	"github.com/hyperledger/fabric/common/policydsl"
 	"github.com/hyperledger/fabric/core/chaincode/lifecycle"

@@ -4,7 +4,7 @@
 package bootstrap
 
 import (
-	ab "github.com/hyperledger/fabric-protos-go/common"
+	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 )
 
 // Helper defines the functions a bootstrapping implementation should provide.

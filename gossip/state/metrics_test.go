@@ -10,7 +10,7 @@ import (
 	"sync"
 	"testing"
 
-	proto "github.com/hyperledger/fabric-protos-go/gossip"
+	proto "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
 	"github.com/hyperledger/fabric/gossip/discovery"
 	"github.com/hyperledger/fabric/gossip/metrics"
 	gmetricsmocks "github.com/hyperledger/fabric/gossip/metrics/mocks"

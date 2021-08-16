@@ -26,9 +26,9 @@ import (
 	"github.com/tedsuo/ifrit/grouper"
 
 	docker "github.com/fsouza/go-dockerclient"
-	"github.com/hyperledger/fabric-protos-go/common"
-	"github.com/hyperledger/fabric-protos-go/msp"
-	"github.com/hyperledger/fabric-protos-go/orderer/smartbft"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/smartbft"
 	"github.com/hyperledger/fabric/common/crypto"
 	"github.com/hyperledger/fabric/integration/nwo"
 	"github.com/hyperledger/fabric/integration/nwo/commands"

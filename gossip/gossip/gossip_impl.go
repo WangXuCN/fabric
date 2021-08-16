@@ -16,7 +16,7 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	pg "github.com/hyperledger/fabric-protos-go/gossip"
+	pg "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
 	"github.com/hyperledger/fabric/gossip/api"
 	"github.com/hyperledger/fabric/gossip/comm"
 	"github.com/hyperledger/fabric/gossip/common"

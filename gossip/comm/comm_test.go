@@ -23,8 +23,8 @@ import (
 	"testing"
 	"time"
 
-	cb "github.com/hyperledger/fabric-protos-go/common"
-	proto "github.com/hyperledger/fabric-protos-go/gossip"
+	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	proto "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
 	"github.com/hyperledger/fabric/bccsp/factory"
 	"github.com/hyperledger/fabric/common/flogging"
 	"github.com/hyperledger/fabric/common/metrics/disabled"

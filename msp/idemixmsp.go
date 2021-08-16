@@ -13,7 +13,7 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	m "github.com/hyperledger/fabric-protos-go/msp"
+	m "github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
 	"github.com/hyperledger/fabric/bccsp"
 	idemixbccsp "github.com/hyperledger/fabric/bccsp/idemix"
 	"github.com/hyperledger/fabric/bccsp/sw"

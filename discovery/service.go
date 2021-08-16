@@ -12,7 +12,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/hyperledger/fabric-protos-go/discovery"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/discovery"
 	"github.com/hyperledger/fabric/common/flogging"
 	"github.com/hyperledger/fabric/common/util"
 	"github.com/hyperledger/fabric/discovery/protoext"

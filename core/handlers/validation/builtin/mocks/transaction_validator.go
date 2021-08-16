@@ -2,7 +2,7 @@
 
 package mocks
 
-import common "github.com/hyperledger/fabric-protos-go/common"
+import common "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 import errors "github.com/hyperledger/fabric/common/errors"
 import mock "github.com/stretchr/testify/mock"
 

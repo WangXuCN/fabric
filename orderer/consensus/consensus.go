@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 package consensus
 
 import (
-	cb "github.com/hyperledger/fabric-protos-go/common"
+	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/hyperledger/fabric/common/channelconfig"
 	"github.com/hyperledger/fabric/internal/pkg/identity"
 	"github.com/hyperledger/fabric/orderer/common/blockcutter"

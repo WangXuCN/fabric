@@ -17,9 +17,9 @@ import (
 
 	docker "github.com/fsouza/go-dockerclient"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-protos-go/common"
-	"github.com/hyperledger/fabric-protos-go/discovery"
-	pm "github.com/hyperledger/fabric-protos-go/msp"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/discovery"
+	pm "github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
 	"github.com/hyperledger/fabric/common/policydsl"
 	"github.com/hyperledger/fabric/integration/nwo"
 	"github.com/hyperledger/fabric/integration/nwo/commands"

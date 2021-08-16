@@ -13,7 +13,7 @@ import (
 	"github.com/SmartBFT-Go/consensus/pkg/types"
 	"github.com/SmartBFT-Go/consensus/smartbftprotos"
 	"github.com/golang/protobuf/proto"
-	cb "github.com/hyperledger/fabric-protos-go/common"
+	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/hyperledger/fabric/common/flogging"
 	mocks2 "github.com/hyperledger/fabric/orderer/consensus/mocks"
 	"github.com/hyperledger/fabric/orderer/consensus/smartbft"

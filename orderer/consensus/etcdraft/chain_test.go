@@ -18,9 +18,9 @@ import (
 
 	"code.cloudfoundry.org/clock/fakeclock"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-protos-go/common"
-	"github.com/hyperledger/fabric-protos-go/orderer"
-	raftprotos "github.com/hyperledger/fabric-protos-go/orderer/etcdraft"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
+	raftprotos "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/etcdraft"
 	"github.com/hyperledger/fabric/bccsp"
 	"github.com/hyperledger/fabric/bccsp/factory"
 	"github.com/hyperledger/fabric/bccsp/sw"

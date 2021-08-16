@@ -3,7 +3,7 @@
 package mocks
 
 import context "context"
-import gossip "github.com/hyperledger/fabric-protos-go/gossip"
+import gossip "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
 import metadata "google.golang.org/grpc/metadata"
 import mock "github.com/stretchr/testify/mock"
 

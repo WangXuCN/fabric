@@ -18,7 +18,7 @@ import (
 	"os"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-protos-go/common"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/hyperledger/fabric/internal/osnadmin"
 	"github.com/hyperledger/fabric/internal/pkg/comm"
 	"github.com/hyperledger/fabric/protoutil"

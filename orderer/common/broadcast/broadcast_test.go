@@ -15,8 +15,8 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	cb "github.com/hyperledger/fabric-protos-go/common"
-	ab "github.com/hyperledger/fabric-protos-go/orderer"
+	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
 	"github.com/hyperledger/fabric/orderer/common/broadcast"
 	"github.com/hyperledger/fabric/orderer/common/broadcast/mock"
 	"github.com/hyperledger/fabric/orderer/common/msgprocessor"

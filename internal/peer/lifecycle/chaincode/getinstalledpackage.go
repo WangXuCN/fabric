@@ -11,9 +11,9 @@ import (
 	"path/filepath"
 
 	"github.com/golang/protobuf/proto"
-	cb "github.com/hyperledger/fabric-protos-go/common"
-	pb "github.com/hyperledger/fabric-protos-go/peer"
-	lb "github.com/hyperledger/fabric-protos-go/peer/lifecycle"
+	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
+	lb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer/lifecycle"
 	"github.com/hyperledger/fabric/bccsp"
 	"github.com/hyperledger/fabric/core/chaincode/persistence"
 	"github.com/hyperledger/fabric/protoutil"

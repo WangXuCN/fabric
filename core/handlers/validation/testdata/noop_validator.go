@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 package main
 
 import (
-	"github.com/hyperledger/fabric-protos-go/common"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	validation "github.com/hyperledger/fabric/core/handlers/validation/api"
 )
 

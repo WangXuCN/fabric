@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 package discovery
 
 import (
-	discprotos "github.com/hyperledger/fabric-protos-go/discovery"
+	discprotos "github.com/SmartBFT-Go/fabric-protos-go/v2/discovery"
 	"github.com/hyperledger/fabric/gossip/api"
 	"github.com/hyperledger/fabric/gossip/common"
 	"github.com/hyperledger/fabric/gossip/discovery"

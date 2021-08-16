@@ -9,7 +9,7 @@ package configtx
 import (
 	"bytes"
 
-	cb "github.com/hyperledger/fabric-protos-go/common"
+	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 )
 
 type comparable struct {

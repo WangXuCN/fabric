@@ -7,10 +7,10 @@ SPDX-License-Identifier: Apache-2.0
 package test
 
 import (
-	cb "github.com/hyperledger/fabric-protos-go/common"
-	mspproto "github.com/hyperledger/fabric-protos-go/msp"
-	"github.com/hyperledger/fabric-protos-go/peer"
-	pb "github.com/hyperledger/fabric-protos-go/peer"
+	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	mspproto "github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
+	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 	"github.com/hyperledger/fabric/common/channelconfig"
 	"github.com/hyperledger/fabric/common/flogging"
 	"github.com/hyperledger/fabric/common/genesis"

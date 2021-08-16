@@ -9,7 +9,7 @@ package etcdraft_test
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric-protos-go/orderer"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
 	"github.com/hyperledger/fabric/common/flogging"
 	"github.com/hyperledger/fabric/orderer/consensus/etcdraft"
 	"github.com/hyperledger/fabric/orderer/consensus/etcdraft/mocks"

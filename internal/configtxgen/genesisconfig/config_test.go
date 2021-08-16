@@ -12,8 +12,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hyperledger/fabric-protos-go/orderer/etcdraft"
-	"github.com/hyperledger/fabric-protos-go/orderer/smartbft"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/etcdraft"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/smartbft"
 	"github.com/hyperledger/fabric/common/viperutil"
 	"github.com/hyperledger/fabric/core/config/configtest"
 	"github.com/stretchr/testify/require"

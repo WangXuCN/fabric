@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"sync"
 
-	gproto "github.com/hyperledger/fabric-protos-go/gossip"
-	tspb "github.com/hyperledger/fabric-protos-go/transientstore"
+	gproto "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
+	tspb "github.com/SmartBFT-Go/fabric-protos-go/v2/transientstore"
 	"github.com/hyperledger/fabric/common/flogging"
 	"github.com/hyperledger/fabric/core/committer"
 	"github.com/hyperledger/fabric/core/committer/txvalidator"

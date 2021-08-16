@@ -12,9 +12,9 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-protos-go/common"
-	gossip_proto "github.com/hyperledger/fabric-protos-go/gossip"
-	"github.com/hyperledger/fabric-protos-go/orderer"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	gossip_proto "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
 	"github.com/hyperledger/fabric/common/flogging"
 	gossipcommon "github.com/hyperledger/fabric/gossip/common"
 	"github.com/hyperledger/fabric/gossip/discovery"

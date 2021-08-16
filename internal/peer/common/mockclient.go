@@ -9,8 +9,8 @@ package common
 import (
 	"context"
 
-	cb "github.com/hyperledger/fabric-protos-go/common"
-	pb "github.com/hyperledger/fabric-protos-go/peer"
+	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 	grpc "google.golang.org/grpc"
 )
 

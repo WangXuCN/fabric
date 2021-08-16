@@ -9,7 +9,7 @@ package pvtdatastorage
 import (
 	"math"
 
-	"github.com/hyperledger/fabric-protos-go/ledger/rwset"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset"
 	"github.com/hyperledger/fabric/core/ledger"
 	"github.com/hyperledger/fabric/core/ledger/pvtdatapolicy"
 	"github.com/willf/bitset"

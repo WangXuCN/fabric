@@ -4,7 +4,7 @@ package fake
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric-protos-go/transientstore"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/transientstore"
 	"github.com/hyperledger/fabric/core/endorser"
 )
 

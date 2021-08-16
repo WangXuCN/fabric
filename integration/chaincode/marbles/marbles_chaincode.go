@@ -89,7 +89,7 @@ import (
 	"time"
 
 	"github.com/hyperledger/fabric-chaincode-go/shim"
-	pb "github.com/hyperledger/fabric-protos-go/peer"
+	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 )
 
 // SimpleChaincode example simple Chaincode implementation

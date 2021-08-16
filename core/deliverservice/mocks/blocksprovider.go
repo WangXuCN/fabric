@@ -11,9 +11,9 @@ import (
 	"sync/atomic"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-protos-go/common"
-	gossip_proto "github.com/hyperledger/fabric-protos-go/gossip"
-	"github.com/hyperledger/fabric-protos-go/orderer"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	gossip_proto "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
 	gossip_common "github.com/hyperledger/fabric/gossip/common"
 	"github.com/hyperledger/fabric/gossip/discovery"
 	"github.com/hyperledger/fabric/internal/pkg/peer/orderers"

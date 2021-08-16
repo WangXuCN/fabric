@@ -8,7 +8,7 @@ package smartbft
 
 import (
 	"github.com/SmartBFT-Go/consensus/pkg/types"
-	cb "github.com/hyperledger/fabric-protos-go/common"
+	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/hyperledger/fabric/common/crypto"
 	"github.com/hyperledger/fabric/protoutil"
 )

@@ -9,7 +9,7 @@ package main
 import (
 	"testing"
 
-	cb "github.com/hyperledger/fabric-protos-go/common"
+	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/hyperledger/fabric/orderer/common/types"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

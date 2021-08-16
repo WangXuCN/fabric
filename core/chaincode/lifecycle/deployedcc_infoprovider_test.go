@@ -9,12 +9,12 @@ package lifecycle_test
 import (
 	"fmt"
 
-	cb "github.com/hyperledger/fabric-protos-go/common"
-	"github.com/hyperledger/fabric-protos-go/ledger/queryresult"
-	"github.com/hyperledger/fabric-protos-go/ledger/rwset/kvrwset"
-	"github.com/hyperledger/fabric-protos-go/msp"
-	pb "github.com/hyperledger/fabric-protos-go/peer"
-	lb "github.com/hyperledger/fabric-protos-go/peer/lifecycle"
+	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/queryresult"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset/kvrwset"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
+	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
+	lb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer/lifecycle"
 	"github.com/hyperledger/fabric/common/channelconfig"
 	commonledger "github.com/hyperledger/fabric/common/ledger"
 	"github.com/hyperledger/fabric/common/util"

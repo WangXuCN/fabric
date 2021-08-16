@@ -15,7 +15,7 @@ import (
 	"sync"
 	"time"
 
-	protosgossip "github.com/hyperledger/fabric-protos-go/gossip"
+	protosgossip "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
 	commonutil "github.com/hyperledger/fabric/common/util"
 	"github.com/hyperledger/fabric/core/common/privdata"
 	"github.com/hyperledger/fabric/gossip/api"

@@ -10,9 +10,9 @@ import (
 	"bytes"
 
 	"github.com/golang/protobuf/proto"
-	cb "github.com/hyperledger/fabric-protos-go/common"
-	"github.com/hyperledger/fabric-protos-go/orderer"
-	protoetcdraft "github.com/hyperledger/fabric-protos-go/orderer/etcdraft"
+	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
+	protoetcdraft "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/etcdraft"
 	"github.com/hyperledger/fabric/bccsp"
 	"github.com/hyperledger/fabric/common/channelconfig"
 	"github.com/hyperledger/fabric/common/configtx"

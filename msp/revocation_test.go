@@ -20,7 +20,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/hyperledger/fabric-protos-go/msp"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
 	"github.com/hyperledger/fabric/bccsp/sw"
 	"github.com/stretchr/testify/require"
 )

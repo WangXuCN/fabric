@@ -12,7 +12,7 @@ import (
 	"math"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric-protos-go/ledger/rwset"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset"
 	"github.com/hyperledger/fabric/core/ledger/internal/version"
 	"github.com/pkg/errors"
 	"github.com/willf/bitset"

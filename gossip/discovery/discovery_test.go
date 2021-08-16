@@ -22,7 +22,7 @@ import (
 	"time"
 
 	protoG "github.com/golang/protobuf/proto"
-	proto "github.com/hyperledger/fabric-protos-go/gossip"
+	proto "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
 	"github.com/hyperledger/fabric/common/flogging"
 	"github.com/hyperledger/fabric/gossip/common"
 	"github.com/hyperledger/fabric/gossip/gossip/msgstore"

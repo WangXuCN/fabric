@@ -17,9 +17,9 @@ import (
 	"reflect"
 
 	"github.com/golang/protobuf/proto"
-	cb "github.com/hyperledger/fabric-protos-go/common"
-	ab "github.com/hyperledger/fabric-protos-go/orderer"
-	"github.com/hyperledger/fabric-protos-go/orderer/smartbft"
+	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/smartbft"
 	"github.com/hyperledger/fabric/bccsp"
 	"github.com/hyperledger/fabric/common/channelconfig"
 	"github.com/hyperledger/fabric/common/crypto"

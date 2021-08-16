@@ -11,7 +11,7 @@ import (
 	"reflect"
 	"testing"
 
-	cb "github.com/hyperledger/fabric-protos-go/common"
+	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	mockpolicies "github.com/hyperledger/fabric/common/configtx/mock"
 	"github.com/hyperledger/fabric/common/policies"
 	"github.com/stretchr/testify/require"

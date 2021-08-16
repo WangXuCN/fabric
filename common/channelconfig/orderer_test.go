@@ -9,7 +9,7 @@ package channelconfig
 import (
 	"testing"
 
-	ab "github.com/hyperledger/fabric-protos-go/orderer"
+	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
 	"github.com/stretchr/testify/require"
 )
 

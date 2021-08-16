@@ -14,8 +14,8 @@ import (
 	"time"
 
 	"github.com/SmartBFT-Go/consensus/pkg/types"
-	"github.com/hyperledger/fabric-protos-go/orderer/etcdraft"
-	"github.com/hyperledger/fabric-protos-go/orderer/smartbft"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/etcdraft"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/smartbft"
 	"github.com/hyperledger/fabric/common/flogging"
 	"github.com/hyperledger/fabric/common/viperutil"
 	cf "github.com/hyperledger/fabric/core/config"

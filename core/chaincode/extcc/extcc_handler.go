@@ -14,7 +14,7 @@ import (
 	"github.com/hyperledger/fabric/internal/pkg/comm"
 	"github.com/pkg/errors"
 
-	pb "github.com/hyperledger/fabric-protos-go/peer"
+	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 
 	"google.golang.org/grpc"
 )

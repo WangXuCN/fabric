@@ -14,8 +14,8 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	etcdraftproto "github.com/hyperledger/fabric-protos-go/orderer/etcdraft"
-	raftprotos "github.com/hyperledger/fabric-protos-go/orderer/etcdraft"
+	etcdraftproto "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/etcdraft"
+	raftprotos "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/etcdraft"
 	"github.com/hyperledger/fabric/bccsp"
 	"github.com/hyperledger/fabric/bccsp/sw"
 	"github.com/hyperledger/fabric/common/crypto/tlsgen"

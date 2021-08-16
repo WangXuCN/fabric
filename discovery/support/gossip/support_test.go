@@ -9,7 +9,7 @@ package gossip_test
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric-protos-go/gossip"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
 	gossipSupport "github.com/hyperledger/fabric/discovery/support/gossip"
 	"github.com/hyperledger/fabric/discovery/support/gossip/mocks"
 	"github.com/hyperledger/fabric/gossip/common"

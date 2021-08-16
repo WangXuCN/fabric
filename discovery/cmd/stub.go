@@ -9,7 +9,7 @@ package discovery
 import (
 	"context"
 
-	"github.com/hyperledger/fabric-protos-go/discovery"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/discovery"
 	"github.com/hyperledger/fabric/cmd/common"
 	"github.com/hyperledger/fabric/cmd/common/comm"
 	"github.com/hyperledger/fabric/cmd/common/signer"

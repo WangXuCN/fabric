@@ -9,7 +9,7 @@ package kvledger
 import (
 	"bytes"
 
-	"github.com/hyperledger/fabric-protos-go/ledger/rwset"
+	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset"
 	"github.com/hyperledger/fabric/common/ledger/blkstorage"
 	"github.com/hyperledger/fabric/common/util"
 	"github.com/hyperledger/fabric/core/ledger"

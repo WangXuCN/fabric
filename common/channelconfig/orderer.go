@@ -13,8 +13,8 @@ import (
 	"strings"
 	"time"
 
-	cb "github.com/hyperledger/fabric-protos-go/common"
-	ab "github.com/hyperledger/fabric-protos-go/orderer"
+	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
+	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
 	"github.com/hyperledger/fabric/common/capabilities"
 	"github.com/pkg/errors"
 )

@@ -6,7 +6,7 @@ SPDX-License-Identifier: Apache-2.0
 
 package protoutil
 
-import "github.com/hyperledger/fabric-protos-go/common"
+import "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 
 func NewConfigGroup() *common.ConfigGroup {
 	return &common.ConfigGroup{

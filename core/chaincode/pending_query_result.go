@@ -8,7 +8,7 @@ package chaincode
 
 import (
 	"github.com/golang/protobuf/proto"
-	pb "github.com/hyperledger/fabric-protos-go/peer"
+	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 	commonledger "github.com/hyperledger/fabric/common/ledger"
 )
 

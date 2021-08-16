@@ -10,7 +10,7 @@ import (
 	"context"
 	"sync"
 
-	proto "github.com/hyperledger/fabric-protos-go/gossip"
+	proto "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
 	"github.com/hyperledger/fabric/gossip/common"
 	"github.com/hyperledger/fabric/gossip/metrics"
 	"github.com/hyperledger/fabric/gossip/protoext"

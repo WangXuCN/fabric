@@ -11,7 +11,7 @@ import (
 	"bytes"
 	"io"
 
-	lb "github.com/hyperledger/fabric-protos-go/peer/lifecycle"
+	lb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer/lifecycle"
 	"github.com/hyperledger/fabric/core/chaincode/lifecycle"
 	"github.com/hyperledger/fabric/core/chaincode/lifecycle/mock"
 	"github.com/hyperledger/fabric/core/chaincode/persistence"
