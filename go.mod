@@ -2,9 +2,6 @@ module github.com/SmartBFT-Go/fabric
 
 go 1.14
 
-// develop
-replace github.com/SmartBFT-Go/fabric => ./
-
 // https://github.com/golang/go/issues/34610
 replace golang.org/x/sys => golang.org/x/sys v0.0.0-20190920190810-ef0ce1748380
 
