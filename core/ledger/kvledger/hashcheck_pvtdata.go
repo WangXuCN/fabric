@@ -10,12 +10,12 @@ import (
 	"bytes"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset"
-	"github.com/hyperledger/fabric/common/ledger/blkstorage"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
-	"github.com/hyperledger/fabric/core/ledger/pvtdatastorage"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/ledger/blkstorage"
+	"github.com/SmartBFT-Go/fabric/common/util"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
+	"github.com/SmartBFT-Go/fabric/core/ledger/pvtdatastorage"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 )
 
 // constructValidAndInvalidPvtData computes the valid pvt data and hash mismatch list

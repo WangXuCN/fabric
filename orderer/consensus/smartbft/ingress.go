@@ -10,7 +10,7 @@ import (
 	protos "github.com/SmartBFT-Go/consensus/v2/smartbftprotos"
 	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/pkg/errors"
 )
 

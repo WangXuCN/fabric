@@ -18,9 +18,9 @@ import (
 	"strings"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	"github.com/hyperledger/fabric/bccsp/utils"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/bccsp/utils"
+	"github.com/SmartBFT-Go/fabric/common/util"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/pkg/errors"
 )
 

@@ -11,7 +11,7 @@ import (
 	"crypto/x509"
 	"io"
 
-	"github.com/hyperledger/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/bccsp"
 	"github.com/pkg/errors"
 )
 

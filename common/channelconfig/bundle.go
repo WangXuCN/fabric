@@ -8,14 +8,14 @@ package channelconfig
 
 import (
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/common/cauthdsl"
-	"github.com/hyperledger/fabric/common/configtx"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/common/policies/orderer"
-	"github.com/hyperledger/fabric/msp"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/common/cauthdsl"
+	"github.com/SmartBFT-Go/fabric/common/configtx"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/common/policies"
+	"github.com/SmartBFT-Go/fabric/common/policies/orderer"
+	"github.com/SmartBFT-Go/fabric/msp"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/pkg/errors"
 )
 

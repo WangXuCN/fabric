@@ -9,9 +9,9 @@ package lifecycle
 import (
 	"github.com/SmartBFT-Go/fabric-chaincode-go/shim"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/queryresult"
-	commonledger "github.com/hyperledger/fabric/common/ledger"
-	validatorstate "github.com/hyperledger/fabric/core/handlers/validation/api/state"
-	"github.com/hyperledger/fabric/core/ledger"
+	commonledger "github.com/SmartBFT-Go/fabric/common/ledger"
+	validatorstate "github.com/SmartBFT-Go/fabric/core/handlers/validation/api/state"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
 
 	"github.com/pkg/errors"
 )

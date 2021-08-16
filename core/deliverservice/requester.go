@@ -21,11 +21,11 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/deliverservice/blocksprovider"
-	"github.com/hyperledger/fabric/internal/pkg/comm"
-	blocksprovider2 "github.com/hyperledger/fabric/internal/pkg/peer/blocksprovider"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/util"
+	"github.com/SmartBFT-Go/fabric/core/deliverservice/blocksprovider"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/comm"
+	blocksprovider2 "github.com/SmartBFT-Go/fabric/internal/pkg/peer/blocksprovider"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/spf13/viper"
 )
 

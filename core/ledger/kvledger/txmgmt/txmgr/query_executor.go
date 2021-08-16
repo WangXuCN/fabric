@@ -9,13 +9,13 @@ package txmgr
 import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/queryresult"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset/kvrwset"
-	commonledger "github.com/hyperledger/fabric/common/ledger"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/internal/version"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/statedb"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/statemetadata"
-	"github.com/hyperledger/fabric/core/ledger/util"
+	commonledger "github.com/SmartBFT-Go/fabric/common/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger/internal/version"
+	"github.com/SmartBFT-Go/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
+	"github.com/SmartBFT-Go/fabric/core/ledger/kvledger/txmgmt/statedb"
+	"github.com/SmartBFT-Go/fabric/core/ledger/kvledger/txmgmt/statemetadata"
+	"github.com/SmartBFT-Go/fabric/core/ledger/util"
 	"github.com/pkg/errors"
 )
 

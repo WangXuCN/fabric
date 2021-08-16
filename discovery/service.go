@@ -13,13 +13,13 @@ import (
 	"fmt"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/discovery"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/discovery/protoext"
-	common2 "github.com/hyperledger/fabric/gossip/common"
-	discovery2 "github.com/hyperledger/fabric/gossip/discovery"
-	"github.com/hyperledger/fabric/internal/pkg/comm"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/common/util"
+	"github.com/SmartBFT-Go/fabric/discovery/protoext"
+	common2 "github.com/SmartBFT-Go/fabric/gossip/common"
+	discovery2 "github.com/SmartBFT-Go/fabric/gossip/discovery"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/comm"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/pkg/errors"
 )
 

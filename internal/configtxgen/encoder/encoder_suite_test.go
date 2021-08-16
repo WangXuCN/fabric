@@ -9,7 +9,7 @@ package encoder_test
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/bccsp/factory"
+	"github.com/SmartBFT-Go/fabric/bccsp/factory"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )

@@ -11,11 +11,11 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/queryresult"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset/kvrwset"
-	"github.com/hyperledger/fabric/bccsp/sw"
-	"github.com/hyperledger/fabric/common/ledger/testutil"
-	"github.com/hyperledger/fabric/common/metrics/disabled"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/mock"
+	"github.com/SmartBFT-Go/fabric/bccsp/sw"
+	"github.com/SmartBFT-Go/fabric/common/ledger/testutil"
+	"github.com/SmartBFT-Go/fabric/common/metrics/disabled"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger/mock"
 	"github.com/stretchr/testify/require"
 )
 

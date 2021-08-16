@@ -14,9 +14,9 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset/kvrwset"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/common/ledger/testutil"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
+	"github.com/SmartBFT-Go/fabric/common/ledger/testutil"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
 	"github.com/stretchr/testify/require"
 )
 

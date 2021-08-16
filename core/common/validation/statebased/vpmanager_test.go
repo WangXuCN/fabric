@@ -18,9 +18,9 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset/kvrwset"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/common/policydsl"
-	validation "github.com/hyperledger/fabric/core/handlers/validation/api/state"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/policydsl"
+	validation "github.com/SmartBFT-Go/fabric/core/handlers/validation/api/state"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/require"
 )

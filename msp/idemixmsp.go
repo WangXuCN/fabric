@@ -14,9 +14,9 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	m "github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	"github.com/hyperledger/fabric/bccsp"
-	idemixbccsp "github.com/hyperledger/fabric/bccsp/idemix"
-	"github.com/hyperledger/fabric/bccsp/sw"
+	"github.com/SmartBFT-Go/fabric/bccsp"
+	idemixbccsp "github.com/SmartBFT-Go/fabric/bccsp/idemix"
+	"github.com/SmartBFT-Go/fabric/bccsp/sw"
 	"github.com/pkg/errors"
 	"go.uber.org/zap/zapcore"
 )

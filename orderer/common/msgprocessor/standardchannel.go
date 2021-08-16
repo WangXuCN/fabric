@@ -9,13 +9,13 @@ package msgprocessor
 import (
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/internal/pkg/identity"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/common/channelconfig"
+	"github.com/SmartBFT-Go/fabric/common/policies"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/identity"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 
-	"github.com/hyperledger/fabric/orderer/common/localconfig"
+	"github.com/SmartBFT-Go/fabric/orderer/common/localconfig"
 	"github.com/pkg/errors"
 )
 

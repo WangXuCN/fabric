@@ -22,22 +22,22 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/etcdraft"
-	"github.com/hyperledger/fabric/bccsp/sw"
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/common/configtx"
-	deliver_mocks "github.com/hyperledger/fabric/common/deliver/mock"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/ledger/blockledger"
-	"github.com/hyperledger/fabric/core/config/configtest"
-	"github.com/hyperledger/fabric/internal/configtxgen/encoder"
-	"github.com/hyperledger/fabric/internal/configtxgen/genesisconfig"
-	"github.com/hyperledger/fabric/internal/pkg/comm"
-	"github.com/hyperledger/fabric/internal/pkg/identity"
-	"github.com/hyperledger/fabric/orderer/common/cluster"
-	cluster_mocks "github.com/hyperledger/fabric/orderer/common/cluster/mocks"
-	"github.com/hyperledger/fabric/orderer/common/localconfig"
-	onboarding_mocks "github.com/hyperledger/fabric/orderer/common/onboarding/mocks"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/bccsp/sw"
+	"github.com/SmartBFT-Go/fabric/common/channelconfig"
+	"github.com/SmartBFT-Go/fabric/common/configtx"
+	deliver_mocks "github.com/SmartBFT-Go/fabric/common/deliver/mock"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/common/ledger/blockledger"
+	"github.com/SmartBFT-Go/fabric/core/config/configtest"
+	"github.com/SmartBFT-Go/fabric/internal/configtxgen/encoder"
+	"github.com/SmartBFT-Go/fabric/internal/configtxgen/genesisconfig"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/comm"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/identity"
+	"github.com/SmartBFT-Go/fabric/orderer/common/cluster"
+	cluster_mocks "github.com/SmartBFT-Go/fabric/orderer/common/cluster/mocks"
+	"github.com/SmartBFT-Go/fabric/orderer/common/localconfig"
+	onboarding_mocks "github.com/SmartBFT-Go/fabric/orderer/common/onboarding/mocks"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/gbytes"
 	"github.com/onsi/gomega/gexec"
@@ -54,12 +54,12 @@ var configtxgen, cryptogen, tempDir string
 
 func TestMain(m *testing.M) {
 	var err error
-	configtxgen, err = gexec.Build("github.com/hyperledger/fabric/cmd/configtxgen")
+	configtxgen, err = gexec.Build("github.com/SmartBFT-Go/fabric/cmd/configtxgen")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "configtxgen build failed: %v", err)
 		os.Exit(-1)
 	}
-	cryptogen, err = gexec.Build("github.com/hyperledger/fabric/cmd/cryptogen")
+	cryptogen, err = gexec.Build("github.com/SmartBFT-Go/fabric/cmd/cryptogen")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "cryptogen build failed: %v", err)
 		os.Exit(-1)

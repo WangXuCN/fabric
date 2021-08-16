@@ -11,14 +11,14 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/discovery"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	"github.com/hyperledger/fabric/common/chaincode"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/graph"
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/common/policies/inquire"
-	"github.com/hyperledger/fabric/gossip/api"
-	"github.com/hyperledger/fabric/gossip/common"
-	. "github.com/hyperledger/fabric/gossip/discovery"
+	"github.com/SmartBFT-Go/fabric/common/chaincode"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/common/graph"
+	"github.com/SmartBFT-Go/fabric/common/policies"
+	"github.com/SmartBFT-Go/fabric/common/policies/inquire"
+	"github.com/SmartBFT-Go/fabric/gossip/api"
+	"github.com/SmartBFT-Go/fabric/gossip/common"
+	. "github.com/SmartBFT-Go/fabric/gossip/discovery"
 	"github.com/pkg/errors"
 )
 

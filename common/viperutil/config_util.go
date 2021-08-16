@@ -21,8 +21,8 @@ import (
 
 	"github.com/Shopify/sarama"
 	version "github.com/hashicorp/go-version"
-	"github.com/hyperledger/fabric/bccsp/factory"
-	"github.com/hyperledger/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/bccsp/factory"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
 	"github.com/mitchellh/mapstructure"
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"

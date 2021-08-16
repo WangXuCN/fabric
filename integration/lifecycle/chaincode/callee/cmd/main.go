@@ -11,7 +11,7 @@ import (
 	"os"
 
 	"github.com/SmartBFT-Go/fabric-chaincode-go/shim"
-	"github.com/hyperledger/fabric/integration/lifecycle/chaincode/callee"
+	"github.com/SmartBFT-Go/fabric/integration/lifecycle/chaincode/callee"
 )
 
 func main() {

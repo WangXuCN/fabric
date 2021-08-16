@@ -13,9 +13,9 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/common/ccprovider"
-	"github.com/hyperledger/fabric/msp"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/core/common/ccprovider"
+	"github.com/SmartBFT-Go/fabric/msp"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/pkg/errors"
 )
 

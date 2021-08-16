@@ -11,7 +11,7 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/discovery"
-	"github.com/hyperledger/fabric/discovery/protoext"
+	"github.com/SmartBFT-Go/fabric/discovery/protoext"
 	"github.com/stretchr/testify/require"
 )
 

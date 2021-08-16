@@ -15,9 +15,9 @@ import (
 	"github.com/golang/protobuf/proto"
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	"github.com/hyperledger/fabric/common/flogging"
-	mspi "github.com/hyperledger/fabric/msp"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	mspi "github.com/SmartBFT-Go/fabric/msp"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/pkg/errors"
 	"go.uber.org/zap/zapcore"
 )

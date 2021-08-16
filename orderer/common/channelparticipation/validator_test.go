@@ -12,9 +12,9 @@ import (
 	"testing"
 
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/orderer/common/channelparticipation"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/orderer/common/channelparticipation"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/stretchr/testify/require"
 )
 

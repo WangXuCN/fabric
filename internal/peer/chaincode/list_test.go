@@ -13,8 +13,8 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/bccsp/sw"
-	"github.com/hyperledger/fabric/internal/peer/common"
+	"github.com/SmartBFT-Go/fabric/bccsp/sw"
+	"github.com/SmartBFT-Go/fabric/internal/peer/common"
 	"github.com/stretchr/testify/require"
 )
 

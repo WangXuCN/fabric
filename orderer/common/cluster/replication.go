@@ -14,12 +14,12 @@ import (
 	"time"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/internal/pkg/comm"
-	"github.com/hyperledger/fabric/internal/pkg/identity"
-	"github.com/hyperledger/fabric/orderer/common/localconfig"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/comm"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/identity"
+	"github.com/SmartBFT-Go/fabric/orderer/common/localconfig"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/pkg/errors"
 )
 

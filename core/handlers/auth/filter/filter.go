@@ -10,7 +10,7 @@ import (
 	"context"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/handlers/auth"
+	"github.com/SmartBFT-Go/fabric/core/handlers/auth"
 )
 
 // NewFilter creates a new Filter

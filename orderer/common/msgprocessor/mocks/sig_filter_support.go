@@ -4,8 +4,8 @@ package mocks
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/common/policies"
+	"github.com/SmartBFT-Go/fabric/common/channelconfig"
+	"github.com/SmartBFT-Go/fabric/common/policies"
 )
 
 type SigFilterSupport struct {

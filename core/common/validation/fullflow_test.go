@@ -15,11 +15,11 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/bccsp/sw"
-	"github.com/hyperledger/fabric/msp"
-	mspmgmt "github.com/hyperledger/fabric/msp/mgmt"
-	msptesttools "github.com/hyperledger/fabric/msp/mgmt/testtools"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/bccsp/sw"
+	"github.com/SmartBFT-Go/fabric/msp"
+	mspmgmt "github.com/SmartBFT-Go/fabric/msp/mgmt"
+	msptesttools "github.com/SmartBFT-Go/fabric/msp/mgmt/testtools"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/stretchr/testify/require"
 )
 

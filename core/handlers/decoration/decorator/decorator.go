@@ -8,7 +8,7 @@ package decorator
 
 import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/handlers/decoration"
+	"github.com/SmartBFT-Go/fabric/core/handlers/decoration"
 )
 
 // NewDecorator creates a new decorator

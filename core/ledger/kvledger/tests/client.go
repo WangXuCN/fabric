@@ -11,11 +11,11 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/common/ccprovider"
-	"github.com/hyperledger/fabric/core/common/privdata"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/util"
+	"github.com/SmartBFT-Go/fabric/core/common/ccprovider"
+	"github.com/SmartBFT-Go/fabric/core/common/privdata"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/stretchr/testify/require"
 )
 

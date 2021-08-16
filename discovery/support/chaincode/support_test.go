@@ -11,10 +11,10 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	"github.com/hyperledger/fabric/common/chaincode"
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/common/policies/inquire"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/chaincode"
+	"github.com/SmartBFT-Go/fabric/common/policies"
+	"github.com/SmartBFT-Go/fabric/common/policies/inquire"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/stretchr/testify/require"
 )
 

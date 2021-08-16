@@ -13,8 +13,8 @@ import (
 	"path"
 	"strconv"
 
-	"github.com/hyperledger/fabric/internal/fileutil"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/internal/fileutil"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 )
 
 // ResetBlockStore drops the block storage index and truncates the blocks files for all channels/ledgers to genesis blocks

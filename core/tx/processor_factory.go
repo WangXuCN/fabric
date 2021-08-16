@@ -11,8 +11,8 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/pkg/tx"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/pkg/tx"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 )
 
 // ProcessorFactory maintains a mapping between transaction type and associate `ProcessorCreator`

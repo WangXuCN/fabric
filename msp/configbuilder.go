@@ -14,8 +14,8 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/bccsp/factory"
+	"github.com/SmartBFT-Go/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/bccsp/factory"
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"
 )

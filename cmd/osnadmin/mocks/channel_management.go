@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/orderer/common/types"
+	"github.com/SmartBFT-Go/fabric/orderer/common/types"
 )
 
 type ChannelManagement struct {

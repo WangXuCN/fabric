@@ -10,9 +10,9 @@ import (
 	"testing"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/orderer/consensus/etcdraft"
-	"github.com/hyperledger/fabric/orderer/consensus/etcdraft/mocks"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/orderer/consensus/etcdraft"
+	"github.com/SmartBFT-Go/fabric/orderer/consensus/etcdraft/mocks"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/require"
 )

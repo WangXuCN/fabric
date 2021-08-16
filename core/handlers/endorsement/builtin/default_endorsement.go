@@ -8,8 +8,8 @@ package builtin
 
 import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	. "github.com/hyperledger/fabric/core/handlers/endorsement/api"
-	. "github.com/hyperledger/fabric/core/handlers/endorsement/api/identities"
+	. "github.com/SmartBFT-Go/fabric/core/handlers/endorsement/api"
+	. "github.com/SmartBFT-Go/fabric/core/handlers/endorsement/api/identities"
 	"github.com/pkg/errors"
 )
 

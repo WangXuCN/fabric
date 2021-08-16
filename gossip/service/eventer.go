@@ -10,8 +10,8 @@ import (
 	"reflect"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/msp"
+	"github.com/SmartBFT-Go/fabric/common/channelconfig"
+	"github.com/SmartBFT-Go/fabric/msp"
 )
 
 // Config enumerates the configuration methods required by gossip

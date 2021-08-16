@@ -13,8 +13,8 @@ import (
 	"math/rand"
 	"sync"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/internal/pkg/comm"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/comm"
 	"github.com/pkg/errors"
 )
 

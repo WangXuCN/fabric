@@ -5,8 +5,8 @@ import (
 	"sync"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/common/ledger"
-	"github.com/hyperledger/fabric/core/chaincode"
+	"github.com/SmartBFT-Go/fabric/common/ledger"
+	"github.com/SmartBFT-Go/fabric/core/chaincode"
 )
 
 type QueryResponseBuilder struct {

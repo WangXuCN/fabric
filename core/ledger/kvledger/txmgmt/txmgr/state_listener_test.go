@@ -11,13 +11,13 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/queryresult"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset/kvrwset"
-	"github.com/hyperledger/fabric/common/ledger/testutil"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/internal/version"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/privacyenabledstate"
-	"github.com/hyperledger/fabric/core/ledger/mock"
-	"github.com/hyperledger/fabric/core/ledger/util"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/ledger/testutil"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger/internal/version"
+	"github.com/SmartBFT-Go/fabric/core/ledger/kvledger/txmgmt/privacyenabledstate"
+	"github.com/SmartBFT-Go/fabric/core/ledger/mock"
+	"github.com/SmartBFT-Go/fabric/core/ledger/util"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/stretchr/testify/require"
 )
 

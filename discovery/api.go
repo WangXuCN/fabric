@@ -8,10 +8,10 @@ package discovery
 
 import (
 	discprotos "github.com/SmartBFT-Go/fabric-protos-go/v2/discovery"
-	"github.com/hyperledger/fabric/gossip/api"
-	"github.com/hyperledger/fabric/gossip/common"
-	"github.com/hyperledger/fabric/gossip/discovery"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/gossip/api"
+	"github.com/SmartBFT-Go/fabric/gossip/common"
+	"github.com/SmartBFT-Go/fabric/gossip/discovery"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 )
 
 // AccessControlSupport checks if clients are eligible of being serviced

@@ -12,8 +12,8 @@ import (
 
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	"github.com/hyperledger/fabric/orderer/common/blockcutter"
-	"github.com/hyperledger/fabric/orderer/common/blockcutter/mock"
+	"github.com/SmartBFT-Go/fabric/orderer/common/blockcutter"
+	"github.com/SmartBFT-Go/fabric/orderer/common/blockcutter/mock"
 )
 
 var _ = Describe("Blockcutter", func() {

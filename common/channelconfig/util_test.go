@@ -20,9 +20,9 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/etcdraft"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/bccsp/sw"
-	"github.com/hyperledger/fabric/common/capabilities"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/bccsp/sw"
+	"github.com/SmartBFT-Go/fabric/common/capabilities"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/stretchr/testify/require"
 )
 

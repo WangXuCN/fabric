@@ -12,11 +12,11 @@ import (
 	"time"
 
 	proto "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
-	"github.com/hyperledger/fabric/gossip/common"
-	"github.com/hyperledger/fabric/gossip/discovery"
-	"github.com/hyperledger/fabric/gossip/metrics"
-	"github.com/hyperledger/fabric/gossip/protoext"
-	"github.com/hyperledger/fabric/gossip/util"
+	"github.com/SmartBFT-Go/fabric/gossip/common"
+	"github.com/SmartBFT-Go/fabric/gossip/discovery"
+	"github.com/SmartBFT-Go/fabric/gossip/metrics"
+	"github.com/SmartBFT-Go/fabric/gossip/protoext"
+	"github.com/SmartBFT-Go/fabric/gossip/util"
 )
 
 type msgImpl struct {

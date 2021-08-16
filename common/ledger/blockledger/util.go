@@ -10,7 +10,7 @@ import (
 	"github.com/golang/protobuf/proto"
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 )
 
 var closedChan chan struct{}

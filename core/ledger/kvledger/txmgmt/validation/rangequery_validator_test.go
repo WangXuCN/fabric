@@ -10,10 +10,10 @@ import (
 	"testing"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset/kvrwset"
-	"github.com/hyperledger/fabric/core/ledger/internal/version"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/statedb"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/statedb/stateleveldb"
+	"github.com/SmartBFT-Go/fabric/core/ledger/internal/version"
+	"github.com/SmartBFT-Go/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
+	"github.com/SmartBFT-Go/fabric/core/ledger/kvledger/txmgmt/statedb"
+	"github.com/SmartBFT-Go/fabric/core/ledger/kvledger/txmgmt/statedb/stateleveldb"
 	"github.com/stretchr/testify/require"
 )
 

@@ -9,9 +9,9 @@ package channelparticipation
 import (
 	"errors"
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/bccsp/factory"
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/bccsp/factory"
+	"github.com/SmartBFT-Go/fabric/common/channelconfig"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 )
 
 // ValidateJoinBlock checks whether this block can be used as a join block for the channel participation API.

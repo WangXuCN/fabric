@@ -5,8 +5,8 @@ import (
 	"sync"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/common/deliver"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/deliver"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 )
 
 type PrivateDataResponseSender struct {

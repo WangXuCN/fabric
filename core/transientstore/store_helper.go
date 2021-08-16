@@ -12,8 +12,8 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/common/ledger/util"
-	"github.com/hyperledger/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/common/ledger/util"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
 )
 
 var (

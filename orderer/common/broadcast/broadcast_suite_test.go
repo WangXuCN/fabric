@@ -10,7 +10,7 @@ import (
 	"testing"
 
 	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	"github.com/hyperledger/fabric/common/metrics"
+	"github.com/SmartBFT-Go/fabric/common/metrics"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

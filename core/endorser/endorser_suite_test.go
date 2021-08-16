@@ -9,9 +9,9 @@ package endorser_test
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/core/endorser"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/msp"
+	"github.com/SmartBFT-Go/fabric/core/endorser"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/msp"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

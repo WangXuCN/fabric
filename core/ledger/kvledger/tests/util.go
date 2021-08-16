@@ -12,13 +12,13 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
 	protopeer "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	configtxtest "github.com/hyperledger/fabric/common/configtx/test"
-	"github.com/hyperledger/fabric/common/crypto"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/policydsl"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/tests/fakes"
-	"github.com/hyperledger/fabric/internal/pkg/txflags"
-	"github.com/hyperledger/fabric/protoutil"
+	configtxtest "github.com/SmartBFT-Go/fabric/common/configtx/test"
+	"github.com/SmartBFT-Go/fabric/common/crypto"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/common/policydsl"
+	"github.com/SmartBFT-Go/fabric/core/ledger/kvledger/tests/fakes"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/txflags"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 )
 
 var logger = flogging.MustGetLogger("test2")

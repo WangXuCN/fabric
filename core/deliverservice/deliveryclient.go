@@ -16,13 +16,13 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/util"
-	bftBlocksprovider "github.com/hyperledger/fabric/core/deliverservice/blocksprovider"
-	"github.com/hyperledger/fabric/internal/pkg/comm"
-	"github.com/hyperledger/fabric/internal/pkg/identity"
-	"github.com/hyperledger/fabric/internal/pkg/peer/blocksprovider"
-	"github.com/hyperledger/fabric/internal/pkg/peer/orderers"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/common/util"
+	bftBlocksprovider "github.com/SmartBFT-Go/fabric/core/deliverservice/blocksprovider"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/comm"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/identity"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/peer/blocksprovider"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/peer/orderers"
 	"google.golang.org/grpc"
 )
 

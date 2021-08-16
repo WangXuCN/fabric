@@ -8,7 +8,7 @@ package capabilities
 
 import (
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
 	"github.com/pkg/errors"
 )
 

@@ -23,7 +23,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/hyperledger/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/bccsp"
 )
 
 type ecdsaPublicKeyKeyDeriver struct{}

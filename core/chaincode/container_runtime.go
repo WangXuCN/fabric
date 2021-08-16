@@ -7,8 +7,8 @@ SPDX-License-Identifier: Apache-2.0
 package chaincode
 
 import (
-	"github.com/hyperledger/fabric/core/container"
-	"github.com/hyperledger/fabric/core/container/ccintf"
+	"github.com/SmartBFT-Go/fabric/core/container"
+	"github.com/SmartBFT-Go/fabric/core/container/ccintf"
 	"github.com/pkg/errors"
 )
 

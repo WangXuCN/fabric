@@ -11,9 +11,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/core/chaincode/persistence"
-	"github.com/hyperledger/fabric/core/container/ccintf"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/persistence"
+	"github.com/SmartBFT-Go/fabric/core/container/ccintf"
 
 	"github.com/pkg/errors"
 )

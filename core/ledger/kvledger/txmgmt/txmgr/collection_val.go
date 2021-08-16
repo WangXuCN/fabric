@@ -8,7 +8,7 @@ package txmgr
 
 import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
 )
 
 // collNameValidator validates the presence of a collection in a namespace

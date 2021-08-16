@@ -12,9 +12,9 @@ import (
 
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/orderer/common/msgprocessor"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/common/util"
+	"github.com/SmartBFT-Go/fabric/orderer/common/msgprocessor"
 	"github.com/pkg/errors"
 )
 

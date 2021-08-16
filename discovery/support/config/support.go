@@ -15,9 +15,9 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/discovery"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/common/flogging"
-	mspconstants "github.com/hyperledger/fabric/msp"
+	"github.com/SmartBFT-Go/fabric/common/channelconfig"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	mspconstants "github.com/SmartBFT-Go/fabric/msp"
 	"github.com/pkg/errors"
 )
 

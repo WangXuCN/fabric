@@ -2,7 +2,7 @@
 
 package mocks
 
-import channelconfig "github.com/hyperledger/fabric/common/channelconfig"
+import channelconfig "github.com/SmartBFT-Go/fabric/common/channelconfig"
 import common "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 import mock "github.com/stretchr/testify/mock"
 

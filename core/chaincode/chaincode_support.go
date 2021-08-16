@@ -13,14 +13,14 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/chaincode/extcc"
-	"github.com/hyperledger/fabric/core/chaincode/lifecycle"
-	"github.com/hyperledger/fabric/core/common/ccprovider"
-	"github.com/hyperledger/fabric/core/container/ccintf"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/peer"
-	"github.com/hyperledger/fabric/core/scc"
+	"github.com/SmartBFT-Go/fabric/common/util"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/extcc"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/lifecycle"
+	"github.com/SmartBFT-Go/fabric/core/common/ccprovider"
+	"github.com/SmartBFT-Go/fabric/core/container/ccintf"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/peer"
+	"github.com/SmartBFT-Go/fabric/core/scc"
 	"github.com/pkg/errors"
 )
 

@@ -10,8 +10,8 @@ import (
 	"testing"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/common/deliver/mock"
-	"github.com/hyperledger/fabric/common/ledger/blockledger"
+	"github.com/SmartBFT-Go/fabric/common/deliver/mock"
+	"github.com/SmartBFT-Go/fabric/common/ledger/blockledger"
 	"github.com/stretchr/testify/require"
 )
 

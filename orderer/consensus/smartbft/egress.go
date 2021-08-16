@@ -13,7 +13,7 @@ import (
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 )
 
 //go:generate mockery -dir . -name RPC -case underscore -output mocks

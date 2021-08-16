@@ -8,7 +8,7 @@ package validation
 
 import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	validation "github.com/hyperledger/fabric/core/handlers/validation/api"
+	validation "github.com/SmartBFT-Go/fabric/core/handlers/validation/api"
 )
 
 // IdentityDeserializer converts serialized identities

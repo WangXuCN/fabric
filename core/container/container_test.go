@@ -13,10 +13,10 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/hyperledger/fabric/core/chaincode/persistence"
-	"github.com/hyperledger/fabric/core/container"
-	"github.com/hyperledger/fabric/core/container/ccintf"
-	"github.com/hyperledger/fabric/core/container/mock"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/persistence"
+	"github.com/SmartBFT-Go/fabric/core/container"
+	"github.com/SmartBFT-Go/fabric/core/container/ccintf"
+	"github.com/SmartBFT-Go/fabric/core/container/mock"
 	"github.com/pkg/errors"
 )
 

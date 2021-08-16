@@ -10,9 +10,9 @@ import (
 	"testing"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	configtxtest "github.com/hyperledger/fabric/common/configtx/test"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/msgs"
-	"github.com/hyperledger/fabric/core/ledger/mock"
+	configtxtest "github.com/SmartBFT-Go/fabric/common/configtx/test"
+	"github.com/SmartBFT-Go/fabric/core/ledger/kvledger/msgs"
+	"github.com/SmartBFT-Go/fabric/core/ledger/mock"
 	"github.com/stretchr/testify/require"
 )
 

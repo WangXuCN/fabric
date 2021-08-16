@@ -6,7 +6,7 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	"github.com/hyperledger/fabric/common/ledger/blockledger"
+	"github.com/SmartBFT-Go/fabric/common/ledger/blockledger"
 )
 
 type ReadWriter struct {

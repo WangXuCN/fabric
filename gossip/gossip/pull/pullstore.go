@@ -13,12 +13,12 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
 	proto "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
-	"github.com/hyperledger/fabric/gossip/comm"
-	"github.com/hyperledger/fabric/gossip/common"
-	"github.com/hyperledger/fabric/gossip/discovery"
-	"github.com/hyperledger/fabric/gossip/gossip/algo"
-	"github.com/hyperledger/fabric/gossip/protoext"
-	"github.com/hyperledger/fabric/gossip/util"
+	"github.com/SmartBFT-Go/fabric/gossip/comm"
+	"github.com/SmartBFT-Go/fabric/gossip/common"
+	"github.com/SmartBFT-Go/fabric/gossip/discovery"
+	"github.com/SmartBFT-Go/fabric/gossip/gossip/algo"
+	"github.com/SmartBFT-Go/fabric/gossip/protoext"
+	"github.com/SmartBFT-Go/fabric/gossip/util"
 	"github.com/pkg/errors"
 	"go.uber.org/zap/zapcore"
 )

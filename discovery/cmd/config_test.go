@@ -13,9 +13,9 @@ import (
 
 	. "github.com/SmartBFT-Go/fabric-protos-go/v2/discovery"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	"github.com/hyperledger/fabric/cmd/common"
-	discovery "github.com/hyperledger/fabric/discovery/cmd"
-	"github.com/hyperledger/fabric/discovery/cmd/mocks"
+	"github.com/SmartBFT-Go/fabric/cmd/common"
+	discovery "github.com/SmartBFT-Go/fabric/discovery/cmd"
+	"github.com/SmartBFT-Go/fabric/discovery/cmd/mocks"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"

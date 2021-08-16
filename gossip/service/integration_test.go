@@ -12,14 +12,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/core/deliverservice"
-	"github.com/hyperledger/fabric/gossip/api"
-	"github.com/hyperledger/fabric/gossip/election"
-	"github.com/hyperledger/fabric/gossip/util"
-	"github.com/hyperledger/fabric/internal/pkg/comm"
-	"github.com/hyperledger/fabric/internal/pkg/peer/blocksprovider"
-	"github.com/hyperledger/fabric/internal/pkg/peer/orderers"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/core/deliverservice"
+	"github.com/SmartBFT-Go/fabric/gossip/api"
+	"github.com/SmartBFT-Go/fabric/gossip/election"
+	"github.com/SmartBFT-Go/fabric/gossip/util"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/comm"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/peer/blocksprovider"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/peer/orderers"
 	"github.com/stretchr/testify/require"
 )
 

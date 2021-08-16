@@ -16,8 +16,8 @@ import (
 
 	docker "github.com/fsouza/go-dockerclient"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/integration/nwo"
-	"github.com/hyperledger/fabric/integration/nwo/commands"
+	"github.com/SmartBFT-Go/fabric/integration/nwo"
+	"github.com/SmartBFT-Go/fabric/integration/nwo/commands"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/gbytes"
@@ -46,7 +46,7 @@ var _ = Describe("SBE_E2E", func() {
 		chaincode = nwo.Chaincode{
 			Name:              "mycc",
 			Version:           "0.0",
-			Path:              "github.com/hyperledger/fabric/integration/chaincode/keylevelep/cmd",
+			Path:              "github.com/SmartBFT-Go/fabric/integration/chaincode/keylevelep/cmd",
 			Ctor:              `{"Args":["init"]}`,
 			CollectionsConfig: "testdata/collection_config.json",
 		}
@@ -103,7 +103,7 @@ var _ = Describe("SBE_E2E", func() {
 			chaincode = nwo.Chaincode{
 				Name:              "mycc",
 				Version:           "0.0",
-				Path:              "github.com/hyperledger/fabric/integration/chaincode/keylevelep/cmd",
+				Path:              "github.com/SmartBFT-Go/fabric/integration/chaincode/keylevelep/cmd",
 				Lang:              "golang",
 				PackageFile:       filepath.Join(tempDir, "simplecc.tar.gz"),
 				Ctor:              `{"Args":["init"]}`,

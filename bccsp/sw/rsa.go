@@ -13,7 +13,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/hyperledger/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/bccsp"
 )
 
 // An rsaPublicKey wraps the standard library implementation of an RSA public

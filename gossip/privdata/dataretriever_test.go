@@ -14,9 +14,9 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/transientstore"
-	"github.com/hyperledger/fabric/core/ledger"
-	privdatacommon "github.com/hyperledger/fabric/gossip/privdata/common"
-	"github.com/hyperledger/fabric/gossip/privdata/mocks"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	privdatacommon "github.com/SmartBFT-Go/fabric/gossip/privdata/common"
+	"github.com/SmartBFT-Go/fabric/gossip/privdata/mocks"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 )

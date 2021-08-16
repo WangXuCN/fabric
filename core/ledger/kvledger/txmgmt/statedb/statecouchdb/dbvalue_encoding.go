@@ -10,7 +10,7 @@ import (
 	"encoding/base64"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/core/ledger/internal/version"
+	"github.com/SmartBFT-Go/fabric/core/ledger/internal/version"
 	"github.com/pkg/errors"
 )
 

@@ -11,10 +11,10 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/hyperledger/fabric/common/ledger/blkstorage"
-	"github.com/hyperledger/fabric/common/ledger/blockledger"
-	"github.com/hyperledger/fabric/common/metrics"
-	"github.com/hyperledger/fabric/orderer/common/filerepo"
+	"github.com/SmartBFT-Go/fabric/common/ledger/blkstorage"
+	"github.com/SmartBFT-Go/fabric/common/ledger/blockledger"
+	"github.com/SmartBFT-Go/fabric/common/metrics"
+	"github.com/SmartBFT-Go/fabric/orderer/common/filerepo"
 )
 
 //go:generate counterfeiter -o mock/block_store_provider.go --fake-name BlockStoreProvider . blockStoreProvider

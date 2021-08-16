@@ -14,10 +14,10 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	lb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer/lifecycle"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/chaincode/lifecycle"
-	"github.com/hyperledger/fabric/core/chaincode/lifecycle/mock"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/util"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/lifecycle"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/lifecycle/mock"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 )
 
 var _ = Describe("Serializer", func() {

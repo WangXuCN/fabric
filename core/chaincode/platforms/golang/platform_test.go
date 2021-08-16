@@ -20,8 +20,8 @@ import (
 	"testing"
 
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/chaincode/platforms/util"
-	"github.com/hyperledger/fabric/core/config/configtest"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/platforms/util"
+	"github.com/SmartBFT-Go/fabric/core/config/configtest"
 	"github.com/pkg/errors"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
@@ -104,7 +104,7 @@ func TestNormalizePath(t *testing.T) {
 		path   string
 		result string
 	}{
-		{path: "github.com/hyperledger/fabric/cmd/peer", result: "github.com/hyperledger/fabric/cmd/peer"},
+		{path: "github.com/SmartBFT-Go/fabric/cmd/peer", result: "github.com/SmartBFT-Go/fabric/cmd/peer"},
 		{path: "testdata/ccmodule", result: "ccmodule"},
 		{path: "missing", result: "missing"},
 		{path: tempdir, result: tempdir}, // /dev/null is returned from `go env GOMOD`

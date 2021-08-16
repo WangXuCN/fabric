@@ -8,7 +8,7 @@ package main
 
 import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	validation "github.com/hyperledger/fabric/core/handlers/validation/api"
+	validation "github.com/SmartBFT-Go/fabric/core/handlers/validation/api"
 )
 
 // NoOpValidator is used to test validation plugin infrastructure

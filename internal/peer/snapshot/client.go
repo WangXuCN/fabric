@@ -11,8 +11,8 @@ import (
 	"os"
 
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/internal/peer/common"
+	"github.com/SmartBFT-Go/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/internal/peer/common"
 	"github.com/pkg/errors"
 	"github.com/spf13/viper"
 )

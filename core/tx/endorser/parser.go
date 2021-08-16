@@ -11,8 +11,8 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 
-	"github.com/hyperledger/fabric/pkg/tx"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/pkg/tx"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/pkg/errors"
 )
 

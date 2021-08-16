@@ -20,8 +20,8 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset/kvrwset"
-	"github.com/hyperledger/fabric/core/ledger/internal/version"
-	"github.com/hyperledger/fabric/core/ledger/util"
+	"github.com/SmartBFT-Go/fabric/core/ledger/internal/version"
+	"github.com/SmartBFT-Go/fabric/core/ledger/util"
 )
 
 /////////////////////////////////////////////////////////////////

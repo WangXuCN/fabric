@@ -9,15 +9,15 @@ package server
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/bccsp/sw"
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/genesis"
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/core/config/configtest"
-	"github.com/hyperledger/fabric/internal/configtxgen/encoder"
-	"github.com/hyperledger/fabric/internal/configtxgen/genesisconfig"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/bccsp/sw"
+	"github.com/SmartBFT-Go/fabric/common/channelconfig"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/common/genesis"
+	"github.com/SmartBFT-Go/fabric/common/policies"
+	"github.com/SmartBFT-Go/fabric/core/config/configtest"
+	"github.com/SmartBFT-Go/fabric/internal/configtxgen/encoder"
+	"github.com/SmartBFT-Go/fabric/internal/configtxgen/genesisconfig"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/stretchr/testify/assert"
 )
 

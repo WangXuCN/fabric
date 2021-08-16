@@ -15,8 +15,8 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	configtxtest "github.com/hyperledger/fabric/common/configtx/test"
-	"github.com/hyperledger/fabric/protoutil"
+	configtxtest "github.com/SmartBFT-Go/fabric/common/configtx/test"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/stretchr/testify/require"
 )
 

@@ -10,8 +10,8 @@ import (
 	"errors"
 
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/scc/cscc"
-	"github.com/hyperledger/fabric/internal/peer/common"
+	"github.com/SmartBFT-Go/fabric/core/scc/cscc"
+	"github.com/SmartBFT-Go/fabric/internal/peer/common"
 	"github.com/spf13/cobra"
 )
 

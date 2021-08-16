@@ -16,7 +16,7 @@ import (
 	"github.com/davecgh/go-spew/spew"
 	"github.com/golang/protobuf/proto"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/internal/fileutil"
+	"github.com/SmartBFT-Go/fabric/internal/fileutil"
 	"github.com/pkg/errors"
 )
 

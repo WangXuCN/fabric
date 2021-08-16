@@ -23,11 +23,11 @@ import (
 
 	docker "github.com/fsouza/go-dockerclient"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/chaincode/persistence"
-	"github.com/hyperledger/fabric/core/container"
-	"github.com/hyperledger/fabric/core/container/ccintf"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/common/util"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/persistence"
+	"github.com/SmartBFT-Go/fabric/core/container"
+	"github.com/SmartBFT-Go/fabric/core/container/ccintf"
 	"github.com/pkg/errors"
 )
 

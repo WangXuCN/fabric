@@ -12,10 +12,10 @@ import (
 	"testing"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/confighistory/confighistorytest"
-	"github.com/hyperledger/fabric/core/ledger/internal/version"
-	btltestutil "github.com/hyperledger/fabric/core/ledger/pvtdatapolicy/testutil"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger/confighistory/confighistorytest"
+	"github.com/SmartBFT-Go/fabric/core/ledger/internal/version"
+	btltestutil "github.com/SmartBFT-Go/fabric/core/ledger/pvtdatapolicy/testutil"
 	"github.com/stretchr/testify/require"
 )
 

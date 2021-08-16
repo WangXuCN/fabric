@@ -9,11 +9,11 @@ package privdata
 import (
 	protosgossip "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset"
-	"github.com/hyperledger/fabric/core/committer"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/transientstore"
-	"github.com/hyperledger/fabric/gossip/privdata/common"
-	"github.com/hyperledger/fabric/gossip/util"
+	"github.com/SmartBFT-Go/fabric/core/committer"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/transientstore"
+	"github.com/SmartBFT-Go/fabric/gossip/privdata/common"
+	"github.com/SmartBFT-Go/fabric/gossip/util"
 	"github.com/pkg/errors"
 )
 

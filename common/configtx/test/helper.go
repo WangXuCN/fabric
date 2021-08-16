@@ -11,14 +11,14 @@ import (
 	mspproto "github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/genesis"
-	"github.com/hyperledger/fabric/core/config/configtest"
-	"github.com/hyperledger/fabric/internal/configtxgen/encoder"
-	"github.com/hyperledger/fabric/internal/configtxgen/genesisconfig"
-	"github.com/hyperledger/fabric/internal/pkg/txflags"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/channelconfig"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/common/genesis"
+	"github.com/SmartBFT-Go/fabric/core/config/configtest"
+	"github.com/SmartBFT-Go/fabric/internal/configtxgen/encoder"
+	"github.com/SmartBFT-Go/fabric/internal/configtxgen/genesisconfig"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/txflags"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 )
 
 var logger = flogging.MustGetLogger("common.configtx.test")

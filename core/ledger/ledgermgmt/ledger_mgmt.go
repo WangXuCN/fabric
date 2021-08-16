@@ -13,13 +13,13 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/metrics"
-	"github.com/hyperledger/fabric/core/common/ccprovider"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/cceventmgmt"
-	"github.com/hyperledger/fabric/core/ledger/kvledger"
-	"github.com/hyperledger/fabric/internal/fileutil"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/common/metrics"
+	"github.com/SmartBFT-Go/fabric/core/common/ccprovider"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger/cceventmgmt"
+	"github.com/SmartBFT-Go/fabric/core/ledger/kvledger"
+	"github.com/SmartBFT-Go/fabric/internal/fileutil"
 	"github.com/pkg/errors"
 )
 

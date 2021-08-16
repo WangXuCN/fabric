@@ -13,7 +13,7 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/internal/configtxlator/update"
+	"github.com/SmartBFT-Go/fabric/internal/configtxlator/update"
 )
 
 func fieldBytes(fieldName string, r *http.Request) ([]byte, error) {

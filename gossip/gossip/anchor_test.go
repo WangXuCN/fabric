@@ -17,12 +17,12 @@ import (
 	"time"
 
 	proto "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/gossip/api"
-	"github.com/hyperledger/fabric/gossip/common"
-	"github.com/hyperledger/fabric/gossip/protoext"
-	utilgossip "github.com/hyperledger/fabric/gossip/util"
-	"github.com/hyperledger/fabric/internal/pkg/comm"
+	"github.com/SmartBFT-Go/fabric/common/util"
+	"github.com/SmartBFT-Go/fabric/gossip/api"
+	"github.com/SmartBFT-Go/fabric/gossip/common"
+	"github.com/SmartBFT-Go/fabric/gossip/protoext"
+	utilgossip "github.com/SmartBFT-Go/fabric/gossip/util"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/comm"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"
 )

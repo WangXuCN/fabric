@@ -14,9 +14,9 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	"github.com/hyperledger/fabric/core/deliverservice/mocks"
-	"github.com/hyperledger/fabric/gossip/api"
-	common2 "github.com/hyperledger/fabric/gossip/common"
+	"github.com/SmartBFT-Go/fabric/core/deliverservice/mocks"
+	"github.com/SmartBFT-Go/fabric/gossip/api"
+	common2 "github.com/SmartBFT-Go/fabric/gossip/common"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )

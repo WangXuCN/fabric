@@ -4,7 +4,7 @@ package mock
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric/msp"
+	"github.com/SmartBFT-Go/fabric/msp"
 )
 
 type IdentityDeserializerManager struct {

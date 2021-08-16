@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/common/ledger"
+	"github.com/SmartBFT-Go/fabric/common/ledger"
 )
 
 type FileLedgerBlockStore struct {

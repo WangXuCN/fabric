@@ -3,7 +3,7 @@
 package mocks
 
 import common "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-import errors "github.com/hyperledger/fabric/common/errors"
+import errors "github.com/SmartBFT-Go/fabric/common/errors"
 import mock "github.com/stretchr/testify/mock"
 import peer "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 

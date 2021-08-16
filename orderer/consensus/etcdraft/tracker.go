@@ -10,9 +10,9 @@ import (
 	"sync/atomic"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/etcdraft"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/metrics"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/common/metrics"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"go.etcd.io/etcd/raft"
 )
 

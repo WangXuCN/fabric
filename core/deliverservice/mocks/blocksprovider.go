@@ -14,10 +14,10 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	gossip_proto "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	gossip_common "github.com/hyperledger/fabric/gossip/common"
-	"github.com/hyperledger/fabric/gossip/discovery"
-	"github.com/hyperledger/fabric/internal/pkg/peer/orderers"
-	"github.com/hyperledger/fabric/protoutil"
+	gossip_common "github.com/SmartBFT-Go/fabric/gossip/common"
+	"github.com/SmartBFT-Go/fabric/gossip/discovery"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/peer/orderers"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"google.golang.org/grpc"
 )
 

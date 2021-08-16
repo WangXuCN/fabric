@@ -11,7 +11,7 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/queryresult"
-	"github.com/hyperledger/fabric/core/chaincode"
+	"github.com/SmartBFT-Go/fabric/core/chaincode"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/pkg/errors"

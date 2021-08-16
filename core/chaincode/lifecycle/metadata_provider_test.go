@@ -11,13 +11,13 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 	lb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer/lifecycle"
-	"github.com/hyperledger/fabric/common/chaincode"
-	"github.com/hyperledger/fabric/common/policydsl"
-	"github.com/hyperledger/fabric/core/chaincode/lifecycle"
-	"github.com/hyperledger/fabric/core/chaincode/lifecycle/mock"
+	"github.com/SmartBFT-Go/fabric/common/chaincode"
+	"github.com/SmartBFT-Go/fabric/common/policydsl"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/lifecycle"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/lifecycle/mock"
 	"github.com/pkg/errors"
 
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )

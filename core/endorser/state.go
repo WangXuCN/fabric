@@ -8,9 +8,9 @@ package endorser
 
 import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset"
-	endorsement "github.com/hyperledger/fabric/core/handlers/endorsement/api/state"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/transientstore"
+	endorsement "github.com/SmartBFT-Go/fabric/core/handlers/endorsement/api/state"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/transientstore"
 	"github.com/pkg/errors"
 )
 

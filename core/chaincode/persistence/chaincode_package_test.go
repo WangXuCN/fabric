@@ -10,8 +10,8 @@ import (
 	"io/ioutil"
 
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/chaincode/persistence"
-	"github.com/hyperledger/fabric/core/chaincode/persistence/mock"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/persistence"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/persistence/mock"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/pkg/errors"

@@ -24,9 +24,9 @@ import (
 	"syscall"
 	"time"
 
-	bpkcs11 "github.com/hyperledger/fabric/bccsp/pkcs11"
-	"github.com/hyperledger/fabric/integration/nwo"
-	"github.com/hyperledger/fabric/integration/nwo/fabricconfig"
+	bpkcs11 "github.com/SmartBFT-Go/fabric/bccsp/pkcs11"
+	"github.com/SmartBFT-Go/fabric/integration/nwo"
+	"github.com/SmartBFT-Go/fabric/integration/nwo/fabricconfig"
 	"github.com/miekg/pkcs11"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -71,7 +71,7 @@ var _ = Describe("PKCS11 enabled network", func() {
 		chaincode := nwo.Chaincode{
 			Name:            "mycc",
 			Version:         "0.0",
-			Path:            components.Build("github.com/hyperledger/fabric/integration/chaincode/simple/cmd"),
+			Path:            components.Build("github.com/SmartBFT-Go/fabric/integration/chaincode/simple/cmd"),
 			Lang:            "binary",
 			PackageFile:     filepath.Join(tempDir, "simplecc.tar.gz"),
 			Ctor:            `{"Args":["init","a","100","b","200"]}`,

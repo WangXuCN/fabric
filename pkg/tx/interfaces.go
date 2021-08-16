@@ -12,7 +12,7 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/pkg/statedata"
+	"github.com/SmartBFT-Go/fabric/pkg/statedata"
 )
 
 // ProcessorCreator creates a new instance of a processor of a particular transaction type.

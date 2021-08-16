@@ -10,11 +10,11 @@ import (
 	"testing"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
-	gossipSupport "github.com/hyperledger/fabric/discovery/support/gossip"
-	"github.com/hyperledger/fabric/discovery/support/gossip/mocks"
-	"github.com/hyperledger/fabric/gossip/common"
-	"github.com/hyperledger/fabric/gossip/discovery"
-	"github.com/hyperledger/fabric/gossip/protoext"
+	gossipSupport "github.com/SmartBFT-Go/fabric/discovery/support/gossip"
+	"github.com/SmartBFT-Go/fabric/discovery/support/gossip/mocks"
+	"github.com/SmartBFT-Go/fabric/gossip/common"
+	"github.com/SmartBFT-Go/fabric/gossip/discovery"
+	"github.com/SmartBFT-Go/fabric/gossip/protoext"
 	"github.com/stretchr/testify/require"
 )
 

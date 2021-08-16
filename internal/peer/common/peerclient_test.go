@@ -13,8 +13,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/internal/peer/common"
-	"github.com/hyperledger/fabric/internal/pkg/comm"
+	"github.com/SmartBFT-Go/fabric/internal/peer/common"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/comm"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
 )

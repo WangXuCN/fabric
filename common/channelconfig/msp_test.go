@@ -10,10 +10,10 @@ import (
 	"testing"
 
 	mspprotos "github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	"github.com/hyperledger/fabric/bccsp/factory"
-	"github.com/hyperledger/fabric/bccsp/sw"
-	"github.com/hyperledger/fabric/core/config/configtest"
-	"github.com/hyperledger/fabric/msp"
+	"github.com/SmartBFT-Go/fabric/bccsp/factory"
+	"github.com/SmartBFT-Go/fabric/bccsp/sw"
+	"github.com/SmartBFT-Go/fabric/core/config/configtest"
+	"github.com/SmartBFT-Go/fabric/msp"
 	"github.com/stretchr/testify/require"
 )
 

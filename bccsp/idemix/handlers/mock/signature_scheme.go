@@ -5,8 +5,8 @@ import (
 	"crypto/ecdsa"
 	"sync"
 
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/bccsp/idemix/handlers"
+	"github.com/SmartBFT-Go/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/bccsp/idemix/handlers"
 )
 
 type SignatureScheme struct {

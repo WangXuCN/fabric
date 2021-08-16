@@ -9,7 +9,7 @@ package channelconfig
 import (
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/common/capabilities"
+	"github.com/SmartBFT-Go/fabric/common/capabilities"
 	"github.com/pkg/errors"
 )
 

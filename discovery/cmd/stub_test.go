@@ -12,11 +12,11 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/hyperledger/fabric/cmd/common"
-	"github.com/hyperledger/fabric/cmd/common/comm"
-	"github.com/hyperledger/fabric/cmd/common/signer"
-	discovery "github.com/hyperledger/fabric/discovery/client"
-	corecomm "github.com/hyperledger/fabric/internal/pkg/comm"
+	"github.com/SmartBFT-Go/fabric/cmd/common"
+	"github.com/SmartBFT-Go/fabric/cmd/common/comm"
+	"github.com/SmartBFT-Go/fabric/cmd/common/signer"
+	discovery "github.com/SmartBFT-Go/fabric/discovery/client"
+	corecomm "github.com/SmartBFT-Go/fabric/internal/pkg/comm"
 	"github.com/stretchr/testify/require"
 )
 

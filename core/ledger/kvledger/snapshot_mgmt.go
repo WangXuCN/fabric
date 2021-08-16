@@ -11,8 +11,8 @@ import (
 	"os"
 	"sync"
 
-	"github.com/hyperledger/fabric/common/ledger/util"
-	"github.com/hyperledger/fabric/common/ledger/util/leveldbhelper"
+	"github.com/SmartBFT-Go/fabric/common/ledger/util"
+	"github.com/SmartBFT-Go/fabric/common/ledger/util/leveldbhelper"
 	"github.com/pkg/errors"
 )
 

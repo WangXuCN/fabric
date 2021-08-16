@@ -17,8 +17,8 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/common/crypto/tlsgen"
-	"github.com/hyperledger/fabric/common/flogging/floggingtest"
+	"github.com/SmartBFT-Go/fabric/common/crypto/tlsgen"
+	"github.com/SmartBFT-Go/fabric/common/flogging/floggingtest"
 	"github.com/stretchr/testify/require"
 	"go.uber.org/zap/zapcore"
 	"google.golang.org/grpc"

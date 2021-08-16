@@ -10,7 +10,7 @@ import (
 	"testing"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
-	"github.com/hyperledger/fabric/gossip/protoext"
+	"github.com/SmartBFT-Go/fabric/gossip/protoext"
 	"github.com/stretchr/testify/require"
 )
 

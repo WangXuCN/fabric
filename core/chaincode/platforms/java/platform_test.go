@@ -18,9 +18,9 @@ import (
 	"time"
 
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/chaincode/platforms/java"
-	"github.com/hyperledger/fabric/core/chaincode/platforms/util"
-	"github.com/hyperledger/fabric/core/config/configtest"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/platforms/java"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/platforms/util"
+	"github.com/SmartBFT-Go/fabric/core/config/configtest"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
 )

@@ -8,8 +8,8 @@ package cache
 
 import (
 	pmsp "github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/msp"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/msp"
 	"github.com/pkg/errors"
 )
 

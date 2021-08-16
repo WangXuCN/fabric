@@ -10,8 +10,8 @@ package gossip
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/internal/peer/gossip/mocks"
-	"github.com/hyperledger/fabric/msp"
+	"github.com/SmartBFT-Go/fabric/internal/peer/gossip/mocks"
+	"github.com/SmartBFT-Go/fabric/msp"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 )

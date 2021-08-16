@@ -11,7 +11,7 @@ import (
 	"testing"
 
 	protopeer "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
 	"github.com/stretchr/testify/require"
 )
 

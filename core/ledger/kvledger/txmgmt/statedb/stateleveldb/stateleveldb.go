@@ -9,11 +9,11 @@ package stateleveldb
 import (
 	"bytes"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/ledger/dataformat"
-	"github.com/hyperledger/fabric/common/ledger/util/leveldbhelper"
-	"github.com/hyperledger/fabric/core/ledger/internal/version"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/statedb"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/common/ledger/dataformat"
+	"github.com/SmartBFT-Go/fabric/common/ledger/util/leveldbhelper"
+	"github.com/SmartBFT-Go/fabric/core/ledger/internal/version"
+	"github.com/SmartBFT-Go/fabric/core/ledger/kvledger/txmgmt/statedb"
 	"github.com/pkg/errors"
 	"github.com/syndtr/goleveldb/leveldb/iterator"
 )

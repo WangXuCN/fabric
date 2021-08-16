@@ -15,11 +15,11 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	gossip_proto "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	"github.com/hyperledger/fabric/common/flogging"
-	gossipcommon "github.com/hyperledger/fabric/gossip/common"
-	"github.com/hyperledger/fabric/gossip/discovery"
-	"github.com/hyperledger/fabric/internal/pkg/peer/blocksprovider"
-	"github.com/hyperledger/fabric/internal/pkg/peer/orderers"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	gossipcommon "github.com/SmartBFT-Go/fabric/gossip/common"
+	"github.com/SmartBFT-Go/fabric/gossip/discovery"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/peer/blocksprovider"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/peer/orderers"
 )
 
 // GossipServiceAdapter serves to provide basic functionality

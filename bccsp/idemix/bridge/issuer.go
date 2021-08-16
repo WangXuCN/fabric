@@ -10,9 +10,9 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric-amcl/amcl"
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/bccsp/idemix/handlers"
-	cryptolib "github.com/hyperledger/fabric/idemix"
+	"github.com/SmartBFT-Go/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/bccsp/idemix/handlers"
+	cryptolib "github.com/SmartBFT-Go/fabric/idemix"
 	"github.com/pkg/errors"
 )
 

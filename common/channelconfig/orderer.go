@@ -15,7 +15,7 @@ import (
 
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	"github.com/hyperledger/fabric/common/capabilities"
+	"github.com/SmartBFT-Go/fabric/common/capabilities"
 	"github.com/pkg/errors"
 )
 

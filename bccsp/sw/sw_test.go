@@ -21,9 +21,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/bccsp/mocks"
-	mocks2 "github.com/hyperledger/fabric/bccsp/sw/mocks"
+	"github.com/SmartBFT-Go/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/bccsp/mocks"
+	mocks2 "github.com/SmartBFT-Go/fabric/bccsp/sw/mocks"
 	"github.com/stretchr/testify/require"
 )
 

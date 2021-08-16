@@ -4,7 +4,7 @@ package mock
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric/bccsp/idemix/handlers"
+	"github.com/SmartBFT-Go/fabric/bccsp/idemix/handlers"
 )
 
 type Ecp struct {

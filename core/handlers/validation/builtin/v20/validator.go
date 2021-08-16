@@ -9,7 +9,7 @@ package v20
 import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	commonerrors "github.com/hyperledger/fabric/common/errors"
+	commonerrors "github.com/SmartBFT-Go/fabric/common/errors"
 )
 
 // StateBasedValidator is used to validate a transaction that performs changes to

@@ -14,7 +14,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/hyperledger/fabric/core/container/externalbuilder"
+	"github.com/SmartBFT-Go/fabric/core/container/externalbuilder"
 )
 
 var _ = Describe("Metadataprovider", func() {

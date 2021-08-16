@@ -15,8 +15,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/hyperledger/fabric/core/container/ccintf"
-	"github.com/hyperledger/fabric/internal/pkg/comm"
+	"github.com/SmartBFT-Go/fabric/core/container/ccintf"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/comm"
 	"github.com/pkg/errors"
 )
 

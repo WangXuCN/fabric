@@ -10,7 +10,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/hyperledger/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/bccsp"
 	"github.com/spf13/cobra"
 )
 

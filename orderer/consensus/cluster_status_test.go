@@ -9,8 +9,8 @@ package consensus_test
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/orderer/common/types"
-	"github.com/hyperledger/fabric/orderer/consensus"
+	"github.com/SmartBFT-Go/fabric/orderer/common/types"
+	"github.com/SmartBFT-Go/fabric/orderer/consensus"
 	"github.com/stretchr/testify/require"
 )
 

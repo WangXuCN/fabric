@@ -9,8 +9,8 @@ package msptesttools
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/bccsp/sw"
-	"github.com/hyperledger/fabric/msp/mgmt"
+	"github.com/SmartBFT-Go/fabric/bccsp/sw"
+	"github.com/SmartBFT-Go/fabric/msp/mgmt"
 	"github.com/stretchr/testify/require"
 )
 

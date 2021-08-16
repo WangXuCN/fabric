@@ -4,7 +4,7 @@ package mocks
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric/msp"
+	"github.com/SmartBFT-Go/fabric/msp"
 )
 
 type ChannelCapabilities struct {

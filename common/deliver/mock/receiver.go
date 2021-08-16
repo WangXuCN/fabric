@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/common/deliver"
+	"github.com/SmartBFT-Go/fabric/common/deliver"
 )
 
 type Receiver struct {

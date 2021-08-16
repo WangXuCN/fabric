@@ -13,8 +13,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/hyperledger/fabric/integration"
-	"github.com/hyperledger/fabric/integration/nwo"
+	"github.com/SmartBFT-Go/fabric/integration"
+	"github.com/SmartBFT-Go/fabric/integration/nwo"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )

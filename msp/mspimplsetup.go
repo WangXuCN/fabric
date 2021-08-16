@@ -15,7 +15,7 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	m "github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	"github.com/hyperledger/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/bccsp"
 	errors "github.com/pkg/errors"
 )
 

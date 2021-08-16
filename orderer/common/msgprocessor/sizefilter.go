@@ -10,7 +10,7 @@ import (
 	"fmt"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/common/channelconfig"
+	"github.com/SmartBFT-Go/fabric/common/channelconfig"
 )
 
 // SizeFilterResources defines the subset of the channel resources required to create this filter

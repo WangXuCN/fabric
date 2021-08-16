@@ -13,8 +13,8 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	"github.com/hyperledger/fabric/cmd/common"
-	discovery "github.com/hyperledger/fabric/discovery/client"
+	"github.com/SmartBFT-Go/fabric/cmd/common"
+	discovery "github.com/SmartBFT-Go/fabric/discovery/client"
 	"github.com/pkg/errors"
 )
 

@@ -4,7 +4,7 @@ package mock
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric/core/chaincode/lifecycle"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/lifecycle"
 )
 
 type ChaincodeLauncher struct {

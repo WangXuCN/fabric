@@ -15,12 +15,12 @@ import (
 
 	protosgossip "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	commonutil "github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/committer"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/gossip/metrics"
-	privdatacommon "github.com/hyperledger/fabric/gossip/privdata/common"
-	"github.com/hyperledger/fabric/gossip/util"
+	commonutil "github.com/SmartBFT-Go/fabric/common/util"
+	"github.com/SmartBFT-Go/fabric/core/committer"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/gossip/metrics"
+	privdatacommon "github.com/SmartBFT-Go/fabric/gossip/privdata/common"
+	"github.com/SmartBFT-Go/fabric/gossip/util"
 	"github.com/pkg/errors"
 )
 

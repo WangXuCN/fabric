@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/transientstore"
-	"github.com/hyperledger/fabric/core/endorser"
+	"github.com/SmartBFT-Go/fabric/core/endorser"
 )
 
 type PrivateDataDistributor struct {

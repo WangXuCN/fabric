@@ -5,9 +5,9 @@ package main
 
 import (
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/internal/configtxgen/encoder"
-	"github.com/hyperledger/fabric/internal/configtxgen/genesisconfig"
-	"github.com/hyperledger/fabric/internal/pkg/identity"
+	"github.com/SmartBFT-Go/fabric/internal/configtxgen/encoder"
+	"github.com/SmartBFT-Go/fabric/internal/configtxgen/genesisconfig"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/identity"
 )
 
 func newChainRequest(

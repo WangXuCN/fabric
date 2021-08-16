@@ -5,8 +5,8 @@ import (
 	"sync"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/orderer/common/broadcast"
-	"github.com/hyperledger/fabric/orderer/common/msgprocessor"
+	"github.com/SmartBFT-Go/fabric/orderer/common/broadcast"
+	"github.com/SmartBFT-Go/fabric/orderer/common/msgprocessor"
 )
 
 type ChannelSupport struct {

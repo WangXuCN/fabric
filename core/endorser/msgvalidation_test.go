@@ -15,9 +15,9 @@ import (
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	mspproto "github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/endorser"
-	"github.com/hyperledger/fabric/core/endorser/fake"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/core/endorser"
+	"github.com/SmartBFT-Go/fabric/core/endorser/fake"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 
 	"github.com/golang/protobuf/proto"
 )

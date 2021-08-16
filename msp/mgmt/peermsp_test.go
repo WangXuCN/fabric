@@ -9,8 +9,8 @@ package mgmt
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/bccsp/sw"
-	"github.com/hyperledger/fabric/core/config/configtest"
+	"github.com/SmartBFT-Go/fabric/bccsp/sw"
+	"github.com/SmartBFT-Go/fabric/core/config/configtest"
 	"github.com/stretchr/testify/require"
 )
 

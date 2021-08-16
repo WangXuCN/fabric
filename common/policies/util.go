@@ -8,7 +8,7 @@ package policies
 
 import (
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 )
 
 // ConfigPolicy defines a common representation for different *cb.ConfigPolicy values.

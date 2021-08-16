@@ -7,8 +7,8 @@ SPDX-License-Identifier: Apache-2.0
 package lifecycle
 
 import (
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/internal/peer/lifecycle/chaincode"
+	"github.com/SmartBFT-Go/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/internal/peer/lifecycle/chaincode"
 	"github.com/spf13/cobra"
 )
 

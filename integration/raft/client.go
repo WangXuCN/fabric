@@ -9,10 +9,10 @@ package raft
 import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	"github.com/hyperledger/fabric/cmd/common/signer"
-	"github.com/hyperledger/fabric/integration/nwo"
-	"github.com/hyperledger/fabric/integration/ordererclient"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/cmd/common/signer"
+	"github.com/SmartBFT-Go/fabric/integration/nwo"
+	"github.com/SmartBFT-Go/fabric/integration/ordererclient"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	. "github.com/onsi/gomega"
 )
 

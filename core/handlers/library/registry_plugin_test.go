@@ -16,16 +16,16 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	endorsement "github.com/hyperledger/fabric/core/handlers/endorsement/api"
-	validation "github.com/hyperledger/fabric/core/handlers/validation/api"
+	endorsement "github.com/SmartBFT-Go/fabric/core/handlers/endorsement/api"
+	validation "github.com/SmartBFT-Go/fabric/core/handlers/validation/api"
 	"github.com/stretchr/testify/require"
 )
 
 const (
-	authPluginPackage      = "github.com/hyperledger/fabric/core/handlers/auth/plugin"
-	decoratorPluginPackage = "github.com/hyperledger/fabric/core/handlers/decoration/plugin"
-	endorsementTestPlugin  = "github.com/hyperledger/fabric/core/handlers/endorsement/testdata/"
-	validationTestPlugin   = "github.com/hyperledger/fabric/core/handlers/validation/testdata/"
+	authPluginPackage      = "github.com/SmartBFT-Go/fabric/core/handlers/auth/plugin"
+	decoratorPluginPackage = "github.com/SmartBFT-Go/fabric/core/handlers/decoration/plugin"
+	endorsementTestPlugin  = "github.com/SmartBFT-Go/fabric/core/handlers/endorsement/testdata/"
+	validationTestPlugin   = "github.com/SmartBFT-Go/fabric/core/handlers/validation/testdata/"
 )
 
 // raceEnabled is set to true when the race build tag is enabled.

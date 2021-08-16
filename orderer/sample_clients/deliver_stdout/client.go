@@ -13,11 +13,11 @@ import (
 	"github.com/SmartBFT-Go/fabric-config/protolator"
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	"github.com/hyperledger/fabric/bccsp/factory"
-	"github.com/hyperledger/fabric/internal/pkg/identity"
-	mspmgmt "github.com/hyperledger/fabric/msp/mgmt"
-	"github.com/hyperledger/fabric/orderer/common/localconfig"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/bccsp/factory"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/identity"
+	mspmgmt "github.com/SmartBFT-Go/fabric/msp/mgmt"
+	"github.com/SmartBFT-Go/fabric/orderer/common/localconfig"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"google.golang.org/grpc"
 )
 

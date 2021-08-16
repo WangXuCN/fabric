@@ -5,7 +5,7 @@ import (
 	"context"
 	"sync"
 
-	"github.com/hyperledger/fabric/internal/pkg/peer/blocksprovider"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/peer/blocksprovider"
 	"google.golang.org/grpc"
 )
 

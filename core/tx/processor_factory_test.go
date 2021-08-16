@@ -11,9 +11,9 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/tx"
-	pkgtx "github.com/hyperledger/fabric/pkg/tx"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/core/tx"
+	pkgtx "github.com/SmartBFT-Go/fabric/pkg/tx"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/require"

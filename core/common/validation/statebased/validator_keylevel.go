@@ -11,11 +11,11 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	commonerrors "github.com/hyperledger/fabric/common/errors"
-	validation "github.com/hyperledger/fabric/core/handlers/validation/api/policies"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
-	"github.com/hyperledger/fabric/protoutil"
+	commonerrors "github.com/SmartBFT-Go/fabric/common/errors"
+	validation "github.com/SmartBFT-Go/fabric/core/handlers/validation/api/policies"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/pkg/errors"
 )
 

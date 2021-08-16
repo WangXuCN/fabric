@@ -13,8 +13,8 @@ import (
 	"testing"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/queryresult"
-	"github.com/hyperledger/fabric/core/chaincode"
-	"github.com/hyperledger/fabric/core/chaincode/mock"
+	"github.com/SmartBFT-Go/fabric/core/chaincode"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/mock"
 	"github.com/stretchr/testify/require"
 )
 

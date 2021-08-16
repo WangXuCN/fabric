@@ -11,12 +11,12 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	validation "github.com/hyperledger/fabric/core/handlers/validation/api"
-	. "github.com/hyperledger/fabric/core/handlers/validation/api/capabilities"
-	. "github.com/hyperledger/fabric/core/handlers/validation/api/identities"
-	. "github.com/hyperledger/fabric/core/handlers/validation/api/policies"
-	. "github.com/hyperledger/fabric/core/handlers/validation/api/state"
-	"github.com/hyperledger/fabric/protoutil"
+	validation "github.com/SmartBFT-Go/fabric/core/handlers/validation/api"
+	. "github.com/SmartBFT-Go/fabric/core/handlers/validation/api/capabilities"
+	. "github.com/SmartBFT-Go/fabric/core/handlers/validation/api/identities"
+	. "github.com/SmartBFT-Go/fabric/core/handlers/validation/api/policies"
+	. "github.com/SmartBFT-Go/fabric/core/handlers/validation/api/state"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/require"
 )

@@ -15,9 +15,9 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset/kvrwset"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
-	privdatacommon "github.com/hyperledger/fabric/gossip/privdata/common"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
+	privdatacommon "github.com/SmartBFT-Go/fabric/gossip/privdata/common"
 )
 
 type txValidationFlags []uint8

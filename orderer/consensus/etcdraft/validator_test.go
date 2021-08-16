@@ -7,8 +7,8 @@
 package etcdraft_test
 
 import (
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/orderer/consensus/etcdraft/mocks"
+	"github.com/SmartBFT-Go/fabric/common/channelconfig"
+	"github.com/SmartBFT-Go/fabric/orderer/consensus/etcdraft/mocks"
 	"io/ioutil"
 	"os"
 	"time"
@@ -16,11 +16,11 @@ import (
 	"github.com/golang/protobuf/proto"
 	etcdraftproto "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/etcdraft"
 	raftprotos "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/etcdraft"
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/bccsp/sw"
-	"github.com/hyperledger/fabric/common/crypto/tlsgen"
-	"github.com/hyperledger/fabric/orderer/consensus/etcdraft"
-	consensusmocks "github.com/hyperledger/fabric/orderer/consensus/mocks"
+	"github.com/SmartBFT-Go/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/bccsp/sw"
+	"github.com/SmartBFT-Go/fabric/common/crypto/tlsgen"
+	"github.com/SmartBFT-Go/fabric/orderer/consensus/etcdraft"
+	consensusmocks "github.com/SmartBFT-Go/fabric/orderer/consensus/mocks"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )

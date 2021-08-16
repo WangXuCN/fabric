@@ -11,9 +11,9 @@ import (
 	"testing"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/endorser/mocks"
-	mocks2 "github.com/hyperledger/fabric/core/handlers/endorsement/builtin/mocks"
-	plgn "github.com/hyperledger/fabric/core/handlers/endorsement/plugin"
+	"github.com/SmartBFT-Go/fabric/core/endorser/mocks"
+	mocks2 "github.com/SmartBFT-Go/fabric/core/handlers/endorsement/builtin/mocks"
+	plgn "github.com/SmartBFT-Go/fabric/core/handlers/endorsement/plugin"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 )

@@ -11,7 +11,7 @@ import (
 	"os"
 
 	"github.com/SmartBFT-Go/fabric-chaincode-go/shim"
-	"github.com/hyperledger/fabric/integration/chaincode/keylevelep"
+	"github.com/SmartBFT-Go/fabric/integration/chaincode/keylevelep"
 )
 
 func main() {

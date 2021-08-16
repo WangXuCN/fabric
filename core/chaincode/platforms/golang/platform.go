@@ -23,8 +23,8 @@ import (
 	"strings"
 
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/chaincode/platforms/util"
-	"github.com/hyperledger/fabric/internal/ccmetadata"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/platforms/util"
+	"github.com/SmartBFT-Go/fabric/internal/ccmetadata"
 	"github.com/pkg/errors"
 	"github.com/spf13/viper"
 )

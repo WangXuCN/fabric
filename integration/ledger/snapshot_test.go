@@ -23,17 +23,17 @@ import (
 	docker "github.com/fsouza/go-dockerclient"
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/cmd/common/signer"
-	"github.com/hyperledger/fabric/core/ledger/util"
-	"github.com/hyperledger/fabric/integration/chaincode/kvexecutor"
-	"github.com/hyperledger/fabric/integration/nwo"
-	"github.com/hyperledger/fabric/integration/nwo/commands"
-	"github.com/hyperledger/fabric/integration/pvtdata/marblechaincodeutil"
-	"github.com/hyperledger/fabric/integration/runner"
-	ic "github.com/hyperledger/fabric/internal/peer/chaincode"
-	"github.com/hyperledger/fabric/internal/peer/common"
-	"github.com/hyperledger/fabric/internal/pkg/comm"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/cmd/common/signer"
+	"github.com/SmartBFT-Go/fabric/core/ledger/util"
+	"github.com/SmartBFT-Go/fabric/integration/chaincode/kvexecutor"
+	"github.com/SmartBFT-Go/fabric/integration/nwo"
+	"github.com/SmartBFT-Go/fabric/integration/nwo/commands"
+	"github.com/SmartBFT-Go/fabric/integration/pvtdata/marblechaincodeutil"
+	"github.com/SmartBFT-Go/fabric/integration/runner"
+	ic "github.com/SmartBFT-Go/fabric/internal/peer/chaincode"
+	"github.com/SmartBFT-Go/fabric/internal/peer/common"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/comm"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/gbytes"
@@ -296,7 +296,7 @@ var _ bool = Describe("Snapshot Generation and Bootstrap", func() {
 			cc2 := nwo.Chaincode{
 				Name:            "kvexecutor",
 				Version:         "1.0",
-				Path:            components.Build("github.com/hyperledger/fabric/integration/chaincode/kvexecutor/cmd"),
+				Path:            components.Build("github.com/SmartBFT-Go/fabric/integration/chaincode/kvexecutor/cmd"),
 				Lang:            "binary",
 				SignaturePolicy: `OR ('Org1MSP.member','Org2MSP.member', 'Org3MSP.member', 'Org4MSP.member')`,
 				PackageFile:     filepath.Join(setup.testDir, "kvexcutor20.tar.gz"),
@@ -319,7 +319,7 @@ var _ bool = Describe("Snapshot Generation and Bootstrap", func() {
 			newlifecycleChaincode = nwo.Chaincode{
 				Name:              "marblesp",
 				Version:           "1.0",
-				Path:              components.Build("github.com/hyperledger/fabric/integration/chaincode/marbles_private/cmd"),
+				Path:              components.Build("github.com/SmartBFT-Go/fabric/integration/chaincode/marbles_private/cmd"),
 				Lang:              "binary",
 				PackageFile:       filepath.Join(setup.testDir, "marbles-pvtdata.tar.gz"),
 				Label:             "marbles-private-20",

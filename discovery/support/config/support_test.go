@@ -19,13 +19,13 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/discovery"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/common/configtx/test"
-	"github.com/hyperledger/fabric/discovery/support/config"
-	"github.com/hyperledger/fabric/discovery/support/mocks"
-	"github.com/hyperledger/fabric/internal/configtxgen/encoder"
-	"github.com/hyperledger/fabric/internal/configtxgen/genesisconfig"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/channelconfig"
+	"github.com/SmartBFT-Go/fabric/common/configtx/test"
+	"github.com/SmartBFT-Go/fabric/discovery/support/config"
+	"github.com/SmartBFT-Go/fabric/discovery/support/mocks"
+	"github.com/SmartBFT-Go/fabric/internal/configtxgen/encoder"
+	"github.com/SmartBFT-Go/fabric/internal/configtxgen/genesisconfig"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/onsi/gomega/gexec"
 	"github.com/stretchr/testify/require"
 )
@@ -41,11 +41,11 @@ func TestMSPIDMapping(t *testing.T) {
 	os.Mkdir(dir, 0700)
 	defer os.RemoveAll(dir)
 
-	cryptogen, err := gexec.Build("github.com/hyperledger/fabric/cmd/cryptogen")
+	cryptogen, err := gexec.Build("github.com/SmartBFT-Go/fabric/cmd/cryptogen")
 	require.NoError(t, err)
 	defer os.Remove(cryptogen)
 
-	idemixgen, err := gexec.Build("github.com/hyperledger/fabric/cmd/idemixgen")
+	idemixgen, err := gexec.Build("github.com/SmartBFT-Go/fabric/cmd/idemixgen")
 	require.NoError(t, err)
 	defer os.Remove(idemixgen)
 

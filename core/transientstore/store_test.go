@@ -18,10 +18,10 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/transientstore"
-	"github.com/hyperledger/fabric/common/policydsl"
-	commonutil "github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/util"
+	"github.com/SmartBFT-Go/fabric/common/policydsl"
+	commonutil "github.com/SmartBFT-Go/fabric/common/util"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger/util"
 	"github.com/stretchr/testify/require"
 )
 

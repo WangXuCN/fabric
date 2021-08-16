@@ -8,7 +8,7 @@ package inactive
 
 import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/orderer/common/types"
+	"github.com/SmartBFT-Go/fabric/orderer/common/types"
 )
 
 // Chain implements an inactive consenter.Chain

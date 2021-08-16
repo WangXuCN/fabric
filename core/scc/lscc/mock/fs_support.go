@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/common/ccprovider"
+	"github.com/SmartBFT-Go/fabric/core/common/ccprovider"
 )
 
 type FileSystemSupport struct {

@@ -9,7 +9,7 @@ package chaincode
 import (
 	"github.com/golang/protobuf/proto"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	commonledger "github.com/hyperledger/fabric/common/ledger"
+	commonledger "github.com/SmartBFT-Go/fabric/common/ledger"
 )
 
 type QueryResponseGenerator struct {

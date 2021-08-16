@@ -4,7 +4,7 @@ package mocks
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric/orderer/common/follower"
+	"github.com/SmartBFT-Go/fabric/orderer/common/follower"
 )
 
 type ChainCreator struct {

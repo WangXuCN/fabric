@@ -12,7 +12,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/ledger/util/leveldbhelper"
+	"github.com/SmartBFT-Go/fabric/common/ledger/util/leveldbhelper"
 	"github.com/stretchr/testify/require"
 )
 

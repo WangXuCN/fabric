@@ -4,8 +4,8 @@ package fake
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric/core/chaincode"
-	"github.com/hyperledger/fabric/core/common/ccprovider"
+	"github.com/SmartBFT-Go/fabric/core/chaincode"
+	"github.com/SmartBFT-Go/fabric/core/common/ccprovider"
 )
 
 type ContextRegistry struct {

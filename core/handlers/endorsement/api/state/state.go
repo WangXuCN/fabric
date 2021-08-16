@@ -8,7 +8,7 @@ package endorsement
 
 import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset"
-	endorsement "github.com/hyperledger/fabric/core/handlers/endorsement/api"
+	endorsement "github.com/SmartBFT-Go/fabric/core/handlers/endorsement/api"
 )
 
 // State defines interaction with the world state

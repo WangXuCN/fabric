@@ -9,13 +9,13 @@ package etcdraft_test
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/bccsp/sw"
-	"github.com/hyperledger/fabric/common/metrics/disabled"
-	"github.com/hyperledger/fabric/internal/pkg/comm"
-	"github.com/hyperledger/fabric/orderer/common/cluster"
-	"github.com/hyperledger/fabric/orderer/common/localconfig"
-	"github.com/hyperledger/fabric/orderer/consensus/etcdraft"
-	"github.com/hyperledger/fabric/orderer/consensus/etcdraft/mocks"
+	"github.com/SmartBFT-Go/fabric/bccsp/sw"
+	"github.com/SmartBFT-Go/fabric/common/metrics/disabled"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/comm"
+	"github.com/SmartBFT-Go/fabric/orderer/common/cluster"
+	"github.com/SmartBFT-Go/fabric/orderer/common/localconfig"
+	"github.com/SmartBFT-Go/fabric/orderer/consensus/etcdraft"
+	"github.com/SmartBFT-Go/fabric/orderer/consensus/etcdraft/mocks"
 	"github.com/stretchr/testify/require"
 )
 

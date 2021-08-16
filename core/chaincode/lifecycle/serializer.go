@@ -12,7 +12,7 @@ import (
 	"reflect"
 
 	lb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer/lifecycle"
-	"github.com/hyperledger/fabric/common/util"
+	"github.com/SmartBFT-Go/fabric/common/util"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/pkg/errors"

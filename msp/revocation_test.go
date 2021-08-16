@@ -21,7 +21,7 @@ import (
 	"testing"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	"github.com/hyperledger/fabric/bccsp/sw"
+	"github.com/SmartBFT-Go/fabric/bccsp/sw"
 	"github.com/stretchr/testify/require"
 )
 

@@ -15,8 +15,8 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/queryresult"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset/kvrwset"
 	protopeer "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/internal/pkg/txflags"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/txflags"
 	"github.com/stretchr/testify/require"
 )
 

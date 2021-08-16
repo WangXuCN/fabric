@@ -27,10 +27,10 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric-lib-go/healthz"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/etcdraft"
-	"github.com/hyperledger/fabric/integration/channelparticipation"
-	"github.com/hyperledger/fabric/integration/nwo"
-	"github.com/hyperledger/fabric/integration/nwo/commands"
-	"github.com/hyperledger/fabric/integration/nwo/fabricconfig"
+	"github.com/SmartBFT-Go/fabric/integration/channelparticipation"
+	"github.com/SmartBFT-Go/fabric/integration/nwo"
+	"github.com/SmartBFT-Go/fabric/integration/nwo/commands"
+	"github.com/SmartBFT-Go/fabric/integration/nwo/fabricconfig"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/gbytes"
@@ -59,7 +59,7 @@ var _ = Describe("EndToEnd", func() {
 		chaincode = nwo.Chaincode{
 			Name:            "mycc",
 			Version:         "0.0",
-			Path:            components.Build("github.com/hyperledger/fabric/integration/chaincode/simple/cmd"),
+			Path:            components.Build("github.com/SmartBFT-Go/fabric/integration/chaincode/simple/cmd"),
 			Lang:            "binary",
 			PackageFile:     filepath.Join(testDir, "simplecc.tar.gz"),
 			Ctor:            `{"Args":["init","a","100","b","200"]}`,
@@ -248,7 +248,7 @@ var _ = Describe("EndToEnd", func() {
 			gopathChaincode := nwo.Chaincode{
 				Name:            "mycc",
 				Version:         "0.0",
-				Path:            "github.com/hyperledger/fabric/integration/chaincode/simple/cmd",
+				Path:            "github.com/SmartBFT-Go/fabric/integration/chaincode/simple/cmd",
 				Lang:            "golang",
 				PackageFile:     filepath.Join(testDir, "simplecc.tar.gz"),
 				Ctor:            `{"Args":["init","a","100","b","200"]}`,
@@ -501,7 +501,7 @@ var _ = Describe("EndToEnd", func() {
 			chaincode := nwo.Chaincode{
 				Name:            "mycc",
 				Version:         "0.0",
-				Path:            "github.com/hyperledger/fabric/integration/chaincode/simple/cmd",
+				Path:            "github.com/SmartBFT-Go/fabric/integration/chaincode/simple/cmd",
 				Lang:            "golang",
 				PackageFile:     filepath.Join(testDir, "simplecc.tar.gz"),
 				Ctor:            `{"Args":["init","a","100","b","200"]}`,

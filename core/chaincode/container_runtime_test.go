@@ -10,10 +10,10 @@ import (
 	"testing"
 
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/chaincode"
-	"github.com/hyperledger/fabric/core/chaincode/mock"
-	"github.com/hyperledger/fabric/core/container"
-	"github.com/hyperledger/fabric/core/container/ccintf"
+	"github.com/SmartBFT-Go/fabric/core/chaincode"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/mock"
+	"github.com/SmartBFT-Go/fabric/core/container"
+	"github.com/SmartBFT-Go/fabric/core/container/ccintf"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/require"
 )

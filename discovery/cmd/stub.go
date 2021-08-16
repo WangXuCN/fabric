@@ -10,11 +10,11 @@ import (
 	"context"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/discovery"
-	"github.com/hyperledger/fabric/cmd/common"
-	"github.com/hyperledger/fabric/cmd/common/comm"
-	"github.com/hyperledger/fabric/cmd/common/signer"
-	discoveryclient "github.com/hyperledger/fabric/discovery/client"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/cmd/common"
+	"github.com/SmartBFT-Go/fabric/cmd/common/comm"
+	"github.com/SmartBFT-Go/fabric/cmd/common/signer"
+	discoveryclient "github.com/SmartBFT-Go/fabric/discovery/client"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/pkg/errors"
 )
 

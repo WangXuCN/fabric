@@ -11,8 +11,8 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/common/capabilities"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/capabilities"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	. "github.com/onsi/gomega"
 )
 

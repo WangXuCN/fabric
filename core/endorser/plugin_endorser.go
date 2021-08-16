@@ -11,9 +11,9 @@ import (
 	"sync"
 
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	endorsement "github.com/hyperledger/fabric/core/handlers/endorsement/api"
-	endorsement3 "github.com/hyperledger/fabric/core/handlers/endorsement/api/identities"
-	"github.com/hyperledger/fabric/core/transientstore"
+	endorsement "github.com/SmartBFT-Go/fabric/core/handlers/endorsement/api"
+	endorsement3 "github.com/SmartBFT-Go/fabric/core/handlers/endorsement/api/identities"
+	"github.com/SmartBFT-Go/fabric/core/transientstore"
 	"github.com/pkg/errors"
 )
 

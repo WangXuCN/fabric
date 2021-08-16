@@ -10,9 +10,9 @@ import (
 	"github.com/golang/protobuf/proto"
 	mspp "github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/common/cauthdsl"
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/msp"
+	"github.com/SmartBFT-Go/fabric/common/cauthdsl"
+	"github.com/SmartBFT-Go/fabric/common/policies"
+	"github.com/SmartBFT-Go/fabric/msp"
 	"github.com/pkg/errors"
 )
 

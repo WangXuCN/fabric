@@ -5,8 +5,8 @@ import (
 	"sync"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/orderer/common/cluster"
-	"github.com/hyperledger/fabric/orderer/common/follower"
+	"github.com/SmartBFT-Go/fabric/orderer/common/cluster"
+	"github.com/SmartBFT-Go/fabric/orderer/common/follower"
 )
 
 type ChannelPuller struct {

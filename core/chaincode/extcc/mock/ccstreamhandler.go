@@ -4,8 +4,8 @@ package mock
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric/core/chaincode/extcc"
-	"github.com/hyperledger/fabric/core/container/ccintf"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/extcc"
+	"github.com/SmartBFT-Go/fabric/core/container/ccintf"
 )
 
 type StreamHandler struct {

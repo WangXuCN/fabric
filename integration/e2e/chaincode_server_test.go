@@ -16,9 +16,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/hyperledger/fabric/common/crypto/tlsgen"
-	"github.com/hyperledger/fabric/core/container/externalbuilder"
-	"github.com/hyperledger/fabric/integration/nwo"
+	"github.com/SmartBFT-Go/fabric/common/crypto/tlsgen"
+	"github.com/SmartBFT-Go/fabric/core/container/externalbuilder"
+	"github.com/SmartBFT-Go/fabric/integration/nwo"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/tedsuo/ifrit"
@@ -81,7 +81,7 @@ var _ = Describe("ChaincodeAsExternalServer", func() {
 		chaincode = nwo.Chaincode{
 			Name:            "mycc",
 			Version:         "0.0",
-			Path:            components.Build("github.com/hyperledger/fabric/integration/chaincode/server"),
+			Path:            components.Build("github.com/SmartBFT-Go/fabric/integration/chaincode/server"),
 			Lang:            "binary",
 			PackageFile:     filepath.Join(testDir, "server.tar.gz"),
 			Ctor:            `{"Args":["init","a","100","b","200"]}`,

@@ -11,11 +11,11 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/core/aclmgmt/resources"
-	"github.com/hyperledger/fabric/core/policy"
-	"github.com/hyperledger/fabric/msp/mgmt"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/policies"
+	"github.com/SmartBFT-Go/fabric/core/aclmgmt/resources"
+	"github.com/SmartBFT-Go/fabric/core/policy"
+	"github.com/SmartBFT-Go/fabric/msp/mgmt"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 )
 
 const (

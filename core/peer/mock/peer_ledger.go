@@ -6,8 +6,8 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	peera "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	ledgera "github.com/hyperledger/fabric/common/ledger"
-	"github.com/hyperledger/fabric/core/ledger"
+	ledgera "github.com/SmartBFT-Go/fabric/common/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
 )
 
 type PeerLedger struct {

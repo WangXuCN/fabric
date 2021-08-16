@@ -9,14 +9,14 @@ package multichannel
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/orderer/common/localconfig"
-	"github.com/hyperledger/fabric/orderer/common/msgprocessor"
-	"github.com/hyperledger/fabric/orderer/common/types"
+	"github.com/SmartBFT-Go/fabric/orderer/common/localconfig"
+	"github.com/SmartBFT-Go/fabric/orderer/common/msgprocessor"
+	"github.com/SmartBFT-Go/fabric/orderer/common/types"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/bccsp/sw"
-	msgprocessormocks "github.com/hyperledger/fabric/orderer/common/msgprocessor/mocks"
-	"github.com/hyperledger/fabric/orderer/common/multichannel/mocks"
+	"github.com/SmartBFT-Go/fabric/bccsp/sw"
+	msgprocessormocks "github.com/SmartBFT-Go/fabric/orderer/common/msgprocessor/mocks"
+	"github.com/SmartBFT-Go/fabric/orderer/common/multichannel/mocks"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/require"
 )

@@ -11,8 +11,8 @@ import (
 	"time"
 
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/orderer/consensus"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/orderer/consensus"
 )
 
 var logger = flogging.MustGetLogger("orderer.consensus.solo")

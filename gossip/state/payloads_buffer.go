@@ -11,8 +11,8 @@ import (
 	"sync/atomic"
 
 	proto "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
-	"github.com/hyperledger/fabric/common/metrics"
-	"github.com/hyperledger/fabric/gossip/util"
+	"github.com/SmartBFT-Go/fabric/common/metrics"
+	"github.com/SmartBFT-Go/fabric/gossip/util"
 )
 
 // PayloadsBuffer is used to store payloads into which used to

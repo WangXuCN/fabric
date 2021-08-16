@@ -13,13 +13,13 @@ import (
 	"sync"
 
 	lb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer/lifecycle"
-	"github.com/hyperledger/fabric/common/chaincode"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/chaincode/implicitcollection"
-	"github.com/hyperledger/fabric/core/chaincode/persistence"
-	"github.com/hyperledger/fabric/core/container/externalbuilder"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/chaincode"
+	"github.com/SmartBFT-Go/fabric/common/util"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/implicitcollection"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/persistence"
+	"github.com/SmartBFT-Go/fabric/core/container/externalbuilder"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 
 	"github.com/pkg/errors"
 )

@@ -5,8 +5,8 @@ import (
 	"sync"
 
 	commona "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/gossip/common"
-	"github.com/hyperledger/fabric/internal/pkg/peer/blocksprovider"
+	"github.com/SmartBFT-Go/fabric/gossip/common"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/peer/blocksprovider"
 )
 
 type BlockVerifier struct {

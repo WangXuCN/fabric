@@ -16,10 +16,10 @@ import (
 	"github.com/SmartBFT-Go/consensus/v2/pkg/types"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/etcdraft"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/smartbft"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/viperutil"
-	cf "github.com/hyperledger/fabric/core/config"
-	"github.com/hyperledger/fabric/msp"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/common/viperutil"
+	cf "github.com/SmartBFT-Go/fabric/core/config"
+	"github.com/SmartBFT-Go/fabric/msp"
 )
 
 const (

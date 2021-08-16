@@ -15,8 +15,8 @@ import (
 	"time"
 
 	"github.com/Shopify/sarama"
-	"github.com/hyperledger/fabric/bccsp/factory"
-	"github.com/hyperledger/fabric/orderer/mocks/util"
+	"github.com/SmartBFT-Go/fabric/bccsp/factory"
+	"github.com/SmartBFT-Go/fabric/orderer/mocks/util"
 	"github.com/stretchr/testify/require"
 )
 

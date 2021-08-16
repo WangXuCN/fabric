@@ -13,7 +13,7 @@ import (
 	"github.com/SmartBFT-Go/consensus/v2/pkg/types"
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/util"
+	"github.com/SmartBFT-Go/fabric/common/util"
 	"github.com/pkg/errors"
 )
 

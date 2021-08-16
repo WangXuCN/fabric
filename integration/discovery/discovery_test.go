@@ -20,11 +20,11 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/discovery"
 	pm "github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	"github.com/hyperledger/fabric/common/policydsl"
-	"github.com/hyperledger/fabric/integration/nwo"
-	"github.com/hyperledger/fabric/integration/nwo/commands"
-	"github.com/hyperledger/fabric/msp"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/policydsl"
+	"github.com/SmartBFT-Go/fabric/integration/nwo"
+	"github.com/SmartBFT-Go/fabric/integration/nwo/commands"
+	"github.com/SmartBFT-Go/fabric/msp"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/gbytes"
@@ -118,7 +118,7 @@ var _ = Describe("DiscoveryService", func() {
 	//	chaincodeWhenNoAnchorPeers := nwo.Chaincode{
 	//		Name:    "noanchorpeersjustyet",
 	//		Version: "1.0",
-	//		Path:    "github.com/hyperledger/fabric/integration/chaincode/simple/cmd",
+	//		Path:    "github.com/SmartBFT-Go/fabric/integration/chaincode/simple/cmd",
 	//		Ctor:    `{"Args":["init","a","100","b","200"]}`,
 	//		Policy:  `OR ('Org1MSP.member')`,
 	//	}
@@ -254,7 +254,7 @@ var _ = Describe("DiscoveryService", func() {
 		chaincode := nwo.Chaincode{
 			Name:    "mycc",
 			Version: "1.0",
-			Path:    "github.com/hyperledger/fabric/integration/chaincode/simple/cmd",
+			Path:    "github.com/SmartBFT-Go/fabric/integration/chaincode/simple/cmd",
 			Ctor:    `{"Args":["init","a","100","b","200"]}`,
 			Policy:  `OR (AND ('Org1MSP.member','Org2MSP.member'), AND ('Org1MSP.member','Org3MSP.member'), AND ('Org2MSP.member','Org3MSP.member'))`,
 		}
@@ -477,7 +477,7 @@ var _ = Describe("DiscoveryService", func() {
 		Expect(sess.Err).To(gbytes.Say(`failed constructing descriptor for chaincodes:<name:"mycc-lifecycle"`))
 
 		By("deploying chaincode using org1 and org2")
-		chaincodePath := components.Build("github.com/hyperledger/fabric/integration/chaincode/simple/cmd")
+		chaincodePath := components.Build("github.com/SmartBFT-Go/fabric/integration/chaincode/simple/cmd")
 		chaincode = nwo.Chaincode{
 			Name:                "mycc-lifecycle",
 			Version:             "1.0",

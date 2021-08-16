@@ -11,7 +11,7 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/common/ledger/testutil"
+	"github.com/SmartBFT-Go/fabric/common/ledger/testutil"
 	"github.com/stretchr/testify/require"
 )
 

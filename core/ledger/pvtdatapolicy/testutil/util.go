@@ -8,8 +8,8 @@ package testutil
 
 import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/ledger/pvtdatapolicy"
-	"github.com/hyperledger/fabric/core/ledger/pvtdatapolicy/mock"
+	"github.com/SmartBFT-Go/fabric/core/ledger/pvtdatapolicy"
+	"github.com/SmartBFT-Go/fabric/core/ledger/pvtdatapolicy/mock"
 )
 
 // SampleBTLPolicy helps tests create a sample BTLPolicy

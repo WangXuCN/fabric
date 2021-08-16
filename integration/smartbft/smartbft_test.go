@@ -29,10 +29,10 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/smartbft"
-	"github.com/hyperledger/fabric/common/crypto"
-	"github.com/hyperledger/fabric/integration/nwo"
-	"github.com/hyperledger/fabric/integration/nwo/commands"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/crypto"
+	"github.com/SmartBFT-Go/fabric/integration/nwo"
+	"github.com/SmartBFT-Go/fabric/integration/nwo/commands"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/gbytes"
@@ -124,7 +124,7 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			nwo.DeployChaincodeLegacy(network, channel, network.Orderers[0], nwo.Chaincode{
 				Name:    "mycc",
 				Version: "0.0",
-				Path:    "github.com/hyperledger/fabric/integration/chaincode/simple/cmd",
+				Path:    "github.com/SmartBFT-Go/fabric/integration/chaincode/simple/cmd",
 				Ctor:    `{"Args":["init","a","100","b","200"]}`,
 				Policy:  `AND ('Org1MSP.member','Org2MSP.member')`,
 			})
@@ -242,7 +242,7 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			nwo.DeployChaincodeLegacy(network, channel, network.Orderers[0], nwo.Chaincode{
 				Name:    "mycc",
 				Version: "0.0",
-				Path:    "github.com/hyperledger/fabric/integration/chaincode/simple/cmd",
+				Path:    "github.com/SmartBFT-Go/fabric/integration/chaincode/simple/cmd",
 				Ctor:    `{"Args":["init","a","100","b","200"]}`,
 				Policy:  `AND ('Org1MSP.member','Org2MSP.member')`,
 			})
@@ -348,7 +348,7 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			nwo.DeployChaincodeLegacy(network, channel, network.Orderers[0], nwo.Chaincode{
 				Name:    "mycc",
 				Version: "0.0",
-				Path:    "github.com/hyperledger/fabric/integration/chaincode/simple/cmd",
+				Path:    "github.com/SmartBFT-Go/fabric/integration/chaincode/simple/cmd",
 				Ctor:    `{"Args":["init","a","100","b","200"]}`,
 				Policy:  `AND ('Org1MSP.member','Org2MSP.member')`,
 			})
@@ -445,7 +445,7 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			nwo.DeployChaincodeLegacy(network, channel, network.Orderers[0], nwo.Chaincode{
 				Name:    "mycc",
 				Version: "0.0",
-				Path:    "github.com/hyperledger/fabric/integration/chaincode/simple/cmd",
+				Path:    "github.com/SmartBFT-Go/fabric/integration/chaincode/simple/cmd",
 				Ctor:    `{"Args":["init","a","100","b","200"]}`,
 				Policy:  `AND ('Org1MSP.member','Org2MSP.member')`,
 			})
@@ -888,7 +888,7 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			nwo.DeployChaincodeLegacy(network, channel, network.Orderers[0], nwo.Chaincode{
 				Name:    "mycc",
 				Version: "0.0",
-				Path:    "github.com/hyperledger/fabric/integration/chaincode/simple/cmd",
+				Path:    "github.com/SmartBFT-Go/fabric/integration/chaincode/simple/cmd",
 				Ctor:    `{"Args":["init","a","100","b","200"]}`,
 				Policy:  `AND ('Org1MSP.member','Org2MSP.member')`,
 			})
@@ -978,7 +978,7 @@ var _ = Describe("EndToEnd Smart BFT configuration test", func() {
 			nwo.DeployChaincodeLegacy(network, channel, network.Orderers[0], nwo.Chaincode{
 				Name:    "mycc",
 				Version: "0.0",
-				Path:    "github.com/hyperledger/fabric/integration/chaincode/simple/cmd",
+				Path:    "github.com/SmartBFT-Go/fabric/integration/chaincode/simple/cmd",
 				Ctor:    `{"Args":["init","a","100","b","200"]}`,
 				Policy:  `AND ('Org1MSP.member','Org2MSP.member')`,
 			})

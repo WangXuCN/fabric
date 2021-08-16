@@ -10,8 +10,8 @@ import (
 	"sync"
 
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	commonledger "github.com/hyperledger/fabric/common/ledger"
-	"github.com/hyperledger/fabric/core/common/ccprovider"
+	commonledger "github.com/SmartBFT-Go/fabric/common/ledger"
+	"github.com/SmartBFT-Go/fabric/core/common/ccprovider"
 	"github.com/pkg/errors"
 )
 

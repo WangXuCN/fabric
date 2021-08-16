@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/orderer/consensus/smartbft"
+	"github.com/SmartBFT-Go/fabric/orderer/consensus/smartbft"
 )
 
 type FakeBlockPuller struct {

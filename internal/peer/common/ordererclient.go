@@ -13,7 +13,7 @@ import (
 
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	"github.com/hyperledger/fabric/internal/pkg/comm"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/comm"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 )

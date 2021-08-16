@@ -2,7 +2,7 @@
 
 package mocks
 
-import cluster "github.com/hyperledger/fabric/orderer/common/cluster"
+import cluster "github.com/SmartBFT-Go/fabric/orderer/common/cluster"
 import common "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 import mock "github.com/stretchr/testify/mock"
 

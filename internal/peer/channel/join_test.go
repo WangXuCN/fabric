@@ -14,7 +14,7 @@ import (
 	"time"
 
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/internal/peer/common"
+	"github.com/SmartBFT-Go/fabric/internal/peer/common"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
 )

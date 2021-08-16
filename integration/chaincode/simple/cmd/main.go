@@ -14,7 +14,7 @@ import (
 	"syscall"
 
 	"github.com/SmartBFT-Go/fabric-chaincode-go/shim"
-	"github.com/hyperledger/fabric/integration/chaincode/simple"
+	"github.com/SmartBFT-Go/fabric/integration/chaincode/simple"
 )
 
 func handleSignals(handlers map[os.Signal]func()) {

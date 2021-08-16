@@ -4,7 +4,7 @@ package mock
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric/common/ledger"
+	"github.com/SmartBFT-Go/fabric/common/ledger"
 )
 
 type SimpleQueryExecutor struct {

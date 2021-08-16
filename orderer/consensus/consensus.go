@@ -8,11 +8,11 @@ package consensus
 
 import (
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/internal/pkg/identity"
-	"github.com/hyperledger/fabric/orderer/common/blockcutter"
-	"github.com/hyperledger/fabric/orderer/common/msgprocessor"
-	"github.com/hyperledger/fabric/protoutil"
+	"github.com/SmartBFT-Go/fabric/common/channelconfig"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/identity"
+	"github.com/SmartBFT-Go/fabric/orderer/common/blockcutter"
+	"github.com/SmartBFT-Go/fabric/orderer/common/msgprocessor"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 )
 
 // Consenter defines the backing ordering mechanism.

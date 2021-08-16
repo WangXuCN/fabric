@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/orderer/consensus"
+	"github.com/SmartBFT-Go/fabric/orderer/consensus"
 )
 
 type Consenter struct {

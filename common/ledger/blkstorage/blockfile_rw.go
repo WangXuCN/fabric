@@ -9,7 +9,7 @@ package blkstorage
 import (
 	"os"
 
-	"github.com/hyperledger/fabric/internal/fileutil"
+	"github.com/SmartBFT-Go/fabric/internal/fileutil"
 	"github.com/pkg/errors"
 )
 

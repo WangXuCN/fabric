@@ -9,11 +9,11 @@ package statebased
 import (
 	"testing"
 
-	verr "github.com/hyperledger/fabric/common/errors"
-	"github.com/hyperledger/fabric/core/common/validation/statebased/mocks"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
-	"github.com/hyperledger/fabric/protoutil"
+	verr "github.com/SmartBFT-Go/fabric/common/errors"
+	"github.com/SmartBFT-Go/fabric/core/common/validation/statebased/mocks"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
+	"github.com/SmartBFT-Go/fabric/protoutil"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"

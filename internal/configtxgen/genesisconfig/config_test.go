@@ -14,8 +14,8 @@ import (
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/etcdraft"
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/smartbft"
-	"github.com/hyperledger/fabric/common/viperutil"
-	"github.com/hyperledger/fabric/core/config/configtest"
+	"github.com/SmartBFT-Go/fabric/common/viperutil"
+	"github.com/SmartBFT-Go/fabric/core/config/configtest"
 	"github.com/stretchr/testify/require"
 )
 

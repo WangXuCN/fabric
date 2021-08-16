@@ -8,9 +8,9 @@ package confighistorytest
 
 import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/confighistory"
-	"github.com/hyperledger/fabric/core/ledger/mock"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger/confighistory"
+	"github.com/SmartBFT-Go/fabric/core/ledger/mock"
 )
 
 type Mgr struct {

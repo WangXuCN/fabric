@@ -14,7 +14,7 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/timestamp"
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
-	"github.com/hyperledger/fabric/internal/pkg/identity"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/identity"
 	"github.com/pkg/errors"
 )
 

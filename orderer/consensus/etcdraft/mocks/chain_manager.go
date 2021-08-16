@@ -4,9 +4,9 @@ package mocks
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric/orderer/common/types"
-	"github.com/hyperledger/fabric/orderer/consensus"
-	"github.com/hyperledger/fabric/orderer/consensus/etcdraft"
+	"github.com/SmartBFT-Go/fabric/orderer/common/types"
+	"github.com/SmartBFT-Go/fabric/orderer/consensus"
+	"github.com/SmartBFT-Go/fabric/orderer/consensus/etcdraft"
 )
 
 type ChainManager struct {

@@ -10,10 +10,10 @@ import (
 	"testing"
 
 	etcdraftproto "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer/etcdraft"
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/common/crypto/tlsgen"
-	"github.com/hyperledger/fabric/orderer/consensus/etcdraft"
-	"github.com/hyperledger/fabric/orderer/consensus/etcdraft/mocks"
+	"github.com/SmartBFT-Go/fabric/common/channelconfig"
+	"github.com/SmartBFT-Go/fabric/common/crypto/tlsgen"
+	"github.com/SmartBFT-Go/fabric/orderer/consensus/etcdraft"
+	"github.com/SmartBFT-Go/fabric/orderer/consensus/etcdraft/mocks"
 	"github.com/stretchr/testify/require"
 	"go.etcd.io/etcd/raft/raftpb"
 )

@@ -12,7 +12,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hyperledger/fabric/bccsp/pkcs11"
+	"github.com/SmartBFT-Go/fabric/bccsp/pkcs11"
 	"github.com/stretchr/testify/require"
 )
 

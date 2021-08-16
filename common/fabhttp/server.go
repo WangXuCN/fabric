@@ -14,9 +14,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/middleware"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/common/util"
+	"github.com/SmartBFT-Go/fabric/core/middleware"
 )
 
 //go:generate counterfeiter -o fakes/logger.go -fake-name Logger . Logger

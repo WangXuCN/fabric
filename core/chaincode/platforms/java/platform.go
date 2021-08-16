@@ -18,8 +18,8 @@ import (
 	"strings"
 
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/core/chaincode/platforms/util"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/core/chaincode/platforms/util"
 )
 
 var logger = flogging.MustGetLogger("chaincode.platform.java")

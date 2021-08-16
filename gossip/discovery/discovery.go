@@ -11,8 +11,8 @@ import (
 
 	protolib "github.com/golang/protobuf/proto"
 	proto "github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
-	"github.com/hyperledger/fabric/gossip/common"
-	"github.com/hyperledger/fabric/gossip/protoext"
+	"github.com/SmartBFT-Go/fabric/gossip/common"
+	"github.com/SmartBFT-Go/fabric/gossip/protoext"
 )
 
 // CryptoService is an interface that the discovery expects to be implemented and passed on creation

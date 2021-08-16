@@ -17,9 +17,9 @@ import (
 
 	cb "github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	ab "github.com/SmartBFT-Go/fabric-protos-go/v2/orderer"
-	"github.com/hyperledger/fabric/orderer/common/broadcast"
-	"github.com/hyperledger/fabric/orderer/common/broadcast/mock"
-	"github.com/hyperledger/fabric/orderer/common/msgprocessor"
+	"github.com/SmartBFT-Go/fabric/orderer/common/broadcast"
+	"github.com/SmartBFT-Go/fabric/orderer/common/broadcast/mock"
+	"github.com/SmartBFT-Go/fabric/orderer/common/msgprocessor"
 )
 
 var _ = Describe("Broadcast", func() {

@@ -9,9 +9,9 @@ package extcc
 import (
 	"context"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/core/container/ccintf"
-	"github.com/hyperledger/fabric/internal/pkg/comm"
+	"github.com/SmartBFT-Go/fabric/common/flogging"
+	"github.com/SmartBFT-Go/fabric/core/container/ccintf"
+	"github.com/SmartBFT-Go/fabric/internal/pkg/comm"
 	"github.com/pkg/errors"
 
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"

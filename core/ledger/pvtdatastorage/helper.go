@@ -10,8 +10,8 @@ import (
 	"math"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/ledger/rwset"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/pvtdatapolicy"
+	"github.com/SmartBFT-Go/fabric/core/ledger"
+	"github.com/SmartBFT-Go/fabric/core/ledger/pvtdatapolicy"
 	"github.com/willf/bitset"
 )
 

@@ -19,9 +19,9 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	docker "github.com/fsouza/go-dockerclient"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/integration/nwo"
-	"github.com/hyperledger/fabric/integration/nwo/commands"
-	"github.com/hyperledger/fabric/integration/ordererclient"
+	"github.com/SmartBFT-Go/fabric/integration/nwo"
+	"github.com/SmartBFT-Go/fabric/integration/nwo/commands"
+	"github.com/SmartBFT-Go/fabric/integration/ordererclient"
 	"github.com/tedsuo/ifrit"
 
 	. "github.com/onsi/ginkgo"

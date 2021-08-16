@@ -8,7 +8,7 @@ package main
 
 import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	endorsement "github.com/hyperledger/fabric/core/handlers/endorsement/api"
+	endorsement "github.com/SmartBFT-Go/fabric/core/handlers/endorsement/api"
 )
 
 type NoOpEndorser struct {

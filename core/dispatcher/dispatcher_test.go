@@ -13,8 +13,8 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/hyperledger/fabric/core/dispatcher"
-	"github.com/hyperledger/fabric/core/dispatcher/mock"
+	"github.com/SmartBFT-Go/fabric/core/dispatcher"
+	"github.com/SmartBFT-Go/fabric/core/dispatcher/mock"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes"

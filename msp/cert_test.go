@@ -28,8 +28,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/bccsp/sw"
-	"github.com/hyperledger/fabric/bccsp/utils"
+	"github.com/SmartBFT-Go/fabric/bccsp/sw"
+	"github.com/SmartBFT-Go/fabric/bccsp/utils"
 	"github.com/stretchr/testify/require"
 )
 

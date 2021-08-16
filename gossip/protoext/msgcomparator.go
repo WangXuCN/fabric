@@ -10,7 +10,7 @@ import (
 	"bytes"
 
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/gossip"
-	"github.com/hyperledger/fabric/gossip/common"
+	"github.com/SmartBFT-Go/fabric/gossip/common"
 )
 
 // NewGossipMessageComparator creates a MessageReplacingPolicy given a maximum number of blocks to hold

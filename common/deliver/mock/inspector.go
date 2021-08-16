@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/deliver"
+	"github.com/SmartBFT-Go/fabric/common/deliver"
 )
 
 type Inspector struct {

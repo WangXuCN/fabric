@@ -18,10 +18,10 @@ import (
 	"github.com/SmartBFT-Go/fabric-protos-go/v2/common"
 	docker "github.com/fsouza/go-dockerclient"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/integration/nwo"
-	"github.com/hyperledger/fabric/integration/nwo/commands"
-	"github.com/hyperledger/fabric/integration/nwo/fabricconfig"
-	"github.com/hyperledger/fabric/integration/runner"
+	"github.com/SmartBFT-Go/fabric/integration/nwo"
+	"github.com/SmartBFT-Go/fabric/integration/nwo/commands"
+	"github.com/SmartBFT-Go/fabric/integration/nwo/fabricconfig"
+	"github.com/SmartBFT-Go/fabric/integration/runner"
 	"github.com/onsi/gomega/gbytes"
 	"github.com/onsi/gomega/gexec"
 	"github.com/tedsuo/ifrit"
@@ -123,7 +123,7 @@ var _ = Describe("Lifecycle", func() {
 		testPeers := network.PeersWithChannel("testchannel")
 		org1peer0 := network.Peer("Org1", "peer0")
 
-		chaincodePath := components.Build("github.com/hyperledger/fabric/integration/chaincode/simple/cmd")
+		chaincodePath := components.Build("github.com/SmartBFT-Go/fabric/integration/chaincode/simple/cmd")
 		chaincode := nwo.Chaincode{
 			Name:                "My_1st-Chaincode",
 			Version:             "Version-0.0",

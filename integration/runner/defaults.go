@@ -9,7 +9,7 @@ package runner
 import (
 	"time"
 
-	"github.com/hyperledger/fabric/integration/helpers"
+	"github.com/SmartBFT-Go/fabric/integration/helpers"
 )
 
 const DefaultStartTimeout = 45 * time.Second

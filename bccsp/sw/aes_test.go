@@ -24,8 +24,8 @@ import (
 	mrand "math/rand"
 	"testing"
 
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/bccsp/mocks"
+	"github.com/SmartBFT-Go/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/bccsp/mocks"
 	"github.com/stretchr/testify/require"
 )
 

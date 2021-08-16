@@ -11,7 +11,7 @@ import (
 	"fmt"
 
 	pb "github.com/SmartBFT-Go/fabric-protos-go/v2/peer"
-	"github.com/hyperledger/fabric/bccsp"
+	"github.com/SmartBFT-Go/fabric/bccsp"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 )

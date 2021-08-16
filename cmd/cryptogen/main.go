@@ -14,10 +14,10 @@ import (
 	"path/filepath"
 	"text/template"
 
-	"github.com/hyperledger/fabric/internal/cryptogen/ca"
-	"github.com/hyperledger/fabric/internal/cryptogen/csp"
-	"github.com/hyperledger/fabric/internal/cryptogen/metadata"
-	"github.com/hyperledger/fabric/internal/cryptogen/msp"
+	"github.com/SmartBFT-Go/fabric/internal/cryptogen/ca"
+	"github.com/SmartBFT-Go/fabric/internal/cryptogen/csp"
+	"github.com/SmartBFT-Go/fabric/internal/cryptogen/metadata"
+	"github.com/SmartBFT-Go/fabric/internal/cryptogen/msp"
 
 	kingpin "gopkg.in/alecthomas/kingpin.v2"
 	yaml "gopkg.in/yaml.v2"

@@ -11,8 +11,8 @@ import (
 	"testing"
 
 	msp2 "github.com/SmartBFT-Go/fabric-protos-go/v2/msp"
-	"github.com/hyperledger/fabric/msp"
-	"github.com/hyperledger/fabric/msp/mocks"
+	"github.com/SmartBFT-Go/fabric/msp"
+	"github.com/SmartBFT-Go/fabric/msp/mocks"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
