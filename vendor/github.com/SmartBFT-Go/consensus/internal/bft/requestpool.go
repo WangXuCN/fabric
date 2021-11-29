@@ -20,7 +20,6 @@ import (
 
 const (
 	defaultRequestTimeout = 10 * time.Second // for unit tests only
-	defaultSubmitTimeout  = 5 * time.Second  // TODO: update value with a config
 )
 
 var (
@@ -152,14 +151,8 @@ func (rp *Pool) Submit(request []byte) error {
 		return ErrReqAlreadyExists
 	}
 
-	ctx, cancel := context.WithTimeout(
-		context.Background(),
-		defaultSubmitTimeout,
-	)
-	defer cancel()
-
 	// do not wait for a semaphore with a lock, as it will prevent draining the pool.
-	if err := rp.semaphore.Acquire(ctx, 1); err != nil {
+	if err := rp.semaphore.Acquire(context.Background(), 1); err != nil {
 		return errors.Wrapf(err, "acquiring semaphore for request: %s", reqInfo)
 	}
 
